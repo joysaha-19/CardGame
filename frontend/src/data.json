@@ -1,0 +1,50 @@
+{
+  "flash": {
+    "name": "THE FLASH",
+    "health": "70%",
+    "strength": "71%",
+    "defense": "60%",
+    "speed": "95%",
+    "combat": "85%",
+    "introtext": "Barry Allen, the Scarlet Speedster, reigns as The Flash in Central City. A lightning strike and chemicals transform him into a superhero with astonishing speed. This alias symbolizes a fierce guardian of justice. His powers, rooted in the mysterious Speed Force, allow him to operate at light speeds. Motivated by his mother's tragic murder, the Scarlet Speedster is unyielding in his fight against crime, using his extraordinary abilities to defend the innocent with relentless dedication.",
+    "Alias": " Barry Allen",
+    "origin": " Central City",
+    "power": " Superspeed"
+  },
+  "batman": {
+    "name": "THE BATMAN",
+    "health": "80%",
+    "strength": "95%",
+    "defense": "87%",
+    "speed": "80%",
+    "combat": "95%",
+    "introtext": "Bruce Wayne, masked as Batman, haunts the shadowy streets of Gotham City. Born into wealth but scarred by the tragic murder of his parents, Wayne transforms his anguish into a crusade against crime. As Batman, he embodies fearlessness and an unbreakable will. Relying on peak physical conditioning, detective skills, and an arsenal of technology, he strikes terror in the hearts of criminals, becoming a symbol of vengeance and justice in a city riddled with corruption.",
+    "Alias": " Bruce Wayne",
+    "origin": " Gotham City",
+    "power": " Martial Arts"
+  },
+  "punisher": {
+    "name": "THE PUNISHER",
+    "health": "80%",
+    "strength": "90%",
+    "defense": "80%",
+    "speed": "60%",
+    "combat": "85%",
+    "introtext": "Frank Castle, known as the Punisher, emerges from the dark alleys of New York City, driven by a tragic backstory. Once a family man and a decorated Marine, Castle's life shatters when his family is brutally murdered. Swearing vengeance, he becomes the Punisher, embodying raw fury and unyielding determination. With no superpowers, his strength lies in military skills, tactical expertise, and an unwavering resolve to wage a one-man war against crime.",
+    "Alias": " Frank Castle",
+    "origin": " New York City",
+    "power": " Ruthlessness"
+  },
+  "ironman": {
+    "name": "IRONMAN",
+    "health": "90%",
+    "strength": "87%",
+    "defense": "87%",
+    "speed": "77%",
+    "combat": "80%",
+    "introtext": "Iron Man, a.k.a. Tony Stark, hails from the bustling city of New York. Renowned for his intellect and wealth, Stark's transformation into Iron Man is marked by a harrowing backstory, where he turns a dire situation into a source of power. Encased in his advanced armor, he exhibits unmatched fierceness, utilizing high-tech weaponry and flight capabilities. His journey from industrialist to superhero is a testament to his resilience and ingenuity.",
+    "Alias": " Tony Stark",
+    "origin": " New York City",
+    "power": " IQ"
+  }
+}

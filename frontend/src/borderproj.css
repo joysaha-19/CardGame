@@ -1,0 +1,425 @@
+.parentcontainer_bproj {
+  background-color: bisque;
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glowcircle {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  top:-9%;
+  right: -6%;
+  transform: scale(0.7);
+}
+
+.inner-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 55%;
+  background-color: rgb(2, 135, 153);
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-circle {
+  height: 210px;
+  width: 210px;
+  /* background-color: gold; */
+  border-radius: 55%;
+  position: absolute;
+  top: calc(50% - 105px);
+  left: calc(50% - 105px);
+  z-index: 1;
+  /* opacity:0 ; */
+  animation: rot 10s linear 0s 100000000 normal forwards;
+  background: conic-gradient(
+    from 0deg,
+    rgb(0, 255, 247) 0deg 90deg,
+    black 90deg 120deg,
+    rgb(0, 255, 247) 120deg 210deg,
+    black 210deg 240deg,
+    rgb(0, 255, 247) 240deg 330deg,
+    black 330deg 360deg
+  );
+
+}
+
+/* .attacker {
+  background: conic-gradient(
+    from 0deg,
+    rgb(6, 141, 186) 0deg 90deg,
+    black 90deg 120deg,
+    rgb(6, 141, 186) 120deg 210deg,
+    black 210deg 240deg,
+    rgb(6, 141, 186) 240deg 330deg,
+    black 330deg 360deg
+  );
+}
+
+.defender {
+  background: conic-gradient(
+    from 0deg,
+    rgb(6, 141, 186) 0deg 90deg,
+    black 90deg 120deg,
+    rgb(6, 141, 186) 120deg 210deg,
+    black 210deg 240deg,
+    rgb(6, 141, 186) 240deg 330deg,
+    black 330deg 360deg
+  );
+}
+
+.healer {
+  background: conic-gradient(
+    from 0deg,
+    rgb(0, 191, 255) 0deg 90deg,
+    black 90deg 120deg,
+    rgb(0, 191, 255) 120deg 210deg,
+    black 210deg 240deg,
+    rgb(0, 191, 255) 240deg 330deg,
+    black 330deg 360deg
+  );
+} */
+
+.outermost {
+  height: 290px;
+  width: 290px;
+  /* background-color: aqua; */
+  position: absolute;
+  top: calc(50% - 145px);
+  left: calc(50% - 145px);
+  border-radius: 55%;
+  z-index: 0;
+
+  opacity: 1;
+  animation: rot 10s linear 0s 100000000 normal forwards;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.367) 0%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+
+
+
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sword {
+  /* position: absolute; */
+  height: 199px;
+  width: 199px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:  rgba(71, 218, 223, 0.367);
+
+  /* animation:  col 1.5s ease 0.9s 1 normal forwards;; */
+}
+
+.blade {
+  position: absolute;
+  height: 125px;
+  width: 22px;
+  top: 3%;
+  clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+  /* border-radius: 10%; */
+  background-color: rgb(0, 255, 247);
+
+}
+
+.support {
+  height: 8px;
+  width: 55px;
+  background-color: rgb(0, 255, 247);
+  top: 66.5%;
+  position: absolute;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+
+}
+
+.handle {
+  width: 18px;
+  height: 39px;
+  background-color: rgb(0, 255, 247);
+  top: 71.5%;
+  position: absolute;
+
+}
+
+.shield {
+  height: 199px;
+  width: 199px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  
+  position: relative;
+
+}
+
+.plateleft {
+  height: 130px;
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  left: 19%;
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%,  0% 60%);
+  background-color: rgb(0, 255, 247);
+  /* border: 2px solid white; */
+}
+.plateright{
+  height: 130px;
+  width: 60px;
+  position: absolute;
+  top:40px;
+  right: 19%;;
+  clip-path: polygon( 0% 10%, 100% 0%, 100% 60%,  0% 100%);
+  background-color: rgb(0, 255, 247);
+}
+
+.heal {
+  height: 199px;
+  width: 199px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+
+
+}
+
+.verticalheal1 {
+  position: absolute;
+  height: 40px;
+  width: 34px;
+  background-color: rgb(0, 255, 247);
+  top: 20%;
+  left: calc(50% - 17px);
+
+}
+.verticalheal2{
+  position: absolute;
+  height: 40px;
+  width: 34px;
+  background-color: rgb(0, 255, 247);
+  bottom: 20%;
+  left: calc(50% - 17px);
+
+}
+
+.horizontalheal1 {
+  position: absolute;
+  height: 34px;
+  width: 140px;
+  background-color: rgb(0, 255, 247);
+  top: calc(50% - 17px);
+  left: 15%;
+
+}
+
+@keyframes grow {
+    0%{
+        opacity: 0;
+        height: 1px;
+        width:2px;
+    }
+  
+    100%{
+        opacity: 1;
+        height: 199px;
+        width: 199px;
+    }
+}
+
+.base{
+  height: 199px;
+  width: 199px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.downcircle{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+ background: radial-gradient(
+  circle,
+  transparent 0%,64%,
+  transparent 67%,
+  red 68% 100%
+ );
+  z-index: 8;
+  position: absolute;
+  top: calc(50% - 100px);
+left: calc(50% - 100px);
+
+  animation: down 1.7s ease 0s 1 normal forwards;
+
+}
+
+.upcircle{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg,
+    transparent 0deg 0deg,
+    black 0deg 360deg
+  );
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  position: absolute;
+  animation: up 1.7s ease 0s 1 normal forwards;
+
+
+}
+
+.upincircle{
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  background-color: white;
+ 
+}
+
+
+@keyframes down {
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  
+}
+
+@keyframes up{
+   
+  0%{
+    background: conic-gradient(
+      from 90deg,
+      transparent 0deg 0deg,
+      black 0deg 360deg
+    );
+  }
+
+  100%{
+    background: conic-gradient(
+      from 90deg,
+      transparent 0deg 90deg,
+      black 90deg 360deg
+    );
+  }
+}
+
+
+.fist{
+  height: 400px;
+  width: 400px;
+  background-color: rgb(255, 0, 0);
+  position: relative;
+}
+
+
+.middlefinger{
+  height: 140px;
+  width: 17.5%;
+  border-radius: 20%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  border: 5px solid black;
+}
+.indexfinger{
+  height: 110px;
+  width: 17.5%;
+  border-radius: 20%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 17%;
+  left: 16.5%;
+  border: 5px solid black;
+}
+
+.ringfinger{
+  height: 140px;
+  width: 17.5%;
+  border-radius: 20%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 17%;
+  left: 53.7%;
+  border: 5px solid black;
+}
+
+.littlefinger{
+  height: 140px;
+  width: 17.5%;
+  border-radius: 20%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 21%;
+  left: 72.5%;
+  border: 5px solid black;
+}
+
+.trapeziumlower{
+  width: 25%;
+  height: 70px;
+  background-color: aqua;
+  top: 80%;
+  left: 50%;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100% , 0% 100%);
+  position: absolute;
+  transform: rotate(120deg);
+}
+
+.trapeziumupper{
+  width: 25%;
+  height: 70px;
+  background-color: aqua;
+  top: 71.3%;
+  left: 35%;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100% , 0% 100%);
+  position: absolute;
+  transform: rotate(300deg);
+
+}
+

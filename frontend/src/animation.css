@@ -1,0 +1,67 @@
+/* in translate the unit is relative to itself.
+
+use skew to make parallelograms
+
+use transition delay. It is the third value.
+
+ ANIMATIONS */
+
+ .animate {
+    /* animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+    animation: 5s ease-in-out 1s 2 normal forwards slide;
+  }
+  /*The percentages are basically checkpoints*/
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+  
+    33% {
+      transform: translateX(300px) rotate(180deg);
+    }
+  
+    66% {
+      transform: translateX(-300px) rotate(-180deg);
+    }
+  
+    100% {
+      transform: translateX(0);
+      background-color: rebeccapurple;
+    }
+  }
+
+
+  /*
+  
+  Animation Fill Mode (animation-fill-mode): This property defines the styles applied to an element when the animation is not playing (before it starts, after it ends, or both). It can take the following values:
+
+none: The animation will not apply any styles to the element, either before or after it is executing.
+forwards: The element will retain the style set by the last keyframe (depending on the animation's direction and duration).
+backwards: The animation will apply the style of the first keyframe, during the period before the animation starts.
+both: The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions.
+Animation Direction (animation-direction): This property specifies whether an animation should play in reverse on alternate cycles. It affects the direction in which the animation iterates. It can take the following values:
+
+normal: The animation is played as normal (forwards) every cycle.
+reverse: The animation is played in reverse order every cycle.
+alternate: The animation direction is alternated from forwards to reverse with each iteration.
+alternate-reverse: The animation direction is alternated from reverse to forwards with each iteration.
+  
+  */
+
+
+  /* To apply multiple animations to a particular class in CSS, you can list multiple animations in the animation property
+
+  .animate {
+    animation: 
+      slide 5s ease-in-out 1s 2 normal forwards, 
+      fade 3s linear 0s infinite alternate;
+  } 
+  the order is decided using
+  
+  */
