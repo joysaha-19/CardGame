@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
-import "./project1.css";
+import "./cardmenu.css";
 import "./borderproj.css";
 import Batman from "./pics/bgs/batman.webp";
 import Flash from "./pics/bgs/Flash.webp";
