@@ -12,6 +12,13 @@ import Superman from "./pics/bgs/superman.webp";
 import Fist from "./pics/fist.png";
 import DoubleFist from "./pics/2fists.png";
 import Sword from "./pics/level3sword.png";
+import Shield from './pics/Shield.png';
+import Level3Shield from './pics/Level2Shield.png'
+import Level2Shield from './pics/Level3Shield.png';
+import Level1Support from './pics/Level1Support.png';
+import Level3Support from './pics/Level2Support.png';
+import Level2Support from './pics/Level3Support.png';
+
 //rgba(255, 0, 0, 1)
 
 const outercirclearr = [
@@ -62,6 +69,14 @@ const Ui = () => {
   const [numcontent,setnumcontent]=useState(0);
   const [prevnav, setprevnav]=useState(0);
   const [backgroundnav,setbackgroundnav]=useState(['rgba(9, 196, 237, 0.496)','transparent','transparent'])
+  // const attackimages=[Fist,DoubleFist,Sword];
+  // const defenseimages=[Shield,Level2Shield,Level3Shield];
+  const L1abilities=[Fist,Shield,Level1Support];
+  const L2abilities=[DoubleFist, Level2Shield,Level2Support];
+  const L3abilities=[Sword,Level3Shield,Level3Support];
+  const L1name=['Batarang Attack','Batsuit','Detective Vision'];
+  const L2name=['Stun Gun', "Fox's Gloves",'Heal Serum'];
+  const L3name=['Knightmare','Bulletproof','EMP Grenade']
   const contents = [
     <div
       className="statscontent"
@@ -161,26 +176,26 @@ const Ui = () => {
       <div className="supportability nav"style={{backgroundColor:backgroundnav[2]}}onClick={()=>{movenav(2)}}> <p className="navlabel">SUPPORT</p></div>
      
       </div>
-      <div className="attackspecial1 special">
+      <div className="special1 special">
         <div className="circle">
-          <img src={Fist} className="abilityimage"></img>
+          <img src={L1abilities[prevnav]} className="abilityimage"></img>
         </div>
       </div>
 
-      <div className="attackspecial2 special">
+      <div className="special2 special">
         <div className="circle">
-          <img src={DoubleFist} className="abilityimage"></img>
+          <img src={L2abilities[prevnav]} className="abilityimage"></img>
         </div>
       </div>
 
-      <div className="attackspecial3 special">
+      <div className="special3 special">
         <div className="circle">
-          <img src={Sword} className="abilityimage"></img>
+          <img src={L3abilities[prevnav]} className="abilityimage"></img>
         </div>
       </div>
-      <p className="ability1name abname">Batarang Attack</p>
-      <p className="ability2name abname">Stun Gun</p>
-      <p className="ability3name abname">Knightmare</p>
+      <p className="ability1name abname">{L1name[prevnav]}</p>
+      <p className="ability2name abname">{L2name[prevnav]}</p>
+      <p className="ability3name abname">{L3name[prevnav]}</p>
     </div>,
   ];
 

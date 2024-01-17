@@ -679,7 +679,7 @@ p{
   top: 57%;
   left: 2%;
   background-color: transparent;
-  border: 1px solid rgba(0, 183, 255, 0.281);
+  /* border: 1px solid rgba(0, 183, 255, 0.281); */
   z-index: 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -954,13 +954,13 @@ p{
   justify-content: center;
   align-items: center;
 }
-.attackspecial1{
+.special1{
   grid-column: 2/4;
   grid-row: 3/4;
   
 }
 
-.attackspecial2{
+.special2{
   grid-column: 4/6;
   grid-row: 3/4;
   display: flex;
@@ -968,7 +968,7 @@ p{
   align-items: center;
 }
 
-.attackspecial3{
+.special3{
   grid-column: 6/8;
   grid-row: 3/4;
   display: flex;
