@@ -12,12 +12,12 @@ import Superman from "./pics/bgs/superman.webp";
 import Fist from "./pics/fist.png";
 import DoubleFist from "./pics/2fists.png";
 import Sword from "./pics/level3sword.png";
-import Shield from './pics/Shield.png';
-import Level3Shield from './pics/Level2Shield.png'
-import Level2Shield from './pics/Level3Shield.png';
-import Level1Support from './pics/Level1Support.png';
-import Level3Support from './pics/Level2Support.png';
-import Level2Support from './pics/Level3Support.png';
+import Shield from "./pics/Shield.png";
+import Level3Shield from "./pics/Level2Shield.png";
+import Level2Shield from "./pics/Level3Shield.png";
+import Level1Support from "./pics/Level1Support.png";
+import Level3Support from "./pics/Level2Support.png";
+import Level2Support from "./pics/Level3Support.png";
 
 //rgba(255, 0, 0, 1)
 
@@ -66,17 +66,23 @@ const Ui = () => {
   const [scaleabilities, setscaleabilities] = useState(0);
   const [opstats, setopstats] = useState(1);
   const [opabilities, setopabilities] = useState(0);
-  const [numcontent,setnumcontent]=useState(0);
-  const [prevnav, setprevnav]=useState(0);
-  const [backgroundnav,setbackgroundnav]=useState(['rgba(9, 196, 237, 0.496)','transparent','transparent'])
+  const [numcontent, setnumcontent] = useState(0);
+  const [prevnav, setprevnav] = useState(0);
+  const [backgroundnav, setbackgroundnav] = useState([
+    "rgba(9, 196, 237, 0.496)",
+    "transparent",
+    "transparent",
+  ]);
+
+  let [abilityfocus,setabilityfocus]=useState([true,false,false]);
   // const attackimages=[Fist,DoubleFist,Sword];
   // const defenseimages=[Shield,Level2Shield,Level3Shield];
-  const L1abilities=[Fist,Shield,Level1Support];
-  const L2abilities=[DoubleFist, Level2Shield,Level2Support];
-  const L3abilities=[Sword,Level3Shield,Level3Support];
-  const L1name=['Batarang Attack','Batsuit','Detective Vision'];
-  const L2name=['Stun Gun', "Fox's Gloves",'Heal Serum'];
-  const L3name=['Knightmare','Bulletproof','EMP Grenade']
+  const L1abilities = [Fist, Shield, Level1Support];
+  const L2abilities = [DoubleFist, Level2Shield, Level2Support];
+  const L3abilities = [Sword, Level3Shield, Level3Support];
+  const L1name = ["Batarang Attack", "Batsuit", "Detective Vision"];
+  const L2name = ["Stun Gun", "Fox's Gloves", "Heal Serum"];
+  const L3name = ["Knightmare", "Bulletproof", "EMP Grenade"];
   const contents = [
     <div
       className="statscontent"
@@ -169,47 +175,104 @@ const Ui = () => {
         opacity: `${opabilities}`,
       }}
     >
-      
       <div className="abilitynavbar">
-      <div className="attackability nav" style={{backgroundColor:backgroundnav[0]}} onClick={()=>{movenav(0)}}><p className="navlabel">ATTACK</p></div>
-      <div className="defenseability nav"style={{backgroundColor:backgroundnav[1]}}onClick={()=>{movenav(1)}}> <p className="navlabel">DEFENSE</p></div>
-      <div className="supportability nav"style={{backgroundColor:backgroundnav[2]}}onClick={()=>{movenav(2)}}> <p className="navlabel">SUPPORT</p></div>
-     
+        <div
+          className="attackability nav"
+          style={{ backgroundColor: backgroundnav[0] }}
+          onClick={() => {
+            movenav(0);
+          }}
+        >
+          <p className="navlabel">ATTACK</p>
+        </div>
+        <div
+          className="defenseability nav"
+          style={{ backgroundColor: backgroundnav[1] }}
+          onClick={() => {
+            movenav(1);
+          }}
+        >
+          {" "}
+          <p className="navlabel">DEFENSE</p>
+        </div>
+        <div
+          className="supportability nav"
+          style={{ backgroundColor: backgroundnav[2] }}
+          onClick={() => {
+            movenav(2);
+          }}
+        >
+          {" "}
+          <p className="navlabel">SUPPORT</p>
+        </div>
       </div>
-      <div className="special1 special">
+      <div className="special1 special"  onClick={()=>focusonability(0)}>
+        <div className="outercircleability" style={{transform: abilityfocus[0]?'scale(1.15)':'scale(0)'}}></div>
         <div className="circle">
           <img src={L1abilities[prevnav]} className="abilityimage"></img>
         </div>
+        
       </div>
 
-      <div className="special2 special">
+      <div className="special2 special"  onClick={()=>focusonability(1)}>
+        <div className="outercircleability" style={{transform: abilityfocus[1]?'scale(1.15)':'scale(0)'}}> </div>
         <div className="circle">
           <img src={L2abilities[prevnav]} className="abilityimage"></img>
         </div>
+       
       </div>
 
-      <div className="special3 special">
+      <div className="special3 special"  onClick={()=>focusonability(2)}>
+        <div className="outercircleability" style={{transform: abilityfocus[2]?'scale(1.15)':'scale(0)'}}> </div>
         <div className="circle">
           <img src={L3abilities[prevnav]} className="abilityimage"></img>
+       
         </div>
       </div>
       <p className="ability1name abname">{L1name[prevnav]}</p>
       <p className="ability2name abname">{L2name[prevnav]}</p>
       <p className="ability3name abname">{L3name[prevnav]}</p>
+      <div className="abilitydescriptionbox">
+        <div className="abilitydescription">
+          <div className="abilitydescriptionname">
+            <p className="abilityname">Batarang Attack</p>
+          </div>
+          <div className="abilitydescriptionlevel">
+            <div className="circle">
+              <p>Lvl 1</p>
+            </div>
+          </div>
+          <div className="abilitydescriptionother">
+            <div className="abilitydescriptioninfo">
+              <p>Batman unleashes a rapid flurry of batarangs, each strike inflicting damage and disorienting his adversary, causing slowed reactions and reduced combat effectiveness.</p>
+            </div>
+            <div className="abilitydescriptionstats">
+            <div className="abilitydescriptionability">
+              <p>DAMAGE: 10%</p>
+            </div>
+            <div className="abilitydescriptionneed">
+              <p>XP Needed for Level Up: 10</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>,
   ];
-
-function movenav(n){
-if(prevnav!=n)
-{
   
-  backgroundnav[prevnav]='transparent';
-  backgroundnav[n]='rgba(9, 196, 237, 0.496)';
-  setbackgroundnav(backgroundnav);
-  setprevnav(n);
-}
-
-}
+  function focusonability(n){
+    abilityfocus=Array(3).fill(false);
+     abilityfocus[n]=true;
+     setabilityfocus(abilityfocus);
+  }
+  function movenav(n) {
+    if (prevnav != n) {
+      backgroundnav[prevnav] = "transparent";
+      backgroundnav[n] = "rgba(9, 196, 237, 0.496)";
+      setbackgroundnav(backgroundnav);
+      setprevnav(n);
+    }
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -239,12 +302,11 @@ if(prevnav!=n)
       if (bg1 == "rgba(65, 65, 66, 0.993)") {
         setopabilities(0);
         setscaleabilities(0);
-        setTimeout(()=>{
+        setTimeout(() => {
           setnumcontent(0);
           setopstats(1);
           setscalestats(1);
-        },210)
-       
+        }, 210);
 
         let t = bg1;
         setbg1(bg2);
@@ -255,11 +317,11 @@ if(prevnav!=n)
       if (bg2 == "rgba(65, 65, 66, 0.993)") {
         setopstats(0);
         setscalestats(0);
-        setTimeout(()=>{
+        setTimeout(() => {
           setnumcontent(1);
           setopabilities(1);
           setscaleabilities(1);
-        },210)
+        }, 210);
         let t = bg2;
         setbg2(bg1);
         setbg1(t);
