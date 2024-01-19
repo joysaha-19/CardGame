@@ -6,6 +6,7 @@ import Batman from "./pics/bgs/batman.webp";
 import Flash from "./pics/bgs/Flash.webp";
 import Ironman from "./pics/bgs/ironman.jpg";
 import Punisher from "./pics/bgs/punisher2.jpg";
+import Vader from "./pics/bgs/Vader.jpg";
 import data from "./data.json";
 import Joker from "./pics/bgs/joker.webp";
 import Superman from "./pics/bgs/superman.webp";
@@ -18,7 +19,7 @@ import Level2Shield from "./pics/Level3Shield.png";
 import Level1Support from "./pics/Level1Support.png";
 import Level3Support from "./pics/Level2Support.png";
 import Level2Support from "./pics/Level3Support.png";
-
+import data1 from "./data1.json";
 //rgba(255, 0, 0, 1)
 
 const outercirclearr = [
@@ -35,26 +36,17 @@ const outermostcirclearr = [
 const anim = "grow 0.7s ease-out 0s 1 normal both";
 
 const Ui = () => {
-  const [clicked, setclicked] = useState(false);
   const [imageinitial, setimageinitial] = useState("Flash");
-  const [image, setimage] = useState(Batman);
   const [health, sethealth] = useState("5%");
   const [strength, setstrength] = useState("5%");
   const [defense, setdefense] = useState("5%");
   const [speed, setspeed] = useState("5%");
   const [combat, setcombat] = useState("5%");
-  const [intro, setintro] = useState("");
-  const [power, setpower] = useState("Martial Arts");
-  const [origin, setorigin] = useState("Gotham City");
-  const [alias, setalias] = useState("Bruce Wayne");
-  const [alias1, setalias1] = useState("");
-  const [name, setname] = useState("");
   const [animation, setanimation] = useState(false);
   const [ang, setang] = useState(45);
   const [prev, setprev] = useState(-1);
   const [arr, setarr] = useState(Array(75).fill(false));
   const [hoverarr, sethoverarr] = useState(Array(75).fill(false));
-  const [scroll, setscroll] = useState(0);
   const scrollref = useRef(null);
   const [delay, setdelay] = useState(0);
   const [height, setheight] = useState("200px");
@@ -74,15 +66,13 @@ const Ui = () => {
     "transparent",
   ]);
 
-  let [abilityfocus,setabilityfocus]=useState([true,false,false]);
-  // const attackimages=[Fist,DoubleFist,Sword];
-  // const defenseimages=[Shield,Level2Shield,Level3Shield];
+  let [abilityfocus, setabilityfocus] = useState([true, false, false]);
+  const [currentabilityfocus,setcurrentabilityfocus]=useState(0);
+  const [character,setcharacter]= useState('Batman');
+  const [image, setimage] = useState(Batman);
   const L1abilities = [Fist, Shield, Level1Support];
   const L2abilities = [DoubleFist, Level2Shield, Level2Support];
   const L3abilities = [Sword, Level3Shield, Level3Support];
-  const L1name = ["Batarang Attack", "Batsuit", "Detective Vision"];
-  const L2name = ["Stun Gun", "Fox's Gloves", "Heal Serum"];
-  const L3name = ["Knightmare", "Bulletproof", "EMP Grenade"];
   const contents = [
     <div
       className="statscontent"
@@ -206,64 +196,75 @@ const Ui = () => {
           <p className="navlabel">SUPPORT</p>
         </div>
       </div>
-      <div className="special1 special"  onClick={()=>focusonability(0)}>
-        <div className="outercircleability" style={{transform: abilityfocus[0]?'scale(1.15)':'scale(0)'}}></div>
+      <div className="special1 special" onClick={() => focusonability(0)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[0] ? "scale(1.15)" : "scale(0)" }}
+        ></div>
         <div className="circle">
           <img src={L1abilities[prevnav]} className="abilityimage"></img>
         </div>
-        
       </div>
 
-      <div className="special2 special"  onClick={()=>focusonability(1)}>
-        <div className="outercircleability" style={{transform: abilityfocus[1]?'scale(1.15)':'scale(0)'}}> </div>
+      <div className="special2 special" onClick={() => focusonability(1)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[1] ? "scale(1.15)" : "scale(0)" }}
+        >
+          {" "}
+        </div>
         <div className="circle">
           <img src={L2abilities[prevnav]} className="abilityimage"></img>
         </div>
-       
       </div>
 
-      <div className="special3 special"  onClick={()=>focusonability(2)}>
-        <div className="outercircleability" style={{transform: abilityfocus[2]?'scale(1.15)':'scale(0)'}}> </div>
+      <div className="special3 special" onClick={() => focusonability(2)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[2] ? "scale(1.15)" : "scale(0)" }}
+        >
+          {" "}
+        </div>
         <div className="circle">
           <img src={L3abilities[prevnav]} className="abilityimage"></img>
-       
         </div>
       </div>
-      <p className="ability1name abname">{L1name[prevnav]}</p>
-      <p className="ability2name abname">{L2name[prevnav]}</p>
-      <p className="ability3name abname">{L3name[prevnav]}</p>
+      <p className="ability1name abname">{data1[character]["abilitypanel"][prevnav][0]["abilityname"]}</p>
+      <p className="ability2name abname">{data1[character]["abilitypanel"][prevnav][1]["abilityname"]}</p>
+      <p className="ability3name abname">{data1[character]["abilitypanel"][prevnav][2]["abilityname"]}</p>
       <div className="abilitydescriptionbox">
         <div className="abilitydescription">
           <div className="abilitydescriptionname">
-            <p className="abilityname">Batarang Attack</p>
+            <p className="abilityname">{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityname"]}</p>
           </div>
           <div className="abilitydescriptionlevel">
             <div className="circle">
-              <p>Lvl 1</p>
+              <p>Lvl&nbsp;{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]}</p>
             </div>
           </div>
           <div className="abilitydescriptionother">
             <div className="abilitydescriptioninfo">
-              <p>Batman unleashes a rapid flurry of batarangs, each strike inflicting damage and disorienting his adversary, causing slowed reactions and reduced combat effectiveness.</p>
+              <p>{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityinfo"]}</p>
             </div>
             <div className="abilitydescriptionstats">
-            <div className="abilitydescriptionability">
-              <p>DAMAGE: 10%</p>
-            </div>
-            <div className="abilitydescriptionneed">
-              <p>XP Needed for Level Up: 10</p>
-            </div>
+              <div className="abilitydescriptionability">
+                <p>{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityspecial"][data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+              </div>
+              <div className="abilitydescriptionneed">
+                <p>XP needed for upgrade: {data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityupgradeneed"][data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>,
   ];
-  
-  function focusonability(n){
-    abilityfocus=Array(3).fill(false);
-     abilityfocus[n]=true;
-     setabilityfocus(abilityfocus);
+
+  function focusonability(n) {
+    abilityfocus = Array(3).fill(false);
+    abilityfocus[n] = true;
+    setcurrentabilityfocus(n);
+    setabilityfocus(abilityfocus);
   }
   function movenav(n) {
     if (prevnav != n) {
@@ -283,20 +284,7 @@ const Ui = () => {
       setcombat("50%");
     }, 200);
   });
-  useEffect(() => {
-    setTimeout(() => {
-      const interval = setInterval(() => {
-        setalias1((prevalias1) => {
-          if (prevalias1.length < alias.length)
-            return prevalias1 + alias[prevalias1.length];
-          else {
-            clearInterval(interval);
-            return prevalias1;
-          }
-        });
-      }, 100);
-    }, 500);
-  }, [delay]);
+ 
   function swapcolor(n) {
     if (n == 1) {
       if (bg1 == "rgba(65, 65, 66, 0.993)") {
@@ -386,20 +374,7 @@ const Ui = () => {
       setimage(a);
     }
 
-    setTimeout(() => {
-      setanimation(false);
-    }, 300);
-    const ob = data[b];
-    sethealth(ob["health"]);
-    setstrength(ob["strength"]);
-    setdefense(ob["defense"]);
-    setspeed(ob["speed"]);
-    setcombat(ob["combat"]);
-    setintro(ob["introtext"]);
-    setalias(ob["Alias"]);
-    setorigin(ob["origin"]);
-    setpower(ob["power"]);
-    setname(ob["name"]);
+  
   }
 
   function transformcard(index) {
@@ -512,7 +487,7 @@ const Ui = () => {
         <div className="description">
           <div className="namebox">
             <div className="Title">
-              <p className="name">The Batman</p>
+              <p className="name">{data1[character]["Name"]}</p>
               <div className="detbar">
                 <div className="rod">
                   <div className="alias"></div>
@@ -523,17 +498,17 @@ const Ui = () => {
               <div className="detarea">
                 <div className="aliasarea">
                   <p className="det-text-label">
-                    Alias:&nbsp;<span className="det-text">{alias}</span>
+                    Alias:&nbsp;<span className="det-text">{data1[character]["Alias"]}</span>
                   </p>
                 </div>
                 <div className="originarea">
                   <p className="det-text-label">
-                    Origin:&nbsp;<span className="det-text">{origin}</span>
+                    Origin:&nbsp;<span className="det-text">{data1[character]["Origin"]}</span>
                   </p>
                 </div>
                 <div className="powerarea">
                   <p className="det-text-label">
-                    Power:&nbsp;<span className="det-text">{power}</span>
+                    Power:&nbsp;<span className="det-text">{data1[character]["Power"]}</span>
                   </p>
                 </div>
               </div>
@@ -552,65 +527,25 @@ const Ui = () => {
           <div className="masterintrobox" style={{ height: height }}>
             <div className="introbox" ref={scrollref}>
               <p className="intro">
-                <strong>CONFIDENTIAL</strong>: CASE FILE - THE DARK GUARDIAN
+                <strong>CONFIDENTIAL</strong>: CASE FILE - {data1[character]["Casefile"]}
                 <br></br>
                 <br></br>
-                <strong>Subject Name</strong>: The Dark Guardian
+                <strong>Subject Name</strong>: {data1[character]["Casefile"]}
                 <br></br>
                 <br></br>
-                <strong>Real Identity:</strong> Bruce Wayne
+                <strong>Real Identity:</strong> {data1[character]["Alias"]}
                 <br></br>
                 <br></br>
-                <strong>Background:</strong> Bruce Wayne, known by his alias
-                "The Dark Guardian," is a vigilante operating in Gotham-like
-                city. His journey began with a personal tragedy: the loss of his
-                parents, Thomas and Martha Wayne, who were victims of a violent
-                crime. This event profoundly influenced Bruce, shaping his
-                future and his vow to fight crime.
+                <strong>Background:</strong> {data1[character]["Background"]}
                 <br></br>
                 <br></br>
-                <strong>Early Life and Education:</strong> Bruce grew up under
-                the guardianship of his family's loyal butler, Alfred. A gifted
-                child, he excelled in academics, martial arts, and investigative
-                techniques. After reaching adulthood, Bruce embarked on a global
-                journey, seeking training in various disciplines that would aid
-                his crusade against crime.
+                <strong>Early Life and Education:</strong> {data1[character]["Earlylife"]}
                 <br></br>
                 <br></br>
-                <strong>Return to His City: </strong>Upon returning, Bruce
-                assumed control of Wayne Enterprises, a leading corporation in
-                the city. Simultaneously, he began his nocturnal activities as
-                The Dark Guardian. His goal: to dismantle the criminal
-                underworld that plagued the city streets.
+                <strong>Modus Operandi:</strong>{data1[character]["ModusOperandi"]}
                 <br></br>
                 <br></br>
-                <strong>Modus Operandi:</strong> Operating primarily at night,
-                The Dark Guardian employs a combination of advanced technology,
-                physical prowess, and psychological warfare. He does not possess
-                superhuman powers but instead relies on his peak human strength,
-                intelligence, and a vast array of gadgets and vehicles.
-                <br></br>
-                <br></br>
-                <strong>Allies:</strong> <br></br>
-                Alfred Pennyworth: Lifelong family butler and closest confidant.
-                <br></br> Lucius Fox: Wayne Enterprises executive and developer
-                of much of The Dark Guardian's technology. Various Protégés:
-                Young individuals he has trained to aid in his mission, each
-                with their unique skills and codenames.
-                <br></br>
-                <br></br>
-                <strong>Notable Adversaries:</strong> <br></br>The Joker: A
-                chaotic criminal mastermind with a penchant for elaborate
-                schemes and a distinctive laugh.
-                <br></br>The Riddler: A brilliant but twisted intellect,
-                obsessed with puzzles and proving his superiority. Conclusion:
-                <br></br>
-                <br></br>
-                The Dark Guardian is a pivotal figure in the fight against crime
-                in his city. While his methods are often questioned, his impact
-                on the city's criminal landscape is undeniable. He remains a
-                symbol of fear for the criminal underworld and a controversial
-                figure of justice for the citizens.
+                {data1[character]["Conclusion"]}
               </p>
               <div className="pulldown" onClick={introincrease}>
                 <div

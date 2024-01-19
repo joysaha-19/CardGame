@@ -1,0 +1,261 @@
+{
+    "Batman":
+    {   "Name":"The Batman",
+        "Alias":"Wayne, Bruce",
+        "Origin":"Gotham City",
+        "Power":"Martial Arts",
+        "Casefile":"THE DARK GUARDIAN",
+        "Background":"Bruce Wayne, known by his alias The Dark Guardian is a vigilante operating in Gotham-like city. His journey began with a personal tragedy: the loss of his parents, Thomas and Martha Wayne, who were victims of a violent crime. This event profoundly influenced Bruce, shaping his future and his vow to fight crime.",
+        "Earlylife":"Bruce grew up under the guardianship of his family's loyal butler, Alfred. A gifted child, he excelled in academics, martial arts, and investigative techniques. After reaching adulthood, Bruce embarked on a global journey seeking training in various disciplines that would aid his crusade against crime.",
+        "ModusOperandi":"Operating primarily at night, The Dark Guardian employs a combination of advanced technology, physical prowess, and psychological warfare. He does not possess superhuman powers but instead relies on his peak human strength, intelligence, and a vast array of gadgets and vehicles.",
+        "Conclusion":" The Dark Guardian is a pivotal figure in the fight against crime in his city. While his methods are often questioned, his impact on the city's criminal landscape is undeniable. He remains a symbol of fear for the criminal underworld and a controversial figure of justice for the citizens.",
+        "abilitypanel":
+        [
+            [
+            {
+                "abilityname":"Batarang Attack",
+                "abilityinfo":"Batman unleashes a rapid flurry of batarangs, each strike inflicting damage and disorienting his adversary, causing slowed reactions and reduced combat effectiveness.",
+                "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
+                "abilityupgradeneed":[10 ,20, 30, 40],
+                "abilitycurrentlevel":1
+
+            },
+            {
+                "abilityname": "Stun Gun",
+                "abilityinfo": "Batman employs his high-voltage stun gun, temporarily incapacitating his foes with an electrifying jolt. This intense shock deals damage, stuns enemies, and disrupts their electronic gadgets, hindering their combat capabilities.",
+                "abilityspecial": ["DAMAGE: 40%", "DAMAGE: 45%", "DAMAGE: 50%", "DAMAGE: 55%"],
+                "abilityupgradeneed": [10, 20, 30, 40],
+                "abilitycurrentlevel":1
+
+            },
+            {
+                "abilityname": "Knightmare",
+                "abilityinfo": "Unleashing a fearsome display of combat prowess, Batman overwhelms enemies with a series of rapid, devastating strikes, leaving them disoriented and vulnerable.",
+                "abilityspecial": ["DAMAGE: 50%", "DAMAGE: 55%", "DAMAGE: 60%", "DAMAGE: 65%"],
+                "abilityupgradeneed": [10, 20, 30, 40],
+                "abilitycurrentlevel":1
+
+            }
+            
+                        
+                
+            ],
+            [
+                {
+                    "abilityname": "Batsuit",
+                    "abilityinfo": "The advanced Batsuit provides enhanced protection against physical and ballistic damage, increasing Batman's resilience in combat.",
+                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Fox's Gloves",
+                    "abilityinfo": "These specialized gloves, designed by Lucius Fox, enhance Batman's defensive capabilities against various threats.",
+                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Bulletproof",
+                    "abilityinfo": "An advanced armor upgrade makes Batman nearly impervious to ballistic attacks, significantly boosting his defense.",
+                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ],
+            [
+                {
+                    "abilityname": "Detective Vision",
+                    "abilityinfo": "Utilizing high-tech optics, Batman's Detective Vision allows him to identify and track enemies, even through walls and obstacles.",
+                    "abilityspecial": [],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Heal Serum",
+                    "abilityinfo": "A potent medical concoction developed by Batman, the Heal Serum rapidly accelerates healing, restoring his health during combat.",
+                    "abilityspecial": ["HEAL: 10%", "HEAL: 15%", "HEAL: 20%", "HEAL: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "EMP Grenade",
+                    "abilityinfo": "Batman's EMP Grenade temporarily disables enemy electronics, neutralizing electronic threats and giving him a tactical advantage.",
+                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ]
+            
+
+
+            
+        ]
+    },
+    "Flash": {
+        "Name": "The Flash",
+        "Alias": "Allen, Barry",
+        "Origin": "Central City",
+        "Power": "Super Speed",
+        "Casefile": "THE FASTEST MAN ALIVE",
+        "Background": "Barry Allen, known as The Fastest Man Alive, is a superhero operating in a city similar to Central City. Struck by lightning and doused with chemicals, Barry gained the power of superhuman speed. He uses his abilities to fight crime and protect the innocent.",
+        "Earlylife": "Barry Allen was an ordinary forensic scientist until the accident that gave him his powers. Always fascinated by mysteries, he uses his expertise in forensics along with his super speed to solve crimes.",
+        "ModusOperandi": "Flash's operations hinge on his incredible speed, allowing him to be almost everywhere at once. He relies on his fast reflexes, time travel ability, and speed-induced constructs to outmaneuver opponents.",
+        "Conclusion": "The Flash is a beacon of hope in his city, using his powers to battle threats both mundane and extraordinary. His presence is a constant reminder that there are forces of good moving faster than the eye can see.",
+        "abilitypanel": [
+            [
+                {
+                    "abilityname": "Speed Punch",
+                    "abilityinfo": "Flash delivers a series of ultra-fast punches, each dealing significant damage due to his incredible speed.",
+                    "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Tornado Spin",
+                    "abilityinfo": "Flash creates a mini-tornado by spinning at high speed, throwing enemies off balance and causing area damage.",
+                    "abilityspecial": ["DAMAGE: 20%", "DAMAGE: 25%", "DAMAGE: 30%", "DAMAGE: 35%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Lightning Bolt",
+                    "abilityinfo": "Flash channels the Speed Force to throw bolts of lightning, causing high damage to his enemies.",
+                    "abilityspecial": ["DAMAGE: 30%", "DAMAGE: 35%", "DAMAGE: 40%", "DAMAGE: 45%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ],
+            [
+                {
+                    "abilityname": "Speed Dodge",
+                    "abilityinfo": "Flash uses his super speed to dodge attacks, reducing incoming damage.",
+                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Afterimage",
+                    "abilityinfo": "Flash moves so quickly he creates afterimages, confusing enemies and making it harder for them to land an attack.",
+                    "abilityspecial": ["DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Vibration Shield",
+                    "abilityinfo": "Flash vibrates his molecules to create a shield, deflecting physical and energy attacks.",
+                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ],
+            [
+                {
+                    "abilityname": "Time Warp",
+                    "abilityinfo": "Flash manipulates the speed force to alter time, allowing allies to act faster or slowing down enemies.",
+                    "abilityspecial": ["DURATION: 3s", "DURATION: 5s", "DURATION: 7s", "DURATION: 10s"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Quick Rescue",
+                    "abilityinfo": "Flash can provide rapid healing to teammates, using his super speed to quickly administer aid.",
+                    "abilityspecial": ["HEAL: 10%", "HEAL: 15%", "HEAL: 20%", "HEAL: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Speed Heal",
+                    "abilityinfo": "Flash accelerates his and his allies' healing processes, rapidly recovering health.",
+                    "abilityspecial": ["HEAL: 15%", "HEAL: 20%", "HEAL: 25%", "HEAL: 30%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ]
+        ]
+    },
+
+
+    "Darth_Vader": {
+        "Name": "Darth Vader",
+        "Alias": "Skywalker, Anakin",
+        "Origin": "Tatooine",
+        "Power": "The Force",
+        "Casefile": "THE SITH LORD",
+        "Background": "Darth Vader, once known as Anakin Skywalker, is a central figure in the Galactic Empire. Born on the desert planet of Tatooine, he was discovered to be strong with the Force and trained as a Jedi Knight. His exceptional skills in the Force and combat were overshadowed by his internal struggles and eventual seduction by the Dark Side of the Force. This transformation marked one of the most tragic falls from grace in the history of the Galaxy.",
+        "Earlylife": "Anakin Skywalker was a slave on Tatooine before being discovered by Jedi Master Qui-Gon Jinn. He showed unprecedented potential in the Force and was believed to be the Chosen One to bring balance. However, his journey was marred by emotional turmoil, a forbidden love affair, and a prophetic fear of loss, all contributing to his eventual turn to the Dark Side.",
+        "ModusOperandi": "As Darth Vader, he became the feared enforcer of the Galactic Empire. Vader wielded immense power with the Force, was a master of lightsaber combat, and used fear and intimidation to maintain control. He was pivotal in hunting down the Jedi and enforcing Emperor Palpatine's will across the galaxy.",
+        "Conclusion": "Vader's story is one of power, tragedy, and redemption. His life was a constant battle between his former identity as Anakin and his persona as Vader. Ultimately, his story is a poignant example of the complex interplay between good and evil, and the redemptive power of love and sacrifice.",
+        "abilitypanel": [
+            [
+                {
+                    "abilityname": "Force Choke",
+                    "abilityinfo": "Vader uses the Force to choke his enemies from a distance, incapacitating them with his mind.",
+                    "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Lightsaber Throw",
+                    "abilityinfo": "Vader throws his lightsaber like a boomerang, slicing through enemies before it returns to his hand.",
+                    "abilityspecial": ["DAMAGE: 20%", "DAMAGE: 25%", "DAMAGE: 30%", "DAMAGE: 35%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Dark Side Lightning",
+                    "abilityinfo": "Vader unleashes a storm of dark side energy, electrocuting enemies in a wide area.",
+                    "abilityspecial": ["DAMAGE: 30%", "DAMAGE: 35%", "DAMAGE: 40%", "DAMAGE: 45%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ],
+            [
+                {
+                    "abilityname": "Force Shield",
+                    "abilityinfo": "Vader creates a protective barrier using the Force, deflecting attacks and projectiles.",
+                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Sith Armor",
+                    "abilityinfo": "Vader's advanced armor provides enhanced resilience against physical and energy attacks.",
+                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Dark Resilience",
+                    "abilityinfo": "Harnessing the dark side of the Force, Vader increases his ability to resist and recover from damage.",
+                    "abilityspecial": ["DEFENSE: 30%", "DEFENSE: 35%", "DEFENSE: 40%", "DEFENSE: 45%"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ],
+            [
+                {
+                    "abilityname": "Force Persuasion",
+                    "abilityinfo": "Vader uses the Force to manipulate the minds of others, bending them to his will.",
+                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Sith Command",
+                    "abilityinfo": "Vader commands his troops with tactical precision, enhancing their combat effectiveness.",
+                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                },
+                {
+                    "abilityname": "Terrifying Presence",
+                    "abilityinfo": "Vader's mere presence instills fear in his enemies, demoralizing them and reducing their combat efficiency.",
+                    "abilityspecial": ["DURATION: 10s", "DURATION: 15s", "DURATION: 20s", "DURATION: 25s"],
+                    "abilityupgradeneed": [10, 20, 30, 40],
+                    "abilitycurrentlevel": 1
+                }
+            ]
+        ]
+    }
+}
