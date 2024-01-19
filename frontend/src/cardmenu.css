@@ -336,21 +336,23 @@ p{
   flex-shrink: 0;
 } */
 .Cardarea {
-  height: 86px;
-  width: 86px;
+  height: 85px;
+  width: 85px;
 
   justify-content: center;
   align-items: center;
   display: flex;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  
 }
 .Cardeg {
   height: 80px;
   width: 80px;
-  background-color: rgb(8, 8, 54);
+  background-color: rgb(21, 211, 221);
   transition: transform 0.3s ease;
   flex-shrink: 1;
+  opacity: 1;
 }
 /* .Cardtrail{
      height: 195px;
@@ -1199,4 +1201,13 @@ right:0.2%;
   100% {
     opacity: 1;
   }
+}
+
+
+
+.symbol{
+  object-fit: contain;
+  height: 80px;
+  width: 80px;
+  opacity: 1;
 }

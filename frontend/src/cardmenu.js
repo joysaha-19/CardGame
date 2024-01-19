@@ -20,6 +20,7 @@ import Level1Support from "./pics/Level1Support.png";
 import Level3Support from "./pics/Level2Support.png";
 import Level2Support from "./pics/Level3Support.png";
 import data1 from "./data1.json";
+import batsymbol from './pics/cardpics/batman.png'
 //rgba(255, 0, 0, 1)
 
 const outercirclearr = [
@@ -587,7 +588,7 @@ const Ui = () => {
                     className="Cardarea"
                     style={{
                       background: value
-                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 25%, white 50%, transparent 75%, transparent 100%)`
+                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 5%, red 50%, transparent 95%, transparent 100%)`
                         : "none",
                       transform: value
                         ? "skewX(-20deg) scale(1.25)"
@@ -607,7 +608,7 @@ const Ui = () => {
                       className="Cardeg"
                       onClick={() => transformcard(index)}
                     >
-                      {/* <img className="Cardeg 1"> </img> */}
+<img className="symbol" src={batsymbol} />
                     </div>
                   </div>
                 </>
