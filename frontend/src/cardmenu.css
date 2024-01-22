@@ -26,7 +26,6 @@ p{
   height: 100vh;
   width: 100vw;
   background-position: bottom;
-  backdrop-filter: blur(2px);
   background-size: cover;
   position: relative;
   
@@ -48,11 +47,10 @@ p{
   width: 100%;
   z-index: -3;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 20px;
   object-fit: cover;
-  animation: moveimage 0.2s ease 0s 1 normal forwards;
-  filter: blur(1px);
+  
 }
 .CollectionContainer {
   position: absolute;
@@ -442,8 +440,8 @@ p{
 /*********ANIMATIONS*******/
 @keyframes moveimage {
   0% {
-    top: 0%;
-    left: 30%;
+    top: 50%;
+    left: 0%;
     opacity: 0;
   }
 

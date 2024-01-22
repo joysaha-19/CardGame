@@ -122,7 +122,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/batman.png",
-      "backgroundlocation": "./pics/bgs/batman.webp"
+      "backgroundlocation": "./pics/bgs/batman.png"
     },
     {
       "Name": "The Flash",
@@ -641,7 +641,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/thor.png",
-      "backgroundlocation": "./pics/bgs/thor.webp"
+      "backgroundlocation": "./pics/bgs/thor.jpg"
     },
     {
       "Name": "Black Panther",
@@ -770,7 +770,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/blackpanther.png",
-      "backgroundlocation": "./pics/bgs/blackpanther.webp"
+      "backgroundlocation": "./pics/bgs/blackpanther.jpg"
     },
     {
       "Name": "Superman",
@@ -899,7 +899,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/superman.png",
-      "backgroundlocation": "./pics/bgs/superman.webp"
+      "backgroundlocation": "./pics/bgs/superman.jpg"
     },
     {
       "Name": "Green Lantern",
@@ -1157,7 +1157,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/hulk.png",
-      "backgroundlocation": "./pics/bgs/hulk.webp"
+      "backgroundlocation": "./pics/bgs/hulk.jpg"
     },
     {
       "Name": "The Punisher",
@@ -1286,7 +1286,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/punisher.png",
-      "backgroundlocation": "./pics/bgs/punisher.webp"
+      "backgroundlocation": "./pics/bgs/punisher.jpg"
     }
   ]
 }

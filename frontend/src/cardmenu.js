@@ -14,6 +14,17 @@ import Level2Support from "./pics/Level3Support.png";
 import data1 from "./data1.json";
 import batsymbol from "./pics/cardpics/batman.png"
 //rgba(255, 0, 0, 1)
+import Batman from './pics/bgs/batman.png';
+import Flash from './pics/bgs/Flash.webp';
+import Superman from './pics/bgs/superman.jpg';
+import DarthVader from './pics/bgs/darthvader.webp';
+import Spiderman from './pics/bgs/spiderman.jpg';
+import Thor from './pics/bgs/thor.jpg';
+import BlackPanther from './pics/bgs/blackpanther.jpg';
+import GreenLantern from './pics/bgs/greenlantern.webp';
+import Hulk from './pics/bgs/hulk.webp';
+import Punisher from './pics/bgs/punisher.webp';
+
 
 const outercirclearr = [
   "attacker outer-circle",
@@ -30,7 +41,7 @@ const anim = "grow 0.7s ease-out 0s 1 normal both";
 
 const Ui = () => {
   const [characterindex,setcharacterindex]= useState(0);
-
+  const imageref=useRef();
   const [image, setimage] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
   const [imageinitial, setimageinitial] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
   const [health, sethealth] = useState("5%");
@@ -253,6 +264,15 @@ const Ui = () => {
     </div>,
   ];
 
+  function preloadImages(urls) {
+    urls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+  }
+  
+  preloadImages(['image1.jpg', 'image2.jpg', 'image3.jpg']);
+  
   function focusonability(n) {
     abilityfocus = Array(3).fill(false);
     abilityfocus[n] = true;
@@ -359,26 +379,58 @@ const Ui = () => {
     sethoverarr(hoverarr);
   }
 
-  function imagechange(a) {
-    if (a != image) {
-      setimageinitial(image);
-      setimage(a);
-      setanimation(true);
-      setTimeout(()=>{
-        setanimation(false);
-      },200);
-    }
+  // function imagechange(a) {
+  //   if (a != image) {
+  //     setimageinitial(image);
+  //     setimage(a);
+  //     setanimation(true);
+  //     setTimeout(()=>{
+  //       setanimation(false);
+  //     },200);
+  //   }
 
   
-  }
+  // }
+  function imageanimation(a){
+    setimage(a);
+      setimageinitial(image);
 
+    let x=0;
+    let y=0;
+    let op=0;
+    function move(){
+    if(imageref.current)
+    {
+
+      imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
+      
+      x=x+2;
+      y=y+2;
+      if(x<20&&y<20)
+      requestAnimationFrame(move);
+    else
+    cancelAnimationFrame(move);
+
+
+    }
+    
+    
+  }
+  requestAnimationFrame(move);
+  }
   function transformcard(index) {
     if (prev != -1) arr[prev] = false;
     arr[index] = true;
     setarr(arr);
     setprev(index);
-    imagechange(data1["Characters"][index]["backgroundlocation"]);
     setcharacterindex(index);
+   
+   
+     
+      imageanimation(data1["Characters"][index]["backgroundlocation"]);
+
+    
+    
   }
 
   const [anime, setanime] = useState(false);
@@ -426,19 +478,18 @@ const Ui = () => {
   return (
     <div
       className="parentcontainer_proj1"
-      style={{ backgroundImage: `url(${image})` }}
     >
       <div>
         <img className="bgi" src={imageinitial}></img>
         <img
           className="bg"
-          src={image}
-          style={{
-            animation: animation
-              ? "moveimage 0.2s ease 0s 1 normal forwards"
-              : "none",
-          }}
-        ></img>
+          src={data1["Characters"][characterindex]["backgroundlocation"]}
+          // style={{
+          //   animation: animation
+          //     ? "moveimage 0.2s ease 0s 1 normal both"
+          //     : "none",
+          // }}
+        ref={imageref} loading="eager"></img>
         
         <div className="description">
           <div className="namebox">
