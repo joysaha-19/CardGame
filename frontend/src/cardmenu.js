@@ -2,14 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import "./cardmenu.css";
 import "./borderproj.css";
-import Batman from "./pics/bgs/batman.webp";
-import Flash from "./pics/bgs/Flash.webp";
-import Ironman from "./pics/bgs/ironman.jpg";
-import Punisher from "./pics/bgs/punisher2.jpg";
-import Vader from "./pics/bgs/Vader.jpg";
-import data from "./data.json";
-import Joker from "./pics/bgs/joker.webp";
-import Superman from "./pics/bgs/superman.webp";
 import Fist from "./pics/fist.png";
 import DoubleFist from "./pics/2fists.png";
 import Sword from "./pics/level3sword.png";
@@ -20,7 +12,7 @@ import Level1Support from "./pics/Level1Support.png";
 import Level3Support from "./pics/Level2Support.png";
 import Level2Support from "./pics/Level3Support.png";
 import data1 from "./data1.json";
-import batsymbol from './pics/cardpics/batman.png'
+import batsymbol from "./pics/cardpics/batman.png"
 //rgba(255, 0, 0, 1)
 
 const outercirclearr = [
@@ -37,7 +29,10 @@ const outermostcirclearr = [
 const anim = "grow 0.7s ease-out 0s 1 normal both";
 
 const Ui = () => {
-  const [imageinitial, setimageinitial] = useState("Flash");
+  const [characterindex,setcharacterindex]= useState(0);
+
+  const [image, setimage] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
+  const [imageinitial, setimageinitial] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
   const [health, sethealth] = useState("5%");
   const [strength, setstrength] = useState("5%");
   const [defense, setdefense] = useState("5%");
@@ -46,10 +41,9 @@ const Ui = () => {
   const [animation, setanimation] = useState(false);
   const [ang, setang] = useState(45);
   const [prev, setprev] = useState(-1);
-  const [arr, setarr] = useState(Array(75).fill(false));
-  const [hoverarr, sethoverarr] = useState(Array(75).fill(false));
+  const [arr, setarr] = useState(Array(data1["Characters"].length).fill(false));
+  const [hoverarr, sethoverarr] = useState(Array(data1["Characters"].length).fill(false));
   const scrollref = useRef(null);
-  const [delay, setdelay] = useState(0);
   const [height, setheight] = useState("200px");
   const [arrow, setarrow] = useState(0);
   const [bg1, setbg1] = useState("rgba(40, 150, 174, 0.793)");
@@ -69,8 +63,6 @@ const Ui = () => {
 
   let [abilityfocus, setabilityfocus] = useState([true, false, false]);
   const [currentabilityfocus,setcurrentabilityfocus]=useState(0);
-  const [character,setcharacter]= useState('Batman');
-  const [image, setimage] = useState(Batman);
   const L1abilities = [Fist, Shield, Level1Support];
   const L2abilities = [DoubleFist, Level2Shield, Level2Support];
   const L3abilities = [Sword, Level3Shield, Level3Support];
@@ -230,29 +222,29 @@ const Ui = () => {
           <img src={L3abilities[prevnav]} className="abilityimage"></img>
         </div>
       </div>
-      <p className="ability1name abname">{data1[character]["abilitypanel"][prevnav][0]["abilityname"]}</p>
-      <p className="ability2name abname">{data1[character]["abilitypanel"][prevnav][1]["abilityname"]}</p>
-      <p className="ability3name abname">{data1[character]["abilitypanel"][prevnav][2]["abilityname"]}</p>
+      <p className="ability1name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][0]["abilityname"]}</p>
+      <p className="ability2name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][1]["abilityname"]}</p>
+      <p className="ability3name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][2]["abilityname"]}</p>
       <div className="abilitydescriptionbox">
         <div className="abilitydescription">
           <div className="abilitydescriptionname">
-            <p className="abilityname">{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityname"]}</p>
+            <p className="abilityname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityname"]}</p>
           </div>
           <div className="abilitydescriptionlevel">
             <div className="circle">
-              <p>Lvl&nbsp;{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]}</p>
+              <p>Lvl&nbsp;{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]}</p>
             </div>
           </div>
           <div className="abilitydescriptionother">
             <div className="abilitydescriptioninfo">
-              <p>{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityinfo"]}</p>
+              <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityinfo"]}</p>
             </div>
             <div className="abilitydescriptionstats">
               <div className="abilitydescriptionability">
-                <p>{data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityspecial"][data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+                <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityspecial"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
               </div>
               <div className="abilitydescriptionneed">
-                <p>XP needed for upgrade: {data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilityupgradeneed"][data1[character]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+                <p>XP needed for upgrade: {data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityupgradeneed"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
               </div>
             </div>
           </div>
@@ -367,12 +359,14 @@ const Ui = () => {
     sethoverarr(hoverarr);
   }
 
-  function hover(n, a, b) {
+  function imagechange(a) {
     if (a != image) {
       setimageinitial(image);
-
-      setanimation(true);
       setimage(a);
+      setanimation(true);
+      setTimeout(()=>{
+        setanimation(false);
+      },200);
     }
 
   
@@ -383,6 +377,8 @@ const Ui = () => {
     arr[index] = true;
     setarr(arr);
     setprev(index);
+    imagechange(data1["Characters"][index]["backgroundlocation"]);
+    setcharacterindex(index);
   }
 
   const [anime, setanime] = useState(false);
@@ -439,56 +435,15 @@ const Ui = () => {
           src={image}
           style={{
             animation: animation
-              ? "moveimage 0.3s ease 0s 1 normal forwards"
+              ? "moveimage 0.2s ease 0s 1 normal forwards"
               : "none",
           }}
         ></img>
-        <div className="CollectionContainer">
-          <div className="Collection1">
-            <div
-              className="_1 Card"
-              onClick={() => hover(0, Punisher, "punisher")}
-            >
-              <div className="inmatter">
-                <div className="image"></div>
-              </div>
-              {/* <p className="Number">1</p> */}
-            </div>
-
-            <div
-              className="_2 Card"
-              onClick={() => hover(1, Ironman, "ironman")}
-            >
-              <div className="inmatter">
-                <div className="image"></div>
-              </div>
-              {/* <p  className="Number">2</p> */}
-            </div>
-            <div className="_3 Card" onClick={() => hover(2, Batman, "batman")}>
-              <div className="inmatter">
-                <div className="image"></div>
-                <div className="intro"></div>
-              </div>
-              {/* <p  className="Number">3</p> */}
-            </div>
-            <div className="_4 Card" onClick={() => hover(3, Flash, "flash")}>
-              <div className="inmatter">
-                <div className="image">
-                  {/* <div className="Name">
-         <p className="halfup">THE FLASH </p>
-         <p className="full">THE FLASH </p>
-         <p className="fulldown">THE FLASH</p>
-      </div> */}
-                </div>
-              </div>
-              {/* <p  className="Number">4</p> */}
-            </div>
-          </div>
-        </div>
+        
         <div className="description">
           <div className="namebox">
             <div className="Title">
-              <p className="name">{data1[character]["Name"]}</p>
+              <p className="name">{data1["Characters"][characterindex]["Name"]}</p>
               <div className="detbar">
                 <div className="rod">
                   <div className="alias"></div>
@@ -499,17 +454,17 @@ const Ui = () => {
               <div className="detarea">
                 <div className="aliasarea">
                   <p className="det-text-label">
-                    Alias:&nbsp;<span className="det-text">{data1[character]["Alias"]}</span>
+                    Alias:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Alias"]}</span>
                   </p>
                 </div>
                 <div className="originarea">
                   <p className="det-text-label">
-                    Origin:&nbsp;<span className="det-text">{data1[character]["Origin"]}</span>
+                    Origin:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Origin"]}</span>
                   </p>
                 </div>
                 <div className="powerarea">
                   <p className="det-text-label">
-                    Power:&nbsp;<span className="det-text">{data1[character]["Power"]}</span>
+                    Power:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Power"]}</span>
                   </p>
                 </div>
               </div>
@@ -528,25 +483,25 @@ const Ui = () => {
           <div className="masterintrobox" style={{ height: height }}>
             <div className="introbox" ref={scrollref}>
               <p className="intro">
-                <strong>CONFIDENTIAL</strong>: CASE FILE - {data1[character]["Casefile"]}
+                <strong>CONFIDENTIAL</strong>: CASE FILE - {data1["Characters"][characterindex]["Casefile"]}
                 <br></br>
                 <br></br>
-                <strong>Subject Name</strong>: {data1[character]["Casefile"]}
+                <strong>Subject Name</strong>: {data1["Characters"][characterindex]["Casefile"]}
                 <br></br>
                 <br></br>
-                <strong>Real Identity:</strong> {data1[character]["Alias"]}
+                <strong>Real Identity:</strong> {data1["Characters"][characterindex]["Alias"]}
                 <br></br>
                 <br></br>
-                <strong>Background:</strong> {data1[character]["Background"]}
+                <strong>Background:</strong> {data1["Characters"][characterindex]["Background"]}
                 <br></br>
                 <br></br>
-                <strong>Early Life and Education:</strong> {data1[character]["Earlylife"]}
+                <strong>Early Life and Education:</strong> {data1["Characters"][characterindex]["Earlylife"]}
                 <br></br>
                 <br></br>
-                <strong>Modus Operandi:</strong>{data1[character]["ModusOperandi"]}
+                <strong>Modus Operandi:</strong>{data1["Characters"][characterindex]["ModusOperandi"]}
                 <br></br>
                 <br></br>
-                {data1[character]["Conclusion"]}
+                {data1["Characters"][characterindex]["Conclusion"]}
               </p>
               <div className="pulldown" onClick={introincrease}>
                 <div
@@ -563,7 +518,7 @@ const Ui = () => {
                 style={{ backgroundColor: bg1 }}
                 onClick={() => swapcolor(1)}
               >
-                <p>STATS</p>
+                <p style={{transform:'  transform:skewX(20deg)'}}>STATS</p>
               </div>
             </div>
             <div className="abilities">
@@ -572,7 +527,7 @@ const Ui = () => {
                 style={{ backgroundColor: bg2 }}
                 onClick={() => swapcolor(2)}
               >
-                <p>ABILITIES</p>
+                <p style={{transform:'  transform:skewX(20deg)'}}>ABILITIES</p>
               </div>
             </div>
             {contents[numcontent]}
@@ -591,10 +546,10 @@ const Ui = () => {
                         ? `linear-gradient(${ang}deg, transparent 0%, transparent 5%, red 50%, transparent 95%, transparent 100%)`
                         : "none",
                       transform: value
-                        ? "skewX(-20deg) scale(1.25)"
+                        ? "skewX(0deg) scale(1.25)"
                         : hoverarr[index]
-                        ? "skewX(-20deg) scale(1.2)"
-                        : "skewX(-20deg)",
+                        ? "skewX(0deg) scale(1.2)"
+                        : "skewX(0deg)",
                       opacity: value || hoverarr[index] ? "1" : "0.5",
                     }}
                     onMouseEnter={() => {
@@ -608,12 +563,13 @@ const Ui = () => {
                       className="Cardeg"
                       onClick={() => transformcard(index)}
                     >
-<img className="symbol" src={batsymbol} />
+<img className="symbol" src={data1["Characters"][index]["imagelocation"]} />
                     </div>
                   </div>
                 </>
               );
             })}
+             <div className="end"></div>
           </div>
         </div>
       </div>

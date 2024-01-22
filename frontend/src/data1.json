@@ -1,261 +1,1292 @@
 {
-    "Batman":
-    {   "Name":"The Batman",
-        "Alias":"Wayne, Bruce",
-        "Origin":"Gotham City",
-        "Power":"Martial Arts",
-        "Casefile":"THE DARK GUARDIAN",
-        "Background":"Bruce Wayne, known by his alias The Dark Guardian is a vigilante operating in Gotham-like city. His journey began with a personal tragedy: the loss of his parents, Thomas and Martha Wayne, who were victims of a violent crime. This event profoundly influenced Bruce, shaping his future and his vow to fight crime.",
-        "Earlylife":"Bruce grew up under the guardianship of his family's loyal butler, Alfred. A gifted child, he excelled in academics, martial arts, and investigative techniques. After reaching adulthood, Bruce embarked on a global journey seeking training in various disciplines that would aid his crusade against crime.",
-        "ModusOperandi":"Operating primarily at night, The Dark Guardian employs a combination of advanced technology, physical prowess, and psychological warfare. He does not possess superhuman powers but instead relies on his peak human strength, intelligence, and a vast array of gadgets and vehicles.",
-        "Conclusion":" The Dark Guardian is a pivotal figure in the fight against crime in his city. While his methods are often questioned, his impact on the city's criminal landscape is undeniable. He remains a symbol of fear for the criminal underworld and a controversial figure of justice for the citizens.",
-        "abilitypanel":
+  "Characters": [
+    {
+      "Name": "The Batman",
+      "Alias": "Wayne, Bruce",
+      "Origin": "Gotham City",
+      "Power": "Martial Arts",
+      "Casefile": "THE DARK GUARDIAN",
+      "Background": "Bruce Wayne, known by his alias The Dark Guardian is a vigilante operating in Gotham-like city. His journey began with a personal tragedy: the loss of his parents, Thomas and Martha Wayne, who were victims of a violent crime. This event profoundly influenced Bruce, shaping his future and his vow to fight crime.",
+      "Earlylife": "Bruce grew up under the guardianship of his family's loyal butler, Alfred. A gifted child, he excelled in academics, martial arts, and investigative techniques. After reaching adulthood, Bruce embarked on a global journey seeking training in various disciplines that would aid his crusade against crime.",
+      "ModusOperandi": "Operating primarily at night, The Dark Guardian employs a combination of advanced technology, physical prowess, and psychological warfare. He does not possess superhuman powers but instead relies on his peak human strength, intelligence, and a vast array of gadgets and vehicles.",
+      "Conclusion": " The Dark Guardian is a pivotal figure in the fight against crime in his city. While his methods are often questioned, his impact on the city's criminal landscape is undeniable. He remains a symbol of fear for the criminal underworld and a controversial figure of justice for the citizens.",
+      "abilitypanel": [
         [
-            [
-            {
-                "abilityname":"Batarang Attack",
-                "abilityinfo":"Batman unleashes a rapid flurry of batarangs, each strike inflicting damage and disorienting his adversary, causing slowed reactions and reduced combat effectiveness.",
-                "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
-                "abilityupgradeneed":[10 ,20, 30, 40],
-                "abilitycurrentlevel":1
-
-            },
-            {
-                "abilityname": "Stun Gun",
-                "abilityinfo": "Batman employs his high-voltage stun gun, temporarily incapacitating his foes with an electrifying jolt. This intense shock deals damage, stuns enemies, and disrupts their electronic gadgets, hindering their combat capabilities.",
-                "abilityspecial": ["DAMAGE: 40%", "DAMAGE: 45%", "DAMAGE: 50%", "DAMAGE: 55%"],
-                "abilityupgradeneed": [10, 20, 30, 40],
-                "abilitycurrentlevel":1
-
-            },
-            {
-                "abilityname": "Knightmare",
-                "abilityinfo": "Unleashing a fearsome display of combat prowess, Batman overwhelms enemies with a series of rapid, devastating strikes, leaving them disoriented and vulnerable.",
-                "abilityspecial": ["DAMAGE: 50%", "DAMAGE: 55%", "DAMAGE: 60%", "DAMAGE: 65%"],
-                "abilityupgradeneed": [10, 20, 30, 40],
-                "abilitycurrentlevel":1
-
-            }
-            
-                        
-                
+          {
+            "abilityname": "Batarang Attack",
+            "abilityinfo": "Batman unleashes a rapid flurry of batarangs, each strike inflicting damage and disorienting his adversary, causing slowed reactions and reduced combat effectiveness.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
             ],
-            [
-                {
-                    "abilityname": "Batsuit",
-                    "abilityinfo": "The advanced Batsuit provides enhanced protection against physical and ballistic damage, increasing Batman's resilience in combat.",
-                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Fox's Gloves",
-                    "abilityinfo": "These specialized gloves, designed by Lucius Fox, enhance Batman's defensive capabilities against various threats.",
-                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Bulletproof",
-                    "abilityinfo": "An advanced armor upgrade makes Batman nearly impervious to ballistic attacks, significantly boosting his defense.",
-                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Stun Gun",
+            "abilityinfo": "Batman employs his high-voltage stun gun, temporarily incapacitating his foes with an electrifying jolt. This intense shock deals damage, stuns enemies, and disrupts their electronic gadgets, hindering their combat capabilities.",
+            "abilityspecial": [
+              "DAMAGE: 40%",
+              "DAMAGE: 45%",
+              "DAMAGE: 50%",
+              "DAMAGE: 55%"
             ],
-            [
-                {
-                    "abilityname": "Detective Vision",
-                    "abilityinfo": "Utilizing high-tech optics, Batman's Detective Vision allows him to identify and track enemies, even through walls and obstacles.",
-                    "abilityspecial": [],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Heal Serum",
-                    "abilityinfo": "A potent medical concoction developed by Batman, the Heal Serum rapidly accelerates healing, restoring his health during combat.",
-                    "abilityspecial": ["HEAL: 10%", "HEAL: 15%", "HEAL: 20%", "HEAL: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "EMP Grenade",
-                    "abilityinfo": "Batman's EMP Grenade temporarily disables enemy electronics, neutralizing electronic threats and giving him a tactical advantage.",
-                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
-            ]
-            
-
-
-            
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Knightmare",
+            "abilityinfo": "Unleashing a fearsome display of combat prowess, Batman overwhelms enemies with a series of rapid, devastating strikes, leaving them disoriented and vulnerable.",
+            "abilityspecial": [
+              "DAMAGE: 50%",
+              "DAMAGE: 55%",
+              "DAMAGE: 60%",
+              "DAMAGE: 65%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Batsuit",
+            "abilityinfo": "The advanced Batsuit provides enhanced protection against physical and ballistic damage, increasing Batman's resilience in combat.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Fox's Gloves",
+            "abilityinfo": "These specialized gloves, designed by Lucius Fox, enhance Batman's defensive capabilities against various threats.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Bulletproof",
+            "abilityinfo": "An advanced armor upgrade makes Batman nearly impervious to ballistic attacks, significantly boosting his defense.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Detective Vision",
+            "abilityinfo": "Utilizing high-tech optics, Batman's Detective Vision allows him to identify and track enemies, even through walls and obstacles.",
+            "abilityspecial": [],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Heal Serum",
+            "abilityinfo": "A potent medical concoction developed by Batman, the Heal Serum rapidly accelerates healing, restoring his health during combat.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "EMP Grenade",
+            "abilityinfo": "Batman's EMP Grenade temporarily disables enemy electronics, neutralizing electronic threats and giving him a tactical advantage.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
         ]
+      ],
+      "imagelocation": "./pics/cardpics/batman.png",
+      "backgroundlocation": "./pics/bgs/batman.webp"
     },
-    "Flash": {
-        "Name": "The Flash",
-        "Alias": "Allen, Barry",
-        "Origin": "Central City",
-        "Power": "Super Speed",
-        "Casefile": "THE FASTEST MAN ALIVE",
-        "Background": "Barry Allen, known as The Fastest Man Alive, is a superhero operating in a city similar to Central City. Struck by lightning and doused with chemicals, Barry gained the power of superhuman speed. He uses his abilities to fight crime and protect the innocent.",
-        "Earlylife": "Barry Allen was an ordinary forensic scientist until the accident that gave him his powers. Always fascinated by mysteries, he uses his expertise in forensics along with his super speed to solve crimes.",
-        "ModusOperandi": "Flash's operations hinge on his incredible speed, allowing him to be almost everywhere at once. He relies on his fast reflexes, time travel ability, and speed-induced constructs to outmaneuver opponents.",
-        "Conclusion": "The Flash is a beacon of hope in his city, using his powers to battle threats both mundane and extraordinary. His presence is a constant reminder that there are forces of good moving faster than the eye can see.",
-        "abilitypanel": [
-            [
-                {
-                    "abilityname": "Speed Punch",
-                    "abilityinfo": "Flash delivers a series of ultra-fast punches, each dealing significant damage due to his incredible speed.",
-                    "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Tornado Spin",
-                    "abilityinfo": "Flash creates a mini-tornado by spinning at high speed, throwing enemies off balance and causing area damage.",
-                    "abilityspecial": ["DAMAGE: 20%", "DAMAGE: 25%", "DAMAGE: 30%", "DAMAGE: 35%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Lightning Bolt",
-                    "abilityinfo": "Flash channels the Speed Force to throw bolts of lightning, causing high damage to his enemies.",
-                    "abilityspecial": ["DAMAGE: 30%", "DAMAGE: 35%", "DAMAGE: 40%", "DAMAGE: 45%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
+    {
+      "Name": "The Flash",
+      "Alias": "Allen, Barry",
+      "Origin": "Central City",
+      "Power": "Super Speed",
+      "Casefile": "THE FASTEST MAN ALIVE",
+      "Background": "Barry Allen, known as The Fastest Man Alive, is a superhero operating in a city similar to Central City. Struck by lightning and doused with chemicals, Barry gained the power of superhuman speed. He uses his abilities to fight crime and protect the innocent.",
+      "Earlylife": "Barry Allen was an ordinary forensic scientist until the accident that gave him his powers. Always fascinated by mysteries, he uses his expertise in forensics along with his super speed to solve crimes.",
+      "ModusOperandi": "Flash's operations hinge on his incredible speed, allowing him to be almost everywhere at once. He relies on his fast reflexes, time travel ability, and speed-induced constructs to outmaneuver opponents.",
+      "Conclusion": "The Flash is a beacon of hope in his city, using his powers to battle threats both mundane and extraordinary. His presence is a constant reminder that there are forces of good moving faster than the eye can see.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Speed Punch",
+            "abilityinfo": "Flash delivers a series of ultra-fast punches, each dealing significant damage due to his incredible speed.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
             ],
-            [
-                {
-                    "abilityname": "Speed Dodge",
-                    "abilityinfo": "Flash uses his super speed to dodge attacks, reducing incoming damage.",
-                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Afterimage",
-                    "abilityinfo": "Flash moves so quickly he creates afterimages, confusing enemies and making it harder for them to land an attack.",
-                    "abilityspecial": ["DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Vibration Shield",
-                    "abilityinfo": "Flash vibrates his molecules to create a shield, deflecting physical and energy attacks.",
-                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Tornado Spin",
+            "abilityinfo": "Flash creates a mini-tornado by spinning at high speed, throwing enemies off balance and causing area damage.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
             ],
-            [
-                {
-                    "abilityname": "Time Warp",
-                    "abilityinfo": "Flash manipulates the speed force to alter time, allowing allies to act faster or slowing down enemies.",
-                    "abilityspecial": ["DURATION: 3s", "DURATION: 5s", "DURATION: 7s", "DURATION: 10s"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Quick Rescue",
-                    "abilityinfo": "Flash can provide rapid healing to teammates, using his super speed to quickly administer aid.",
-                    "abilityspecial": ["HEAL: 10%", "HEAL: 15%", "HEAL: 20%", "HEAL: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Speed Heal",
-                    "abilityinfo": "Flash accelerates his and his allies' healing processes, rapidly recovering health.",
-                    "abilityspecial": ["HEAL: 15%", "HEAL: 20%", "HEAL: 25%", "HEAL: 30%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
-            ]
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Lightning Bolt",
+            "abilityinfo": "Flash channels the Speed Force to throw bolts of lightning, causing high damage to his enemies.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Speed Dodge",
+            "abilityinfo": "Flash uses his super speed to dodge attacks, reducing incoming damage.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Afterimage",
+            "abilityinfo": "Flash moves so quickly he creates afterimages, confusing enemies and making it harder for them to land an attack.",
+            "abilityspecial": [
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Vibration Shield",
+            "abilityinfo": "Flash vibrates his molecules to create a shield, deflecting physical and energy attacks.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Time Warp",
+            "abilityinfo": "Flash manipulates the speed force to alter time, allowing allies to act faster or slowing down enemies.",
+            "abilityspecial": [
+              "DURATION: 3s",
+              "DURATION: 5s",
+              "DURATION: 7s",
+              "DURATION: 10s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Quick Rescue",
+            "abilityinfo": "Flash can provide rapid healing to teammates, using his super speed to quickly administer aid.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Speed Heal",
+            "abilityinfo": "Flash accelerates his and his allies' healing processes, rapidly recovering health.",
+            "abilityspecial": [
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%",
+              "HEAL: 30%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
         ]
+      ],
+      "imagelocation": "./pics/cardpics/flashsymbol.png",
+      "backgroundlocation": "./pics/bgs/flash.webp"
+    },
+    {
+      "Name": "Darth Vader",
+      "Alias": "Skywalker, Anakin",
+      "Origin": "Tatooine",
+      "Power": "The Force",
+      "Casefile": "THE SITH LORD",
+      "Background": "Darth Vader, once known as Anakin Skywalker, is a central figure in the Galactic Empire. Born on the desert planet of Tatooine, he was discovered to be strong with the Force and trained as a Jedi Knight. His exceptional skills in the Force and combat were overshadowed by his internal struggles and eventual seduction by the Dark Side of the Force. This transformation marked one of the most tragic falls from grace in the history of the Galaxy.",
+      "Earlylife": "Anakin Skywalker was a slave on Tatooine before being discovered by Jedi Master Qui-Gon Jinn. He showed unprecedented potential in the Force and was believed to be the Chosen One to bring balance. However, his journey was marred by emotional turmoil, a forbidden love affair, and a prophetic fear of loss, all contributing to his eventual turn to the Dark Side.",
+      "ModusOperandi": "As Darth Vader, he became the feared enforcer of the Galactic Empire. Vader wielded immense power with the Force, was a master of lightsaber combat, and used fear and intimidation to maintain control. He was pivotal in hunting down the Jedi and enforcing Emperor Palpatine's will across the galaxy.",
+      "Conclusion": "Vader's story is one of power, tragedy, and redemption. His life was a constant battle between his former identity as Anakin and his persona as Vader. Ultimately, his story is a poignant example of the complex interplay between good and evil, and the redemptive power of love and sacrifice.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Force Choke",
+            "abilityinfo": "Vader uses the Force to choke his enemies from a distance, incapacitating them with his mind.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Lightsaber Throw",
+            "abilityinfo": "Vader throws his lightsaber like a boomerang, slicing through enemies before it returns to his hand.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Dark Side Lightning",
+            "abilityinfo": "Vader unleashes a storm of dark side energy, electrocuting enemies in a wide area.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Force Shield",
+            "abilityinfo": "Vader creates a protective barrier using the Force, deflecting attacks and projectiles.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Sith Armor",
+            "abilityinfo": "Vader's advanced armor provides enhanced resilience against physical and energy attacks.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Dark Resilience",
+            "abilityinfo": "Harnessing the dark side of the Force, Vader increases his ability to resist and recover from damage.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Force Persuasion",
+            "abilityinfo": "Vader uses the Force to manipulate the minds of others, bending them to his will.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Sith Command",
+            "abilityinfo": "Vader commands his troops with tactical precision, enhancing their combat effectiveness.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Terrifying Presence",
+            "abilityinfo": "Vader's mere presence instills fear in his enemies, demoralizing them and reducing their combat efficiency.",
+            "abilityspecial": [
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s",
+              "DURATION: 25s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/darthvader.png",
+      "backgroundlocation": "./pics/bgs/darthvader.webp"
+    },
+    {
+      "Name": "Spider-Man",
+      "Alias": "Peter Parker",
+      "Origin": "New York City, USA",
+      "Power": "Superhuman Strength, Agility, Spider-Sense, Web-Shooting",
+      "Casefile": "THE WEB-SLINGER",
+      "Background": "Peter Parker, bitten by a radioactive spider, gained the proportionate powers of a spider, including superhuman strength, agility, and a 'spider-sense' that warns him of danger. He initially used his powers for personal gain but learned a life-altering lesson about responsibility after his uncle's death, leading him to use his abilities to fight crime as Spider-Man.",
+      "Earlylife": "Peter was an academically gifted but socially awkward teenager when he gained his spider-like abilities. His transformation into Spider-Man marked his transition from a shy student to a superhero.",
+      "ModusOperandi": "Spider-Man uses his powers to protect New York City from criminals and supervillains. He relies on his agility, web-shooters, and spider-sense in combat, often using his environment to his advantage.",
+      "Conclusion": "Spider-Man's story is a tale of growth, responsibility, and the struggle to balance a normal life with the duties of a superhero. He's a symbol of the everyday person facing extraordinary challenges.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Web Shot",
+            "abilityinfo": "Shoots quick-hardening webbing to immobilize enemies or use as projectiles.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Spider Strike",
+            "abilityinfo": "Combines agility and strength to deliver powerful melee attacks.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Web Bomb",
+            "abilityinfo": "Throws a web grenade that explodes on impact, ensnaring multiple enemies.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Spider-Sense",
+            "abilityinfo": "A precognitive sense that alerts to incoming danger, allowing for swift evasion.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Acrobatic Dodge",
+            "abilityinfo": "Utilizes extraordinary acrobatics to avoid attacks.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Web Shield",
+            "abilityinfo": "Creates a shield of webbing to block incoming attacks.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Web Snare",
+            "abilityinfo": "Spider-Man uses his webbing to temporarily immobilize enemies, reducing their speed and reaction time.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Agility Boost",
+            "abilityinfo": "Enhances the speed and evasion of an ally, making them more agile in combat.",
+            "abilityspecial": [
+              "SPEED BOOST: 10%",
+              "SPEED BOOST: 15%",
+              "SPEED BOOST: 20%",
+              "SPEED BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Rapid Recovery",
+            "abilityinfo": "Spider-Man uses his knowledge of first aid to heal minor injuries of his allies.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/spiderman.png",
+      "backgroundlocation": "./pics/bgs/spiderman.jpg"
     },
 
+    {
+      "Name": "Thor",
+      "Alias": "God of Thunder",
+      "Origin": "Asgard",
+      "Power": "Superhuman Strength, Durability, Longevity, Control over Lightning",
+      "Casefile": "THE ASGARDIAN AVENGER",
+      "Background": "Thor, the son of Odin, is the Norse God of Thunder from Asgard. Known for his formidable strength and wielding the magical hammer Mjolnir, Thor is a warrior and a protector. He is a founding member of the Avengers and often finds himself defending Earth from various intergalactic threats.",
+      "Earlylife": "As the heir to the throne of Asgard, Thor was trained in the ways of a warrior and expected to become king. His early arrogance and brash actions led to him being banished to Earth by his father, where he learned humility and what it truly means to be a hero.",
+      "ModusOperandi": "Thor combats enemies using his immense strength, control over thunder and lightning, and the enchanted hammer Mjolnir, which grants him the ability to fly and manipulate weather.",
+      "Conclusion": "Thor's journey is one of growth from a reckless warrior to a wise and noble hero. He represents the power of redemption and the importance of understanding one's true strength.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Hammer Strike",
+            "abilityinfo": "Thor uses Mjolnir to deliver devastating blows to his enemies.",
+            "abilityspecial": [
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Lightning Blast",
+            "abilityinfo": "Thor summons a powerful lightning strike from Mjolnir, targeting multiple enemies.",
+            "abilityspecial": [
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Asgardian Smite",
+            "abilityinfo": "Thor unleashes the full might of Asgard, dealing massive area damage.",
+            "abilityspecial": [
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%",
+              "DAMAGE: 50%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
 
-    "Darth_Vader": {
-        "Name": "Darth Vader",
-        "Alias": "Skywalker, Anakin",
-        "Origin": "Tatooine",
-        "Power": "The Force",
-        "Casefile": "THE SITH LORD",
-        "Background": "Darth Vader, once known as Anakin Skywalker, is a central figure in the Galactic Empire. Born on the desert planet of Tatooine, he was discovered to be strong with the Force and trained as a Jedi Knight. His exceptional skills in the Force and combat were overshadowed by his internal struggles and eventual seduction by the Dark Side of the Force. This transformation marked one of the most tragic falls from grace in the history of the Galaxy.",
-        "Earlylife": "Anakin Skywalker was a slave on Tatooine before being discovered by Jedi Master Qui-Gon Jinn. He showed unprecedented potential in the Force and was believed to be the Chosen One to bring balance. However, his journey was marred by emotional turmoil, a forbidden love affair, and a prophetic fear of loss, all contributing to his eventual turn to the Dark Side.",
-        "ModusOperandi": "As Darth Vader, he became the feared enforcer of the Galactic Empire. Vader wielded immense power with the Force, was a master of lightsaber combat, and used fear and intimidation to maintain control. He was pivotal in hunting down the Jedi and enforcing Emperor Palpatine's will across the galaxy.",
-        "Conclusion": "Vader's story is one of power, tragedy, and redemption. His life was a constant battle between his former identity as Anakin and his persona as Vader. Ultimately, his story is a poignant example of the complex interplay between good and evil, and the redemptive power of love and sacrifice.",
-        "abilitypanel": [
-            [
-                {
-                    "abilityname": "Force Choke",
-                    "abilityinfo": "Vader uses the Force to choke his enemies from a distance, incapacitating them with his mind.",
-                    "abilityspecial": ["DAMAGE: 10%", "DAMAGE: 15%", "DAMAGE: 20%", "DAMAGE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Lightsaber Throw",
-                    "abilityinfo": "Vader throws his lightsaber like a boomerang, slicing through enemies before it returns to his hand.",
-                    "abilityspecial": ["DAMAGE: 20%", "DAMAGE: 25%", "DAMAGE: 30%", "DAMAGE: 35%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Dark Side Lightning",
-                    "abilityinfo": "Vader unleashes a storm of dark side energy, electrocuting enemies in a wide area.",
-                    "abilityspecial": ["DAMAGE: 30%", "DAMAGE: 35%", "DAMAGE: 40%", "DAMAGE: 45%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
+        [
+          {
+            "abilityname": "Asgardian Shield",
+            "abilityinfo": "Thor's armor and endurance provide him with significant resistance to damage.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
             ],
-            [
-                {
-                    "abilityname": "Force Shield",
-                    "abilityinfo": "Vader creates a protective barrier using the Force, deflecting attacks and projectiles.",
-                    "abilityspecial": ["DEFENSE: 10%", "DEFENSE: 15%", "DEFENSE: 20%", "DEFENSE: 25%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Sith Armor",
-                    "abilityinfo": "Vader's advanced armor provides enhanced resilience against physical and energy attacks.",
-                    "abilityspecial": ["DEFENSE: 20%", "DEFENSE: 25%", "DEFENSE: 30%", "DEFENSE: 35%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Dark Resilience",
-                    "abilityinfo": "Harnessing the dark side of the Force, Vader increases his ability to resist and recover from damage.",
-                    "abilityspecial": ["DEFENSE: 30%", "DEFENSE: 35%", "DEFENSE: 40%", "DEFENSE: 45%"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Mjolnir Guard",
+            "abilityinfo": "Thor uses Mjolnir to deflect attacks and projectiles.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
             ],
-            [
-                {
-                    "abilityname": "Force Persuasion",
-                    "abilityinfo": "Vader uses the Force to manipulate the minds of others, bending them to his will.",
-                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Sith Command",
-                    "abilityinfo": "Vader commands his troops with tactical precision, enhancing their combat effectiveness.",
-                    "abilityspecial": ["DURATION: 5s", "DURATION: 10s", "DURATION: 15s", "DURATION: 20s"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                },
-                {
-                    "abilityname": "Terrifying Presence",
-                    "abilityinfo": "Vader's mere presence instills fear in his enemies, demoralizing them and reducing their combat efficiency.",
-                    "abilityspecial": ["DURATION: 10s", "DURATION: 15s", "DURATION: 20s", "DURATION: 25s"],
-                    "abilityupgradeneed": [10, 20, 30, 40],
-                    "abilitycurrentlevel": 1
-                }
-            ]
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "God of Thunder",
+            "abilityinfo": "Thor's divine nature makes him exceptionally tough, reducing all incoming damage.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+
+        [
+          {
+            "abilityname": "Godly Aura",
+            "abilityinfo": "Thor emits a godly aura that weakens nearby enemies, decreasing their combat effectiveness.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Strength of Asgard",
+            "abilityinfo": "Thor boosts the physical strength of his allies, enhancing their power in combat.",
+            "abilityspecial": [
+              "STRENGTH BOOST: 10%",
+              "STRENGTH BOOST: 15%",
+              "STRENGTH BOOST: 20%",
+              "STRENGTH BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Mjolnir's Blessing",
+            "abilityinfo": "Using Mjolnir, Thor blesses his allies, rapidly healing them and enhancing their resilience.",
+            "abilityspecial": [
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%",
+              "HEAL: 30%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
         ]
+      ],
+      "imagelocation": "./pics/cardpics/thor.png",
+      "backgroundlocation": "./pics/bgs/thor.webp"
+    },
+    {
+      "Name": "Black Panther",
+      "Alias": "T'Challa",
+      "Origin": "Wakanda",
+      "Power": "Enhanced Strength, Speed, Agility, Vibranium Suit",
+      "Casefile": "THE WAKANDAN KING",
+      "Background": "T'Challa, the King of Wakanda, gained his enhanced abilities through the Heart-Shaped Herb. As the Black Panther, he is the protector of Wakanda, a secretive and highly advanced African nation. Skilled in hand-to-hand combat, he also has access to advanced technology and resources.",
+      "Earlylife": "Born as the prince of Wakanda, T'Challa was trained in various forms of combat and statecraft. He assumed the Black Panther mantle after the death of his father, King T'Chaka.",
+      "ModusOperandi": "Black Panther uses a combination of his superhuman abilities, expert combat skills, and advanced Wakandan technology, including his Vibranium suit, to protect his nation and the world.",
+      "Conclusion": "Black Panther represents the unification of tradition and modernity, using his powers and intellect to promote peace and justice.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Vibranium Claws",
+            "abilityinfo": "T'Challa's suit is equipped with retractable claws made of Vibranium, capable of cutting through most materials.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Panther Strike",
+            "abilityinfo": "A powerful physical attack that leverages his enhanced strength and agility.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Kinetic Energy Blast",
+            "abilityinfo": "The Vibranium in Black Panther's suit can absorb kinetic energy and release it explosively against his enemies.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Vibranium Armor",
+            "abilityinfo": "His suit, made from Vibranium, provides exceptional protection against all forms of damage.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Enhanced Reflexes",
+            "abilityinfo": "Black Panther's heightened reflexes allow him to evade and counter enemy attacks effectively.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Stealth Mode",
+            "abilityinfo": "His suit can render him nearly invisible, allowing him to move undetected.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Wakandan Tactics",
+            "abilityinfo": "T'Challa uses his strategic mind to enhance the combat effectiveness of his allies.",
+            "abilityspecial": [
+              "COMBAT BOOST: 10%",
+              "COMBAT BOOST: 15%",
+              "COMBAT BOOST: 20%",
+              "COMBAT BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Herb Enhancement",
+            "abilityinfo": "Sharing the benefits of the Heart-Shaped Herb, T'Challa can temporarily boost the physical abilities of his allies.",
+            "abilityspecial": [
+              "STRENGTH BOOST: 10%",
+              "STRENGTH BOOST: 15%",
+              "STRENGTH BOOST: 20%",
+              "STRENGTH BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Vibranium Aid",
+            "abilityinfo": "Utilizing Wakandan technology, Black Panther can deploy vibranium-based medical equipment to heal his allies.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/blackpanther.png",
+      "backgroundlocation": "./pics/bgs/blackpanther.webp"
+    },
+    {
+      "Name": "Superman",
+      "Alias": "Clark Kent",
+      "Origin": "Krypton / Smallville, Kansas",
+      "Power": "Superhuman Strength, Speed, Flight, X-Ray Vision, Heat Vision",
+      "Casefile": "THE MAN OF STEEL",
+      "Background": "Superman, born Kal-El on the planet Krypton, was sent to Earth by his parents. Raised as Clark Kent in Smallville, Kansas, he discovered his superhuman abilities and chose to use them to protect humanity. As Superman, he is one of Earth's most powerful heroes, known for his unwavering sense of justice.",
+      "Earlylife": "Clark Kent grew up on a farm with his adoptive parents, Martha and Jonathan Kent, learning human values and morals. His early realization of his superhuman abilities led him to a life of serving the greater good.",
+      "ModusOperandi": "Superman uses his powers to combat threats both earthly and extraterrestrial. His abilities include flight, superhuman strength, speed, durability, and various forms of vision and breath powers.",
+      "Conclusion": "Superman is a symbol of hope and a testament to the ideals of truth, justice, and the human spirit.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Heat Vision",
+            "abilityinfo": "Superman unleashes a precise and powerful beam of heat from his eyes, capable of cutting through almost any material.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Super Punch",
+            "abilityinfo": "A devastating physical attack utilizing his superhuman strength.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Frost Breath",
+            "abilityinfo": "Superman can exhale a freezing breath to immobilize enemies or create barriers of ice.",
+            "abilityspecial": [
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Invulnerability",
+            "abilityinfo": "Superman's Kryptonian physiology grants him a near-immunity to all forms of physical harm.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Flight Maneuvers",
+            "abilityinfo": "His power of flight allows him to evade attacks swiftly and effectively.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Solar Regeneration",
+            "abilityinfo": "Exposure to sunlight enhances Superman's healing, allowing him to recover quickly from injuries.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Solar Flare",
+            "abilityinfo": "Superman emits a burst of solar energy, temporarily enhancing the physical capabilities of nearby allies.",
+            "abilityspecial": [
+              "STRENGTH BOOST: 10%",
+              "STRENGTH BOOST: 15%",
+              "STRENGTH BOOST: 20%",
+              "STRENGTH BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Super Breath",
+            "abilityinfo": "Using his super breath, Superman can create gusts of wind to disorient enemies or shield allies.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "X-Ray Vision",
+            "abilityinfo": "Superman uses his X-ray vision to reveal hidden threats or weaknesses, providing tactical information to his team.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/superman.png",
+      "backgroundlocation": "./pics/bgs/superman.webp"
+    },
+    {
+      "Name": "Green Lantern",
+      "Alias": "Varies (e.g., Hal Jordan, John Stewart)",
+      "Origin": "Earth / Oa",
+      "Power": "Power Ring - Constructs, Flight, Various Abilities",
+      "Casefile": "THE GALACTIC PEACEKEEPER",
+      "Background": "Green Lantern, a title held by various individuals, is a member of the Green Lantern Corps, an intergalactic police force. The power ring, the source of their abilities, allows the wielder to create constructs and provides flight, communication, and translation capabilities.",
+      "Earlylife": "Each Green Lantern has a unique background, often as individuals who exhibit great courage. They are chosen by the power ring for their ability to overcome great fear.",
+      "ModusOperandi": "Green Lanterns are tasked with keeping peace in their assigned sectors of space. They use their rings to create constructs limited only by their willpower and imagination.",
+      "Conclusion": "The story of Green Lantern is a testament to the power of will, courage, and responsibility, as they maintain peace and justice throughout the universe.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Energy Constructs",
+            "abilityinfo": "The ring creates solid constructs, like weapons or shields, used to battle foes.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Blinding Light",
+            "abilityinfo": "Emits a powerful burst of light to stun and disorient enemies.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Ring Blast",
+            "abilityinfo": "Fires a concentrated beam of energy at a target, causing significant damage.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Energy Shield",
+            "abilityinfo": "Creates a protective barrier around the user or an area to deflect attacks.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Construct Armor",
+            "abilityinfo": "Forms a suit of armor around the user, enhancing defense against physical attacks.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Ring Barrier",
+            "abilityinfo": "Encases an area in an impenetrable dome, protecting allies from external threats.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Galactic Support",
+            "abilityinfo": "Summons reinforcements from the Green Lantern Corps, providing assistance in combat.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Willpower Infusion",
+            "abilityinfo": "Enhances the willpower of allies, increasing their combat effectiveness and resilience.",
+            "abilityspecial": [
+              "COMBAT BOOST: 10%",
+              "COMBAT BOOST: 15%",
+              "COMBAT BOOST: 20%",
+              "COMBAT BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Ring Healing",
+            "abilityinfo": "Utilizes the ring's energy to heal minor injuries of allies.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/greenlantern.png",
+      "backgroundlocation": "./pics/bgs/greenlantern.webp"
+    },
+    {
+      "Name": "Hulk",
+      "Alias": "Bruce Banner",
+      "Origin": "Earth",
+      "Power": "Immense Superhuman Strength, Durability, Regeneration",
+      "Casefile": "THE GREEN GOLIATH",
+      "Background": "Dr. Bruce Banner was transformed into the Hulk after exposure to gamma radiation. As the Hulk, he possesses almost limitless strength and durability, which increase with his level of anger. Banner is a brilliant scientist in his human form, with a deep internal struggle between his intellect and the Hulk's rage.",
+      "Earlylife": "Bruce Banner was a renowned scientist specializing in gamma radiation. A lab accident involving gamma rays led to the creation of his alter ego, the Hulk.",
+      "ModusOperandi": "The Hulk is often seen as a destructive force, but he has also been a hero, fighting against threats to humanity and the planet. His strength and invulnerability make him one of the most powerful beings in existence.",
+      "Conclusion": "Hulk's story is a complex tale of anger management, self-acceptance, and the duality of human nature.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Thunder Clap",
+            "abilityinfo": "Hulk claps his hands together, creating a shockwave that damages and stuns enemies.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Smash",
+            "abilityinfo": "A devastating ground pound attack that deals significant area damage.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Rage Burst",
+            "abilityinfo": "Hulk channels his anger to unleash a burst of energy, causing massive damage to surrounding enemies.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Gamma Skin",
+            "abilityinfo": "Hulk's skin provides incredible resistance to physical and energy attacks.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Unstoppable Force",
+            "abilityinfo": "When Hulk charges, he becomes nearly invulnerable, plowing through obstacles and enemies.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Rapid Regeneration",
+            "abilityinfo": "Hulk's natural healing factor allows him to recover from injuries at an incredible rate.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Intimidating Roar",
+            "abilityinfo": "Hulk's roar demoralizes enemies, temporarily reducing their combat effectiveness.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Battlefield Control",
+            "abilityinfo": "Hulk creates chaos on the battlefield, disrupting enemy formations and strategies.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Team Protector",
+            "abilityinfo": "Hulk uses his immense strength to shield allies from harm, taking the brunt of enemy attacks.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/hulk.png",
+      "backgroundlocation": "./pics/bgs/hulk.webp"
+    },
+    {
+      "Name": "The Punisher",
+      "Alias": "Frank Castle",
+      "Origin": "New York City, USA",
+      "Power": "Expert Marksman, Skilled Hand-to-Hand Combatant",
+      "Casefile": "THE VIGILANTE",
+      "Background": "Frank Castle, known as The Punisher, is a vigilante who aims to clean up crime in New York City by any means necessary. A former Marine, Castle's family was murdered for witnessing a mob hit, leading him to wage a one-man war on crime. He uses guerrilla tactics and relies on his military training and an extensive arsenal.",
+      "Earlylife": "Before becoming The Punisher, Frank Castle was a U.S. Marine with a distinguished record. He served with honor but became disillusioned with the system after the tragic murder of his family.",
+      "ModusOperandi": "Operating outside the law, The Punisher utilizes a wide array of weapons and his combat experience to target criminals. He is relentless, showing little mercy to those he considers to be on the wrong side of justice.",
+      "Conclusion": "The Punisher's story is a dark tale of vengeance and justice. He is a controversial figure, blurring the lines between hero and vigilante.",
+      "abilitypanel": [
+        [
+          {
+            "abilityname": "Firearms Expertise",
+            "abilityinfo": "An expert with firearms, The Punisher can accurately hit targets from great distances.",
+            "abilityspecial": [
+              "DAMAGE: 10%",
+              "DAMAGE: 15%",
+              "DAMAGE: 20%",
+              "DAMAGE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Close Quarters Combat",
+            "abilityinfo": "Skilled in hand-to-hand combat, he can incapacitate enemies quickly and efficiently.",
+            "abilityspecial": [
+              "DAMAGE: 20%",
+              "DAMAGE: 25%",
+              "DAMAGE: 30%",
+              "DAMAGE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Tactical Grenades",
+            "abilityinfo": "Uses a variety of grenades for different tactical situations, causing substantial damage.",
+            "abilityspecial": [
+              "DAMAGE: 30%",
+              "DAMAGE: 35%",
+              "DAMAGE: 40%",
+              "DAMAGE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Body Armor",
+            "abilityinfo": "Wearing bulletproof armor, he can withstand gunfire and physical attacks.",
+            "abilityspecial": [
+              "DEFENSE: 10%",
+              "DEFENSE: 15%",
+              "DEFENSE: 20%",
+              "DEFENSE: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Combat Awareness",
+            "abilityinfo": "His heightened awareness allows him to anticipate and evade enemy attacks.",
+            "abilityspecial": [
+              "DEFENSE: 20%",
+              "DEFENSE: 25%",
+              "DEFENSE: 30%",
+              "DEFENSE: 35%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Counter-Attack",
+            "abilityinfo": "Expert in turning an enemy's move against them, effectively protecting himself while damaging the opponent.",
+            "abilityspecial": [
+              "DEFENSE: 30%",
+              "DEFENSE: 35%",
+              "DEFENSE: 40%",
+              "DEFENSE: 45%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ],
+        [
+          {
+            "abilityname": "Tactical Leadership",
+            "abilityinfo": "Frank's military experience makes him an effective leader, enhancing the capabilities of any team he's part of.",
+            "abilityspecial": [
+              "COMBAT BOOST: 10%",
+              "COMBAT BOOST: 15%",
+              "COMBAT BOOST: 20%",
+              "COMBAT BOOST: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Field Medicine",
+            "abilityinfo": "His training includes field medicine, allowing him to provide first aid and stabilize injuries during combat.",
+            "abilityspecial": [
+              "HEAL: 10%",
+              "HEAL: 15%",
+              "HEAL: 20%",
+              "HEAL: 25%"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          },
+          {
+            "abilityname": "Intimidation",
+            "abilityinfo": "Frank's presence and reputation can demoralize enemies, reducing their effectiveness in combat.",
+            "abilityspecial": [
+              "DURATION: 5s",
+              "DURATION: 10s",
+              "DURATION: 15s",
+              "DURATION: 20s"
+            ],
+            "abilityupgradeneed": [10, 20, 30, 40],
+            "abilitycurrentlevel": 1
+          }
+        ]
+      ],
+      "imagelocation": "./pics/cardpics/punisher.png",
+      "backgroundlocation": "./pics/bgs/punisher.webp"
     }
+  ]
 }
