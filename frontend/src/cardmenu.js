@@ -391,32 +391,32 @@ const Ui = () => {
 
   
   // }
-  // function imageanimation(a){
+  function imageanimation(){
     
 
-  //   let x=0;
-  //   let y=0;
-  //   let op=0;
-  //   function move(){
-  //   if(imageref.current)
-  //   {
+    let x=0;
+    let y=0;
+    let op=0;
+    function move(){
+    if(imageref.current)
+    {
 
-  //     imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
+      imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
       
-  //     x=x+2;
-  //     y=y+2;
-  //     if(x<20&&y<20)
-  //     requestAnimationFrame(move);
-  //   else
-  //   cancelAnimationFrame(move);
+      x=x+2;
+      y=y+2;
+      if(x<40&&y<40)
+      requestAnimationFrame(move);
+    else
+    cancelAnimationFrame(move);
 
 
-  //   }
+    }
     
     
-  // }
-  // requestAnimationFrame(move);
-  // }
+  }
+  requestAnimationFrame(move);
+  }
   function transformcard(index) {
     if (prev != -1) arr[prev] = false;
     arr[index] = true;
@@ -424,21 +424,23 @@ const Ui = () => {
     setprev(index);
     setcharacterindex(index);
     setanimation(true);
+    setimage(data1["Characters"][index]["backgroundlocation"]);
+    setimageinitial(image);
 
+    // imageanimation(data1["Characters"][index]["backgroundlocation"]);
     setTimeout(()=>{
       setanimation(false);
-    },130)
-
-    setTimeout(()=>{
-      setimageinitial(image);
     },100)
+
+    // setTimeout(()=>{
+    //   setimageinitial(image);
+    // },100)
     
     
     
   }
 
   function onlyplace(index){
-    if(!animation)
     setimage(data1["Characters"][index]["backgroundlocation"]);
   }
 
@@ -495,9 +497,9 @@ const Ui = () => {
           src={image}
           style={{
             animation: animation
-              ? "moveimage 0.13s ease 0s 1 normal forwards"
+              ? "moveimage 0.1s ease 0s 1 normal forwards"
               : "",
-              opacity:animation?1:0,
+              opacity:1,
           }}
         ref={imageref} ></img>
         
@@ -623,7 +625,7 @@ const Ui = () => {
                     <div
                       className="Cardeg"
                       onClick={() => transformcard(index)}
-                      onMouseEnter={()=>{onlyplace(index)}}
+                      // onMouseEnter={()=>{onlyplace(index)}}
                     >
 <img className="symbol" src={data1["Characters"][index]["imagelocation"]} />
                     </div>
