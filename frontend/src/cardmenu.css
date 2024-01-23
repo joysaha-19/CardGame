@@ -36,10 +36,10 @@ p{
   width: 100%;
   z-index: -4;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   object-fit: cover;
-  filter: blur(1px);
+  filter: blur(0px);
 
 }
 .bg {
@@ -47,8 +47,9 @@ p{
   width: 100%;
   z-index: -3;
   position: absolute;
-  top: 0px;
-  left: 20px;
+  filter: blur(0px);
+  top:0px;
+  left:100px;
   object-fit: cover;
   
 }
@@ -440,15 +441,21 @@ p{
 /*********ANIMATIONS*******/
 @keyframes moveimage {
   0% {
-    top: 50%;
-    left: 0%;
+    top: 0px;
+    left: 100px;
     opacity: 0;
-  }
 
+  }
+  99%{
+    opacity: 1;
+    top:0;
+    left: 5px;
+  }
   100% {
     top: 0%;
     left: 0%;
-    opacity: 1;
+    opacity: 0;
+
   }
 }
 
@@ -706,7 +713,7 @@ p{
 .lowbarbutton {
   height: 35px;
   width: 100%;
-  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100% , 10% 100%);
   top: 0%;
   opacity: 1;
   display: flex;

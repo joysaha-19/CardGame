@@ -391,46 +391,55 @@ const Ui = () => {
 
   
   // }
-  function imageanimation(a){
-    setimage(a);
-      setimageinitial(image);
+  // function imageanimation(a){
+    
 
-    let x=0;
-    let y=0;
-    let op=0;
-    function move(){
-    if(imageref.current)
-    {
+  //   let x=0;
+  //   let y=0;
+  //   let op=0;
+  //   function move(){
+  //   if(imageref.current)
+  //   {
 
-      imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
+  //     imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
       
-      x=x+2;
-      y=y+2;
-      if(x<20&&y<20)
-      requestAnimationFrame(move);
-    else
-    cancelAnimationFrame(move);
+  //     x=x+2;
+  //     y=y+2;
+  //     if(x<20&&y<20)
+  //     requestAnimationFrame(move);
+  //   else
+  //   cancelAnimationFrame(move);
 
 
-    }
+  //   }
     
     
-  }
-  requestAnimationFrame(move);
-  }
+  // }
+  // requestAnimationFrame(move);
+  // }
   function transformcard(index) {
     if (prev != -1) arr[prev] = false;
     arr[index] = true;
     setarr(arr);
     setprev(index);
     setcharacterindex(index);
-   
-   
-     
-      imageanimation(data1["Characters"][index]["backgroundlocation"]);
+    setanimation(true);
 
+    setTimeout(()=>{
+      setanimation(false);
+    },130)
+
+    setTimeout(()=>{
+      setimageinitial(image);
+    },100)
     
     
+    
+  }
+
+  function onlyplace(index){
+    if(!animation)
+    setimage(data1["Characters"][index]["backgroundlocation"]);
   }
 
   const [anime, setanime] = useState(false);
@@ -483,13 +492,14 @@ const Ui = () => {
         <img className="bgi" src={imageinitial}></img>
         <img
           className="bg"
-          src={data1["Characters"][characterindex]["backgroundlocation"]}
-          // style={{
-          //   animation: animation
-          //     ? "moveimage 0.2s ease 0s 1 normal both"
-          //     : "none",
-          // }}
-        ref={imageref} loading="eager"></img>
+          src={image}
+          style={{
+            animation: animation
+              ? "moveimage 0.13s ease 0s 1 normal forwards"
+              : "",
+              opacity:animation?1:0,
+          }}
+        ref={imageref} ></img>
         
         <div className="description">
           <div className="namebox">
@@ -613,6 +623,7 @@ const Ui = () => {
                     <div
                       className="Cardeg"
                       onClick={() => transformcard(index)}
+                      onMouseEnter={()=>{onlyplace(index)}}
                     >
 <img className="symbol" src={data1["Characters"][index]["imagelocation"]} />
                     </div>

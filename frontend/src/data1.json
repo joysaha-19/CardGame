@@ -251,7 +251,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/flashsymbol.png",
-      "backgroundlocation": "./pics/bgs/flash.webp"
+      "backgroundlocation": "./pics/bgs/flash.jpg"
     },
     {
       "Name": "Darth Vader",
@@ -380,7 +380,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/darthvader.png",
-      "backgroundlocation": "./pics/bgs/darthvader.webp"
+      "backgroundlocation": "./pics/bgs/darthvader.jpg"
     },
     {
       "Name": "Spider-Man",
@@ -1028,7 +1028,7 @@
         ]
       ],
       "imagelocation": "./pics/cardpics/greenlantern.png",
-      "backgroundlocation": "./pics/bgs/greenlantern.webp"
+      "backgroundlocation": "./pics/bgs/greenlantern.jpg"
     },
     {
       "Name": "Hulk",
