@@ -27,10 +27,14 @@ const outermostcirclearr = [
 const anim = "grow 0.7s ease-out 0s 1 normal both";
 
 const Ui = () => {
-  const [characterindex,setcharacterindex]= useState(0);
-  const imageref=useRef();
-  const [image, setimage] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
-  const [imageinitial, setimageinitial] = useState(data1["Characters"][characterindex]["backgroundlocation"]);
+  const [characterindex, setcharacterindex] = useState(0);
+  const imageref = useRef();
+  const [image, setimage] = useState(
+    data1["Characters"][characterindex]["backgroundlocation"]
+  );
+  const [imageinitial, setimageinitial] = useState(
+    data1["Characters"][characterindex]["backgroundlocation"]
+  );
   const [health, sethealth] = useState("5%");
   const [strength, setstrength] = useState("5%");
   const [defense, setdefense] = useState("5%");
@@ -39,10 +43,15 @@ const Ui = () => {
   const [animation, setanimation] = useState(false);
   const [ang, setang] = useState(45);
   const [prev, setprev] = useState(0);
-  const [arr, setarr] = useState([...[true], ...Array(data1["Characters"].length - 1).fill(false)]);
-  const [hoverarr, sethoverarr] = useState(Array(data1["Characters"].length).fill(false));
+  const [arr, setarr] = useState([
+    ...[true],
+    ...Array(data1["Characters"].length - 1).fill(false),
+  ]);
+  const [hoverarr, sethoverarr] = useState(
+    Array(data1["Characters"].length).fill(false)
+  );
   const scrollref = useRef(null);
-  const [height, setheight] = useState("200px");
+  const [height, setheight] = useState("210px");
   const [arrow, setarrow] = useState(0);
   const [bg1, setbg1] = useState("rgba(40, 150, 174, 0.793)");
   const [bg2, setbg2] = useState("rgba(65, 65, 66, 0.993)");
@@ -60,7 +69,8 @@ const Ui = () => {
   ]);
 
   let [abilityfocus, setabilityfocus] = useState([true, false, false]);
-  const [currentabilityfocus,setcurrentabilityfocus]=useState(0);
+  const [currentabilityfocus, setcurrentabilityfocus] = useState(0);
+  const [filelinewidth,setfilelinewidth]=useState('4%');
   const L1abilities = [Fist, Shield, Level1Support];
   const L2abilities = [DoubleFist, Level2Shield, Level2Support];
   const L3abilities = [Sword, Level3Shield, Level3Support];
@@ -220,29 +230,87 @@ const Ui = () => {
           <img src={L3abilities[prevnav]} className="abilityimage"></img>
         </div>
       </div>
-      <p className="ability1name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][0]["abilityname"]}</p>
-      <p className="ability2name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][1]["abilityname"]}</p>
-      <p className="ability3name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][2]["abilityname"]}</p>
+      <p className="ability1name abname">
+        {
+          data1["Characters"][characterindex]["abilitypanel"][prevnav][0][
+            "abilityname"
+          ]
+        }
+      </p>
+      <p className="ability2name abname">
+        {
+          data1["Characters"][characterindex]["abilitypanel"][prevnav][1][
+            "abilityname"
+          ]
+        }
+      </p>
+      <p className="ability3name abname">
+        {
+          data1["Characters"][characterindex]["abilitypanel"][prevnav][2][
+            "abilityname"
+          ]
+        }
+      </p>
       <div className="abilitydescriptionbox">
         <div className="abilitydescription">
           <div className="abilitydescriptionname">
-            <p className="abilityname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityname"]}</p>
+            <p className="abilityname">
+              {
+                data1["Characters"][characterindex]["abilitypanel"][prevnav][
+                  currentabilityfocus
+                ]["abilityname"]
+              }
+            </p>
           </div>
           <div className="abilitydescriptionlevel">
             <div className="circle">
-              <p>Lvl&nbsp;{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]}</p>
+              <p>
+                Lvl&nbsp;
+                {
+                  data1["Characters"][characterindex]["abilitypanel"][prevnav][
+                    currentabilityfocus
+                  ]["abilitycurrentlevel"]
+                }
+              </p>
             </div>
           </div>
           <div className="abilitydescriptionother">
             <div className="abilitydescriptioninfo">
-              <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityinfo"]}</p>
+              <p>
+                {
+                  data1["Characters"][characterindex]["abilitypanel"][prevnav][
+                    currentabilityfocus
+                  ]["abilityinfo"]
+                }
+              </p>
             </div>
             <div className="abilitydescriptionstats">
               <div className="abilitydescriptionability">
-                <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityspecial"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+                <p>
+                  {
+                    data1["Characters"][characterindex]["abilitypanel"][
+                      prevnav
+                    ][currentabilityfocus]["abilityspecial"][
+                      data1["Characters"][characterindex]["abilitypanel"][
+                        prevnav
+                      ][currentabilityfocus]["abilitycurrentlevel"] - 1
+                    ]
+                  }
+                </p>
               </div>
               <div className="abilitydescriptionneed">
-                <p>XP needed for upgrade: {data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityupgradeneed"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+                <p>
+                  XP needed for upgrade:{" "}
+                  {
+                    data1["Characters"][characterindex]["abilitypanel"][
+                      prevnav
+                    ][currentabilityfocus]["abilityupgradeneed"][
+                      data1["Characters"][characterindex]["abilitypanel"][
+                        prevnav
+                      ][currentabilityfocus]["abilitycurrentlevel"] - 1
+                    ]
+                  }
+                </p>
               </div>
             </div>
           </div>
@@ -252,14 +320,14 @@ const Ui = () => {
   ];
 
   function preloadImages(urls) {
-    urls.forEach(url => {
+    urls.forEach((url) => {
       const img = new Image();
       img.src = url;
     });
   }
-  
-  preloadImages(['image1.jpg', 'image2.jpg', 'image3.jpg']);
-  
+
+  preloadImages(["image1.jpg", "image2.jpg", "image3.jpg"]);
+
   function focusonability(n) {
     abilityfocus = Array(3).fill(false);
     abilityfocus[n] = true;
@@ -284,7 +352,7 @@ const Ui = () => {
       setcombat("50%");
     }, 200);
   });
- 
+
   function swapcolor(n) {
     if (n == 1) {
       if (bg1 == "rgba(65, 65, 66, 0.993)") {
@@ -332,7 +400,7 @@ const Ui = () => {
     const interval = setInterval(() => {
       setang((prevang) => prevang + 1);
     }, 30);
-    return ()=>clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -377,36 +445,16 @@ const Ui = () => {
   //     },200);
   //   }
 
-  
   // }
-  function imageanimation(){
-    
-
-    let x=0;
-    let y=0;
-    let op=0;
-    function move(){
-    if(imageref.current)
-    {
-
-      imageref.current.style.transform = `translate(${-x}px, ${0}px)`;
-      
-      x=x+2;
-      y=y+2;
-      if(x<40&&y<40)
-      requestAnimationFrame(move);
-    else
-    cancelAnimationFrame(move);
-
-
-    }
-    
-    
-  }
-  requestAnimationFrame(move);
-  }
+  useEffect(()=>{
+    setTimeout(()=>{
+      setfilelinewidth('40%');
+    },100)
+  })
   function transformcard(index) {
     if (prev != -1) arr[prev] = false;
+    setfilelinewidth('4%');
+  
     arr[index] = true;
     setarr(arr);
     setprev(index);
@@ -416,19 +464,16 @@ const Ui = () => {
     setimageinitial(image);
 
     // imageanimation(data1["Characters"][index]["backgroundlocation"]);
-    setTimeout(()=>{
+    setTimeout(() => {
       setanimation(false);
-    },200)
+    }, 200);
 
     // setTimeout(()=>{
     //   setimageinitial(image);
     // },100)
-    
-    
-    
   }
 
-  function onlyplace(index){
+  function onlyplace(index) {
     setimage(data1["Characters"][index]["backgroundlocation"]);
   }
 
@@ -475,26 +520,28 @@ const Ui = () => {
   }
 
   return (
-    <div
-      className="parentcontainer_proj1"
-    >
+    <div className="parentcontainer_proj1">
       <div>
         <img className="bgi" src={imageinitial}></img>
         <img
           className="bg"
           src={image}
           style={{
-            animation: animation
-              ? "moveimage 0.2s ease 0s 1 normal both"
-              : "",
-              opacity:1,
+            animation: animation ? "moveimage 0.2s ease 0s 1 normal both" : "",
+            opacity: 1,
           }}
-        ref={imageref} ></img>
-        
+          ref={imageref}
+        ></img>
+
         <div className="description">
           <div className="namebox">
             <div className="Title">
-              <p className="name">{data1["Characters"][characterindex]["Name"]}</p>
+              <div className="name">
+                <p>{data1["Characters"][characterindex]["Name"]}</p>
+                <div className="Titleswipe">
+                  <div className="Titleswipedec"></div>
+                </div>
+              </div>
               <div className="detbar">
                 <div className="rod">
                   <div className="alias"></div>
@@ -505,17 +552,26 @@ const Ui = () => {
               <div className="detarea">
                 <div className="aliasarea">
                   <p className="det-text-label">
-                    Alias:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Alias"]}</span>
+                    Alias:&nbsp;
+                    <span className="det-text">
+                      {data1["Characters"][characterindex]["Alias"]}
+                    </span>
                   </p>
                 </div>
                 <div className="originarea">
                   <p className="det-text-label">
-                    Origin:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Origin"]}</span>
+                    Origin:&nbsp;
+                    <span className="det-text">
+                      {data1["Characters"][characterindex]["Origin"]}
+                    </span>
                   </p>
                 </div>
                 <div className="powerarea">
                   <p className="det-text-label">
-                    Power:&nbsp;<span className="det-text">{data1["Characters"][characterindex]["Power"]}</span>
+                    Power:&nbsp;
+                    <span className="det-text">
+                      {data1["Characters"][characterindex]["Power"]}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -532,8 +588,29 @@ const Ui = () => {
             </div>
           </div>
           <div className="masterintrobox" style={{ height: height }}>
-            <div className="introbox" ref={scrollref}>
-              <p className="intro">
+            <div className="filestitle">
+              <div className="fileline filelineleft" style={{width:filelinewidth}}>
+                <div className="endpoint endpointleft"></div>
+              </div>
+              <p className="filestag">FILES</p>
+              <div className="fileline filelineright" style={{width:filelinewidth}}>
+              <div className="endpoint endpointright"></div>
+
+              </div>
+            </div>
+            <div className="introbox">
+              <div className="logbegin"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="log"></div>
+              <div className="logend"></div>
+              {/* <p className="intro">
                 <strong>CONFIDENTIAL</strong>: CASE FILE - {data1["Characters"][characterindex]["Casefile"]}
                 <br></br>
                 <br></br>
@@ -553,13 +630,13 @@ const Ui = () => {
                 <br></br>
                 <br></br>
                 {data1["Characters"][characterindex]["Conclusion"]}
-              </p>
-              <div className="pulldown" onClick={introincrease}>
+              </p> */}
+              {/* <div className="pulldown" onClick={introincrease}>
                 <div
                   className="arrow"
                   style={{ transform: `rotate(${arrow}deg)` }}
                 ></div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="infogrid" style={{ opacity: viewinfo }}>
@@ -569,7 +646,7 @@ const Ui = () => {
                 style={{ backgroundColor: bg1 }}
                 onClick={() => swapcolor(1)}
               >
-                <p style={{transform:'  transform:skewX(20deg)'}}>STATS</p>
+                <p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p>
               </div>
             </div>
             <div className="abilities">
@@ -578,7 +655,9 @@ const Ui = () => {
                 style={{ backgroundColor: bg2 }}
                 onClick={() => swapcolor(2)}
               >
-                <p style={{transform:'  transform:skewX(20deg)'}}>ABILITIES</p>
+                <p style={{ transform: "  transform:skewX(20deg)" }}>
+                  ABILITIES
+                </p>
               </div>
             </div>
             {contents[numcontent]}
@@ -601,8 +680,8 @@ const Ui = () => {
                         : hoverarr[index]
                         ? "skewX(0deg) scale(1.1)"
                         : "skewX(0deg)",
-                      opacity: value?1:hoverarr[index]?0.92:0.5,
-                      zIndex: value?1:0
+                      opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
+                      zIndex: value ? 1 : 0,
                     }}
                     onMouseEnter={() => {
                       hoverscale(index);
@@ -616,13 +695,16 @@ const Ui = () => {
                       onClick={() => transformcard(index)}
                       // onMouseEnter={()=>{onlyplace(index)}}
                     >
-<img className="symbol" src={data1["Characters"][index]["imagelocation"]} />
+                      <img
+                        className="symbol"
+                        src={data1["Characters"][index]["imagelocation"]}
+                      />
                     </div>
                   </div>
                 </>
               );
             })}
-             <div className="end"></div>
+            <div className="end"></div>
           </div>
         </div>
       </div>
