@@ -344,14 +344,15 @@ p{
   flex-shrink: 0;
 }
 .Cardarea {
-  height: 150px;
-  width: 150px;
+  height: 152px;
+  width: 152px;
 
   justify-content: center;
   align-items: center;
   display: flex;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  z-index: 0;
   
 }
 .Cardeg {
@@ -442,8 +443,8 @@ p{
 @keyframes moveimage {
   0% {
     top: 0px;
-    left: 20px;
-    opacity: 1;
+    left: 50px;
+    opacity: 0;
 
   }
   /* 80%{

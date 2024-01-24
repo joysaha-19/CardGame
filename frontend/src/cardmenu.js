@@ -12,19 +12,6 @@ import Level1Support from "./pics/Level1Support.png";
 import Level3Support from "./pics/Level2Support.png";
 import Level2Support from "./pics/Level3Support.png";
 import data1 from "./data1.json";
-import batsymbol from "./pics/cardpics/batman.png"
-//rgba(255, 0, 0, 1)
-import Batman from './pics/bgs/batman.png';
-import Flash from './pics/bgs/Flash.webp';
-import Superman from './pics/bgs/superman.jpg';
-import DarthVader from './pics/bgs/darthvader.webp';
-import Spiderman from './pics/bgs/spiderman.jpg';
-import Thor from './pics/bgs/thor.jpg';
-import BlackPanther from './pics/bgs/blackpanther.jpg';
-import GreenLantern from './pics/bgs/greenlantern.webp';
-import Hulk from './pics/bgs/hulk.webp';
-import Punisher from './pics/bgs/punisher.webp';
-
 
 const outercirclearr = [
   "attacker outer-circle",
@@ -51,8 +38,8 @@ const Ui = () => {
   const [combat, setcombat] = useState("5%");
   const [animation, setanimation] = useState(false);
   const [ang, setang] = useState(45);
-  const [prev, setprev] = useState(-1);
-  const [arr, setarr] = useState(Array(data1["Characters"].length).fill(false));
+  const [prev, setprev] = useState(0);
+  const [arr, setarr] = useState([...[true], ...Array(data1["Characters"].length - 1).fill(false)]);
   const [hoverarr, sethoverarr] = useState(Array(data1["Characters"].length).fill(false));
   const scrollref = useRef(null);
   const [height, setheight] = useState("200px");
@@ -345,6 +332,7 @@ const Ui = () => {
     const interval = setInterval(() => {
       setang((prevang) => prevang + 1);
     }, 30);
+    return ()=>clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -430,7 +418,7 @@ const Ui = () => {
     // imageanimation(data1["Characters"][index]["backgroundlocation"]);
     setTimeout(()=>{
       setanimation(false);
-    },100)
+    },200)
 
     // setTimeout(()=>{
     //   setimageinitial(image);
@@ -497,7 +485,7 @@ const Ui = () => {
           src={image}
           style={{
             animation: animation
-              ? "moveimage 0.1s ease 0s 1 normal forwards"
+              ? "moveimage 0.2s ease 0s 1 normal both"
               : "",
               opacity:1,
           }}
@@ -606,14 +594,15 @@ const Ui = () => {
                     className="Cardarea"
                     style={{
                       background: value
-                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 5%, red 50%, transparent 95%, transparent 100%)`
+                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, red 50%, transparent 85%, transparent 100%)`
                         : "none",
                       transform: value
                         ? "skewX(0deg) scale(1.25)"
                         : hoverarr[index]
-                        ? "skewX(0deg) scale(1.2)"
+                        ? "skewX(0deg) scale(1.1)"
                         : "skewX(0deg)",
-                      opacity: value || hoverarr[index] ? "1" : "0.5",
+                      opacity: value?1:hoverarr[index]?0.92:0.5,
+                      zIndex: value?1:0
                     }}
                     onMouseEnter={() => {
                       hoverscale(index);
