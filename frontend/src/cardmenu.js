@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef , useCallback } from "react";
 import { useState } from "react";
 import "./cardmenu.css";
 import "./borderproj.css";
@@ -12,6 +12,7 @@ import Level1Support from "./pics/Level1Support.png";
 import Level3Support from "./pics/Level2Support.png";
 import Level2Support from "./pics/Level3Support.png";
 import data1 from "./data1.json";
+import lore from "./loredata.json";
 
 const outercirclearr = [
   "attacker outer-circle",
@@ -451,7 +452,7 @@ const Ui = () => {
       setfilelinewidth('40%');
     },100)
   })
-  function transformcard(index) {
+  const transformcard =useCallback((index)=> {
     if (prev != -1) arr[prev] = false;
     setfilelinewidth('4%');
   
@@ -471,7 +472,7 @@ const Ui = () => {
     // setTimeout(()=>{
     //   setimageinitial(image);
     // },100)
-  }
+  })
 
   function onlyplace(index) {
     setimage(data1["Characters"][index]["backgroundlocation"]);
@@ -600,6 +601,38 @@ const Ui = () => {
             </div>
             <div className="introbox">
               <div className="logbegin"></div>
+              {
+                lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
+                       return <div className="log">
+                       <p className="classifiedtag">CLASSIFIED</p>
+                       <p className="filenumber">FILE{value["Filenumber"]}</p>
+                       <div className="filesymbol">
+                       <img style={{height: '50px'}}
+                               className="fileimage"
+                               src={data1["Characters"][characterindex]["imagelocation"]}
+                             />
+                       </div>
+                       <div className="filetitle">
+                         <p>{value["Title"]}</p>
+                       
+                       </div>
+                     </div>
+                })
+              }
+              {/* <div className="log">
+                <p className="classifiedtag">CLASSIFIED</p>
+                <p className="filenumber">FILE#SBW001</p>
+                <div className="filesymbol">
+                <img style={{height: '50px'}}
+                        className="fileimage"
+                        src={data1["Characters"][characterindex]["imagelocation"]}
+                      />
+                </div>
+                <div className="filetitle">
+                  <p>BIRTH OF THE BAT</p>
+                
+                </div>
+              </div>
               <div className="log"></div>
               <div className="log"></div>
               <div className="log"></div>
@@ -607,8 +640,7 @@ const Ui = () => {
               <div className="log"></div>
               <div className="log"></div>
               <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
+              <div className="log"></div> */}
               <div className="logend"></div>
               {/* <p className="intro">
                 <strong>CONFIDENTIAL</strong>: CASE FILE - {data1["Characters"][characterindex]["Casefile"]}

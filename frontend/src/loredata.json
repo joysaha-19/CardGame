@@ -1,0 +1,422 @@
+{
+    "The Batman": [
+        {
+            "Title": "THE BIRTH OF THE BAT",
+            "Filenumber": "#SBW001"
+        },
+        {
+            "Title": "THE RISE OF THE DARK KNIGHT",
+            "Filenumber": "#SBW002"
+        },
+        {
+            "Title": "THE FALL OF THE JOKER",
+            "Filenumber": "#SBW003"
+        },
+        {
+            "Title": "SHADOWS OVER GOTHAM",
+            "Filenumber": "#SBW004"
+        },
+        {
+            "Title": "THE LEAGUE OF SHADOWS",
+            "Filenumber": "#SBW005"
+        },
+        {
+            "Title": "A RIDDLE IN THE DARK",
+            "Filenumber": "#SBW006"
+        },
+        {
+            "Title": "THE PENGUIN'S PLOT",
+            "Filenumber": "#SBW007"
+        },
+        {
+            "Title": "BATMAN: YEAR ONE",
+            "Filenumber": "#SBW008"
+        },
+        {
+            "Title": "THE KNIGHTFALL",
+            "Filenumber": "#SBW009"
+        },
+        {
+            "Title": "NO MAN'S LAND",
+            "Filenumber": "#SBW010"
+        }
+    ],
+    "Spider-Man": [
+        {
+            "Title": "THE BITE THAT CHANGED EVERYTHING",
+            "Filenumber": "#SPM001"
+        },
+        {
+            "Title": "GREAT POWER, GREAT RESPONSIBILITY",
+            "Filenumber": "#SPM002"
+        },
+        {
+            "Title": "THE RISE OF THE GREEN GOBLIN",
+            "Filenumber": "#SPM003"
+        },
+        {
+            "Title": "WEB-SLINGER'S FIRST CHALLENGE",
+            "Filenumber": "#SPM004"
+        },
+        {
+            "Title": "CONFLICT WITH THE KINGPIN",
+            "Filenumber": "#SPM005"
+        },
+        {
+            "Title": "THE LIZARD'S LEGACY",
+            "Filenumber": "#SPM006"
+        },
+        {
+            "Title": "VENOM'S VENGEANCE",
+            "Filenumber": "#SPM007"
+        },
+        {
+            "Title": "CRISIS IN THE MULTIVERSE",
+            "Filenumber": "#SPM008"
+        },
+        {
+            "Title": "THE SINISTER SIX STRIKE",
+            "Filenumber": "#SPM009"
+        },
+        {
+            "Title": "SPIDER-MAN: NO WAY HOME",
+            "Filenumber": "#SPM010"
+        }
+    ],
+    "Darth Vader": [
+        {
+            "Title": "THE FALL OF ANAKIN SKYWALKER",
+            "Filenumber": "#DV001"
+        },
+        {
+            "Title": "RISE OF THE SITH",
+            "Filenumber": "#DV002"
+        },
+        {
+            "Title": "THE EMPIRE'S IRON FIST",
+            "Filenumber": "#DV003"
+        },
+        {
+            "Title": "SHADOWS OF MUSTAFAR",
+            "Filenumber": "#DV004"
+        },
+        {
+            "Title": "HUNT FOR THE REBELS",
+            "Filenumber": "#DV005"
+        },
+        {
+            "Title": "CONFRONTATION WITH OBI-WAN",
+            "Filenumber": "#DV006"
+        },
+        {
+            "Title": "THE REBELLION STRIKES BACK",
+            "Filenumber": "#DV007"
+        },
+        {
+            "Title": "THE BATTLE OF HOTH",
+            "Filenumber": "#DV008"
+        },
+        {
+            "Title": "THE TRAP ON CLOUD CITY",
+            "Filenumber": "#DV009"
+        },
+        {
+            "Title": "FATHER AND SON",
+            "Filenumber": "#DV010"
+        }
+    ],
+    "Hulk": [
+        {
+            "Title": "THE GAMMA ACCIDENT",
+            "Filenumber": "#HLK001"
+        },
+        {
+            "Title": "RAGE AND RUIN",
+            "Filenumber": "#HLK002"
+        },
+        {
+            "Title": "THE HUNT FOR THE HULK",
+            "Filenumber": "#HLK003"
+        },
+        {
+            "Title": "BATTLE WITH THE ABOMINATION",
+            "Filenumber": "#HLK004"
+        },
+        {
+            "Title": "PLANET HULK: EXILE",
+            "Filenumber": "#HLK005"
+        },
+        {
+            "Title": "WORLD WAR HULK",
+            "Filenumber": "#HLK006"
+        },
+        {
+            "Title": "HULK VS. THE AVENGERS",
+            "Filenumber": "#HLK007"
+        },
+        {
+            "Title": "THE RED HULK RISES",
+            "Filenumber": "#HLK008"
+        },
+        {
+            "Title": "HULK: THE END",
+            "Filenumber": "#HLK009"
+        },
+        {
+            "Title": "THE IMMORTAL HULK",
+            "Filenumber": "#HLK010"
+        }
+    ],
+    "The Punisher": [
+        {
+            "Title": "ORIGIN OF VENGEANCE",
+            "Filenumber": "#PUN001"
+        },
+        {
+            "Title": "WAR JOURNAL BEGINS",
+            "Filenumber": "#PUN002"
+        },
+        {
+            "Title": "THE MOB FALLS",
+            "Filenumber": "#PUN003"
+        },
+        {
+            "Title": "CONFLICT WITH KINGPIN",
+            "Filenumber": "#PUN004"
+        },
+        {
+            "Title": "BATTLE IN THE BIG APPLE",
+            "Filenumber": "#PUN005"
+        },
+        {
+            "Title": "VIGILANTE JUSTICE",
+            "Filenumber": "#PUN006"
+        },
+        {
+            "Title": "BLOOD ON THE STREETS",
+            "Filenumber": "#PUN007"
+        },
+        {
+            "Title": "THE PUNISHER VS. THE MARVEL UNIVERSE",
+            "Filenumber": "#PUN008"
+        },
+        {
+            "Title": "NO MERCY",
+            "Filenumber": "#PUN009"
+        },
+        {
+            "Title": "THE FINAL RECKONING",
+            "Filenumber": "#PUN010"
+        }
+    ],
+    "Black Panther": [
+        {
+            "Title": "THE LEGACY OF WAKANDA",
+            "Filenumber": "#BKP001"
+        },
+        {
+            "Title": "RISE OF THE PANTHER",
+            "Filenumber": "#BKP002"
+        },
+        {
+            "Title": "THE HEART-SHAPED HERB",
+            "Filenumber": "#BKP003"
+        },
+        {
+            "Title": "KINGDOM UNDER THREAT",
+            "Filenumber": "#BKP004"
+        },
+        {
+            "Title": "THE DORA MILAJE",
+            "Filenumber": "#BKP005"
+        },
+        {
+            "Title": "CONFLICT WITH KILLMONGER",
+            "Filenumber": "#BKP006"
+        },
+        {
+            "Title": "WAKANDA VS. THE WORLD",
+            "Filenumber": "#BKP007"
+        },
+        {
+            "Title": "THE INFINITY WAR",
+            "Filenumber": "#BKP008"
+        },
+        {
+            "Title": "SECRET OF VIBRANIUM",
+            "Filenumber": "#BKP009"
+        },
+        {
+            "Title": "THE FUTURE OF WAKANDA",
+            "Filenumber": "#BKP010"
+        }
+    ],
+    "Green Lantern": [
+        {
+            "Title": "THE RING OF POWER",
+            "Filenumber": "#GL001"
+        },
+        {
+            "Title": "GUARDIANS OF THE UNIVERSE",
+            "Filenumber": "#GL002"
+        },
+        {
+            "Title": "THE EMERALD DAWN",
+            "Filenumber": "#GL003"
+        },
+        {
+            "Title": "SINESTRO'S FALL",
+            "Filenumber": "#GL004"
+        },
+        {
+            "Title": "WAR OF LIGHT",
+            "Filenumber": "#GL005"
+        },
+        {
+            "Title": "BLACKEST NIGHT",
+            "Filenumber": "#GL006"
+        },
+        {
+            "Title": "BRIGHTEST DAY",
+            "Filenumber": "#GL007"
+        },
+        {
+            "Title": "THE RISE OF THE RED LANTERNS",
+            "Filenumber": "#GL008"
+        },
+        {
+            "Title": "REBIRTH OF HAL JORDAN",
+            "Filenumber": "#GL009"
+        },
+        {
+            "Title": "THE GREEN LANTERN CORPS",
+            "Filenumber": "#GL010"
+        }
+    ],
+    "Superman": [
+        {
+            "Title": "THE LAST SON OF KRYPTON",
+            "Filenumber": "#SUP001"
+        },
+        {
+            "Title": "METROPOLIS' NEW HERO",
+            "Filenumber": "#SUP002"
+        },
+        {
+            "Title": "BATTLE WITH LEX LUTHOR",
+            "Filenumber": "#SUP003"
+        },
+        {
+            "Title": "THE FORTRESS OF SOLITUDE",
+            "Filenumber": "#SUP004"
+        },
+        {
+            "Title": "THE RISE OF BRAINIAC",
+            "Filenumber": "#SUP005"
+        },
+        {
+            "Title": "WAR OF THE SUPERMEN",
+            "Filenumber": "#SUP006"
+        },
+        {
+            "Title": "THE DEATH AND RETURN",
+            "Filenumber": "#SUP007"
+        },
+        {
+            "Title": "KRYPTONIAN LEGACY",
+            "Filenumber": "#SUP008"
+        },
+        {
+            "Title": "INJUSTICE: GODS AMONG US",
+            "Filenumber": "#SUP009"
+        },
+        {
+            "Title": "THE MULTIVERSE CRISIS",
+            "Filenumber": "#SUP010"
+        }
+    ],
+    "The Flash": [
+        {
+            "Title": "THE FASTEST MAN ALIVE",
+            "Filenumber": "#FLS001"
+        },
+        {
+            "Title": "FLASHPOINT PARADOX",
+            "Filenumber": "#FLS002"
+        },
+        {
+            "Title": "THE ROGUES' REVENGE",
+            "Filenumber": "#FLS003"
+        },
+        {
+            "Title": "REBIRTH OF BARRY ALLEN",
+            "Filenumber": "#FLS004"
+        },
+        {
+            "Title": "THE SPEED FORCE",
+            "Filenumber": "#FLS005"
+        },
+        {
+            "Title": "TRIAL OF THE FLASH",
+            "Filenumber": "#FLS006"
+        },
+        {
+            "Title": "THE DARK FLASH SAGA",
+            "Filenumber": "#FLS007"
+        },
+        {
+            "Title": "RUNNING SCARED",
+            "Filenumber": "#FLS008"
+        },
+        {
+            "Title": "CRISIS ON INFINITE EARTHS",
+            "Filenumber": "#FLS009"
+        },
+        {
+            "Title": "THE LEGION OF ZOOM",
+            "Filenumber": "#FLS010"
+        }
+    ],
+    "Thor": [
+        {
+            "Title": "THE GOD OF THUNDER",
+            "Filenumber": "#THR001"
+        },
+        {
+            "Title": "JOURNEY INTO MYSTERY",
+            "Filenumber": "#THR002"
+        },
+        {
+            "Title": "RAGNAROK AND RENEWAL",
+            "Filenumber": "#THR003"
+        },
+        {
+            "Title": "THE MIGHTY AVENGER",
+            "Filenumber": "#THR004"
+        },
+        {
+            "Title": "WAR OF THE REALMS",
+            "Filenumber": "#THR005"
+        },
+        {
+            "Title": "THE FALL OF ASGARD",
+            "Filenumber": "#THR006"
+        },
+        {
+            "Title": "THE UNWORTHY THOR",
+            "Filenumber": "#THR007"
+        },
+        {
+            "Title": "BATTLE WITH THE FROST GIANTS",
+            "Filenumber": "#THR008"
+        },
+        {
+            "Title": "THE SIEGE OF ASGARD",
+            "Filenumber": "#THR009"
+        },
+        {
+            "Title": "THOR: GOD OF THUNDER",
+            "Filenumber": "#THR010"
+        }
+    ]
+}
