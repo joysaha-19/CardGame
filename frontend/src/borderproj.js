@@ -49,16 +49,6 @@ const Ui = () => {
       <div className="upincircle"></div>
       </div>
       <div className="downcircle"></div> */}
-      <div className="fist">
-      <div className="middlefinger"></div>
-      <div className="indexfinger"></div>
-      <div className="ringfinger"></div>
-      <div className="littlefinger"></div>
-      <div className="thumb">
-        <div className="trapeziumlower"></div>
-        <div className="trapeziumupper"></div>
-      </div>
-      </div>
      
      </div>
   );

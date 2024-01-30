@@ -52,6 +52,7 @@ const Ui = () => {
     Array(data1["Characters"].length).fill(false)
   );
   const scrollref = useRef(null);
+  const scroll=useRef(null);
   const [height, setheight] = useState("210px");
   const [arrow, setarrow] = useState(0);
   const [bg1, setbg1] = useState("rgba(40, 150, 174, 0.793)");
@@ -63,6 +64,13 @@ const Ui = () => {
   const [opabilities, setopabilities] = useState(0);
   const [numcontent, setnumcontent] = useState(0);
   const [prevnav, setprevnav] = useState(0);
+  const [showfile,setshowfile]=useState(true);
+  const [opacityleft,setopacityleft]=useState(0);
+  const [opacityright,setopacityright]=useState(1);
+
+    // const [showfile,setshowfile]=useState([...true,Array[lore.length-1].fill(false)]);
+
+  const [delay,setdelay]=useState(1);
   const [backgroundnav, setbackgroundnav] = useState([
     "rgba(9, 196, 237, 0.496)",
     "transparent",
@@ -345,13 +353,18 @@ const Ui = () => {
   }
 
   useEffect(() => {
-    setTimeout(() => {
+   
       setstrength("60%");
       sethealth("40%");
       setdefense("30%");
       setspeed("70%");
       setcombat("50%");
-    }, 200);
+      setshowfile(true);
+    const a=  setTimeout(()=>{
+        setshowfile(false);
+        setdelay(0);
+      },1150)
+  
   });
 
   function swapcolor(n) {
@@ -463,11 +476,13 @@ const Ui = () => {
     setanimation(true);
     setimage(data1["Characters"][index]["backgroundlocation"]);
     setimageinitial(image);
-
     // imageanimation(data1["Characters"][index]["backgroundlocation"]);
-    setTimeout(() => {
+   const anim1= setTimeout(() => {
       setanimation(false);
     }, 200);
+
+   
+    
 
     // setTimeout(()=>{
     //   setimageinitial(image);
@@ -519,7 +534,41 @@ const Ui = () => {
     }, 200);
     seti((i + 1) % 3);
   }
+ function shiftright(){
+  if(scroll.current)
+  { const element=scroll.current;
+    const remainingScrollLength = element.scrollWidth - (element.clientWidth + element.scrollLeft);
+    setopacityleft(1);
 
+   if(remainingScrollLength>0)
+   {
+   element.scrollLeft+=700;
+   let remlengthr=element.scrollWidth - (element.clientWidth + element.scrollLeft);
+   console.log(remlengthr)
+    setopacityright(remlengthr < 700 ? 0 : 1);
+
+
+   }
+  
+  }
+ }
+ function shiftleft(){
+  if(scroll.current)
+  { const element=scroll.current;
+   setopacityright(1);
+
+
+   if(element.scrollLeft>0)
+   {
+   element.scrollLeft-=700;
+   setopacityleft(element.scrollLeft > 700 ? 1 : 0);
+
+  
+   }
+   }
+  
+  }
+ 
   return (
     <div className="parentcontainer_proj1">
       <div>
@@ -599,12 +648,20 @@ const Ui = () => {
 
               </div>
             </div>
-            <div className="introbox">
+            <div className="scroll leftscroll" style={{opacity:opacityleft}}onClick={shiftleft}>
+        <div className="actualbutton">
+        </div>
+      </div>
+      <div className="scroll rightscroll"  style={{opacity:opacityright}}onClick={shiftright}>
+        <div className="actualbutton">
+        </div>
+      </div>
+            <div className="introbox" ref={scroll}>
               <div className="logbegin"></div>
               {
                 lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
-                       return <div className="log">
-                       <p className="classifiedtag">CLASSIFIED</p>
+                       return <div className="log" >
+                       <p className="classifiedtag" >CLASSIFIED</p>
                        <p className="filenumber">FILE{value["Filenumber"]}</p>
                        <div className="filesymbol">
                        <img style={{height: '50px'}}
@@ -619,28 +676,6 @@ const Ui = () => {
                      </div>
                 })
               }
-              {/* <div className="log">
-                <p className="classifiedtag">CLASSIFIED</p>
-                <p className="filenumber">FILE#SBW001</p>
-                <div className="filesymbol">
-                <img style={{height: '50px'}}
-                        className="fileimage"
-                        src={data1["Characters"][characterindex]["imagelocation"]}
-                      />
-                </div>
-                <div className="filetitle">
-                  <p>BIRTH OF THE BAT</p>
-                
-                </div>
-              </div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div>
-              <div className="log"></div> */}
               <div className="logend"></div>
               {/* <p className="intro">
                 <strong>CONFIDENTIAL</strong>: CASE FILE - {data1["Characters"][characterindex]["Casefile"]}
