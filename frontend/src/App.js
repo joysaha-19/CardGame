@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
         <Routes>
         
-        <Route path='/proj1' element={<Project1/>}/>
+        <Route path='/' element={<Project1/>}/>
         <Route path='/bproj' element={<BProj/>}/>
 
       </Routes>

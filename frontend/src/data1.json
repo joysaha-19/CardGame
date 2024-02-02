@@ -31,7 +31,7 @@
                   },
                   {
                       "abilityname": "Stun Gun",
-                      "abilityinfo": "Batman employs his high-voltage stun gun, temporarily incapacitating his foes with an electrifying jolt. This intense shock deals damage, stuns enemies, and disrupts their electronic gadgets, hindering their combat capabilities.",
+                      "abilityinfo": "Batman employs his high-voltage stun gun, temporarily incapacitating his foes with an electrifying jolt.",
                       "abilityspecial": [
                           "DAMAGE: 40%",
                           "DAMAGE: 45%",
