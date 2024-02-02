@@ -93,7 +93,7 @@ const Ui = () => {
           <p className="parameter">STRENGTH</p>
         </div>
         <div className="strength">
-          <div className="bar strengthbar" style={{ width: strength }}>
+          <div className="bar strengthbar" style={{ width: data1["Characters"][characterindex]["STRENGTH"] }}>
             <div className="offset"></div>
             {/* <p className="value">{strength}</p> */}
           </div>
@@ -102,7 +102,7 @@ const Ui = () => {
           <p className="parameter">HEALTH</p>
         </div>
         <div className="health">
-          <div className="bar healthbar" style={{ width: health }}>
+          <div className="bar healthbar" style={{ width: data1["Characters"][characterindex]["HEALTH"] }}>
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -111,7 +111,7 @@ const Ui = () => {
           <p className="parameter">DEFENSE</p>
         </div>
         <div className="defense">
-          <div className="bar defensebar" style={{ width: defense }}>
+          <div className="bar defensebar" style={{ width: data1["Characters"][characterindex]["DEFENSE"] }}>
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -120,7 +120,7 @@ const Ui = () => {
           <p className="parameter">SPEED</p>
         </div>
         <div className="speed">
-          <div className="bar speedbar" style={{ width: speed }}>
+          <div className="bar speedbar" style={{ width: data1["Characters"][characterindex]["SPEED"] }}>
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -129,7 +129,7 @@ const Ui = () => {
           <p className="parameter">COMBAT</p>
         </div>
         <div className="combat">
-          <div className="bar combatbar" style={{ width: combat }}>
+          <div className="bar combatbar" style={{width: data1["Characters"][characterindex]["COMBAT"] }}>
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -354,11 +354,6 @@ const Ui = () => {
 
   useEffect(() => {
    
-      setstrength("60%");
-      sethealth("40%");
-      setdefense("30%");
-      setspeed("70%");
-      setcombat("50%");
       setshowfile(true);
     const a=  setTimeout(()=>{
         setshowfile(false);
@@ -404,6 +399,7 @@ const Ui = () => {
       setarrow(180);
       setheight("500px");
       setviewinfo("0");
+      
     } else {
       setheight("200px");
       setarrow(0);
@@ -468,7 +464,13 @@ const Ui = () => {
   const transformcard =useCallback((index)=> {
     if (prev != -1) arr[prev] = false;
     setfilelinewidth('4%');
-  
+    if(scroll.current)
+    {
+      const element=scroll.current;
+      element.scrollLeft=0;
+      setopacityleft(0);
+      setopacityright(1);
+    }
     arr[index] = true;
     setarr(arr);
     setprev(index);
@@ -545,7 +547,7 @@ const Ui = () => {
    element.scrollLeft+=700;
    let remlengthr=element.scrollWidth - (element.clientWidth + element.scrollLeft);
    console.log(remlengthr)
-    setopacityright(remlengthr < 700 ? 0 : 1);
+    setopacityright(remlengthr <730 ? 0 : 1);
 
 
    }
@@ -637,7 +639,7 @@ const Ui = () => {
               <div className="outermost-conic"></div>
             </div>
           </div>
-          <div className="masterintrobox" style={{ height: height }}>
+          <div className="masterintrobox" style={{ height: height }} >
             <div className="filestitle">
               <div className="fileline filelineleft" style={{width:filelinewidth}}>
                 <div className="endpoint endpointleft"></div>
@@ -659,8 +661,11 @@ const Ui = () => {
             <div className="introbox" ref={scroll}>
               <div className="logbegin"></div>
               {
+
                 lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
-                       return <div className="log" >
+                       return <>
+                       <div className="log" key={index}>
+                        <div className="logsubcontainer">
                        <p className="classifiedtag" >CLASSIFIED</p>
                        <p className="filenumber">FILE{value["Filenumber"]}</p>
                        <div className="filesymbol">
@@ -673,38 +678,20 @@ const Ui = () => {
                          <p>{value["Title"]}</p>
                        
                        </div>
+                       </div>
                      </div>
+                     </>
                 })
               }
               <div className="logend"></div>
-              {/* <p className="intro">
-                <strong>CONFIDENTIAL</strong>: CASE FILE - {data1["Characters"][characterindex]["Casefile"]}
-                <br></br>
-                <br></br>
-                <strong>Subject Name</strong>: {data1["Characters"][characterindex]["Casefile"]}
-                <br></br>
-                <br></br>
-                <strong>Real Identity:</strong> {data1["Characters"][characterindex]["Alias"]}
-                <br></br>
-                <br></br>
-                <strong>Background:</strong> {data1["Characters"][characterindex]["Background"]}
-                <br></br>
-                <br></br>
-                <strong>Early Life and Education:</strong> {data1["Characters"][characterindex]["Earlylife"]}
-                <br></br>
-                <br></br>
-                <strong>Modus Operandi:</strong>{data1["Characters"][characterindex]["ModusOperandi"]}
-                <br></br>
-                <br></br>
-                {data1["Characters"][characterindex]["Conclusion"]}
-              </p> */}
-              {/* <div className="pulldown" onClick={introincrease}>
+               
+            </div>
+            <div className="pulldown" >
                 <div
                   className="arrow"
                   style={{ transform: `rotate(${arrow}deg)` }}
                 ></div>
-              </div> */}
-            </div>
+              </div> 
           </div>
           <div className="infogrid" style={{ opacity: viewinfo }}>
             <div className="stats">
@@ -736,7 +723,7 @@ const Ui = () => {
             {arr.map((value, index) => {
               return (
                 <>
-                  <div
+                  <div key={index}
                     className="Cardarea"
                     style={{
                       background: value

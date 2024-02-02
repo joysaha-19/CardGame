@@ -462,7 +462,7 @@ p{
 
 .masterintrobox {
   position: absolute;
-  top: 26%;
+  top: 25%;
   left: 3%;
   width: 94%;
   /* background-color: black; */
@@ -530,11 +530,10 @@ p{
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  /* display: none; */
 }
 
-.scroll:hover{
-  transform: scale(1.1);
-}
+
 .scroll:hover .actualbutton{
   background-color: azure;
 }
@@ -579,9 +578,28 @@ p{
   gap: 5px;
   scroll-behavior: smooth;
   overflow-y: hidden;
-  /* background-color: black; */
-  /* flex-wrap: wrap; */
+ 
 }
+/* .introbox{
+  border: 2px solid rgba(0, 183, 255, 0.46);
+  background: rgba(36, 35, 35, 0.573);
+  height: 89.5%;
+  bottom: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: increasearea 0.9s ease-out 0s 1 normal forwards;
+  transition: height 0.3s ease, width 0.3s ease;
+  z-index: 5;
+  overflow-x: hidden;
+  gap: 5px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  background-color: black; 
+  flex-wrap: wrap;
+} */
 .logbegin{
   height: 180px;
   width: 30px;
@@ -592,16 +610,32 @@ p{
 .log{
   height: 180px;
   width: 22.2%;
-  background-color: rgba(0, 255, 255, 0.675);
+  background-color: rgb(10, 96, 96);
+  background-color: transparent;
   transform: skew(-20deg) scale(0);
   opacity: 0;
   flex-shrink: 0;
-  display: grid;
+  flex-grow: 0;
+  /* display: grid;
   grid-template-columns: 10px 1fr 10px;
-  grid-template-rows: 0.3fr 0.1fr 0.5fr  0.25fr;
+  grid-template-rows: 0.3fr 0.1fr 0.5fr  0.25fr; */
   transition: transform 0.3s ease, background-color 0.3s ease;
   animation: showfile 0.5s ease 1s 1 normal both;
   
+}
+.logsubcontainer{
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+  grid-template-rows: 0.3fr 0.1fr 0.5fr  0.25fr;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 247, 0.279) 92%,
+    aqua 93% 100%
+  )
 }
 
 .log:hover{
@@ -660,7 +694,7 @@ p{
 }
 .logend{
   height: 180px;
-  width: 0px;
+  width: 2px;
   background-color: transparent;
   transform: skew(-20deg);
   flex-shrink: 0;
@@ -808,7 +842,7 @@ p{
   left: calc(50% - 35px);
   clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
   opacity: 0;
-  animation: pulldownbar 0.3s ease 1.4s 1 normal forwards;
+  animation: pulldownbar 0.3s ease 1.2s 1 normal forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -843,12 +877,12 @@ p{
 
 @keyframes showfile{
   0%{
-    transform: scale(0) skew(-20deg);
+    transform: scale(0) skewX(-20deg);
     opacity: 0;
   }
 
   100%{
-    transform: scale(1) skew(-20deg);
+    transform: scale(1) skewX(-20deg);
     opacity: 1;
   }
 }
@@ -998,7 +1032,7 @@ p{
 .offset {
   height: 18px;
   width: 15px;
-  background-color: rgba(17, 176, 176, 1);
+  background-color: rgb(0, 255, 255);
   position: absolute;
   left: -10px;
   top: 0%;
@@ -1007,8 +1041,8 @@ p{
 }
 .bar {
   height: 18px;
-  background-color: rgba(17, 176, 176, 1);
-  transition: width 1s ease-in-out;
+  background-color: rgb(0, 255, 255);
+  transition: width 0.4s ease-out;
   position: relative;
   /* clip-path: polygon(0% 0% , 97% 0% , 100% 100% , 0% 100%); */
   transform: skewX(-30deg);
