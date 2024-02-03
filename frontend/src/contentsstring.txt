@@ -1,0 +1,186 @@
+const contents = [
+    <div
+      className="statscontent"
+      style={{ transform: `scale(${scalestats})`, opacity: `${opstats}` }}
+    >
+      <div className="graphs">
+        <div className="strengthparam label">
+          <p className="parameter">STRENGTH</p>
+        </div>
+        <div className="strength">
+          <div className="bar strengthbar" style={{ width: strength }}>
+            <div className="offset"></div>
+            {/* <p className="value">{strength}</p> */}
+          </div>
+        </div>
+        <div className="healthparam label">
+          <p className="parameter">HEALTH</p>
+        </div>
+        <div className="health">
+          <div className="bar healthbar" style={{ width: health }}>
+            <div className="offset"></div>
+            <div className="endpoint"></div>
+          </div>
+        </div>
+        <div className="defenseparam label">
+          <p className="parameter">DEFENSE</p>
+        </div>
+        <div className="defense">
+          <div className="bar defensebar" style={{ width: defense }}>
+            <div className="offset"></div>
+            <div className="endpoint"></div>
+          </div>
+        </div>
+        <div className="speedparam label">
+          <p className="parameter">SPEED</p>
+        </div>
+        <div className="speed">
+          <div className="bar speedbar" style={{ width: speed }}>
+            <div className="offset"></div>
+            <div className="endpoint"></div>
+          </div>
+        </div>
+        <div className="combatparam label">
+          <p className="parameter">COMBAT</p>
+        </div>
+        <div className="combat">
+          <div className="bar combatbar" style={{ width: combat }}>
+            <div className="offset"></div>
+            <div className="endpoint"></div>
+          </div>
+        </div>
+      </div>
+      <div className="levels">
+        <div className="level strengthlevel">
+          <div className="strengthcircle circle">
+            <p className="levellabel">STRENGTH</p>
+            <p className="levelnumber"> Lvl 1</p>
+          </div>
+        </div>
+        <div className="level healthlevel">
+          <div className="healthcircle circle">
+            <p className="levellabel">HEALTH</p>
+            <p className="levelnumber"> Lvl 1</p>
+          </div>
+        </div>
+        <div className="level defenselevel">
+          <div className="defensecircle circle">
+            <p className="levellabel">DEFENSE</p>
+            <p className="levelnumber"> Lvl 1</p>
+          </div>
+        </div>
+        <div className="level speedlevel">
+          <div className="speedcircle circle">
+            <p className="levellabel">SPEED</p>
+            <p className="levelnumber"> Lvl 1</p>
+          </div>
+        </div>
+        <div className="level combatlevel">
+          <div className="combatcircle circle">
+            <p className="levellabel">COMBAT</p>
+            <p className="levelnumber"> Lvl 1</p>
+          </div>
+        </div>
+      </div>
+    </div>,
+    <div
+      className="abilitiescontent"
+      style={{
+        transform: `scale(${scaleabilities})`,
+        opacity: `${opabilities}`,
+      }}
+    >
+      <div className="abilitynavbar">
+        <div
+          className="attackability nav"
+          style={{ backgroundColor: backgroundnav[0] }}
+          onClick={() => {
+            movenav(0);
+          }}
+        >
+          <p className="navlabel">ATTACK</p>
+        </div>
+        <div
+          className="defenseability nav"
+          style={{ backgroundColor: backgroundnav[1] }}
+          onClick={() => {
+            movenav(1);
+          }}
+        >
+          {" "}
+          <p className="navlabel">DEFENSE</p>
+        </div>
+        <div
+          className="supportability nav"
+          style={{ backgroundColor: backgroundnav[2] }}
+          onClick={() => {
+            movenav(2);
+          }}
+        >
+          {" "}
+          <p className="navlabel">SUPPORT</p>
+        </div>
+      </div>
+      <div className="special1 special" onClick={() => focusonability(0)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[0] ? "scale(1.15)" : "scale(0)" }}
+        ></div>
+        <div className="circle">
+          <img src={L1abilities[prevnav]} className="abilityimage"></img>
+        </div>
+      </div>
+
+      <div className="special2 special" onClick={() => focusonability(1)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[1] ? "scale(1.15)" : "scale(0)" }}
+        >
+          {" "}
+        </div>
+        <div className="circle">
+          <img src={L2abilities[prevnav]} className="abilityimage"></img>
+        </div>
+      </div>
+
+      <div className="special3 special" onClick={() => focusonability(2)}>
+        <div
+          className="outercircleability"
+          style={{ transform: abilityfocus[2] ? "scale(1.15)" : "scale(0)" }}
+        >
+          {" "}
+        </div>
+        <div className="circle">
+          <img src={L3abilities[prevnav]} className="abilityimage"></img>
+        </div>
+      </div>
+      <p className="ability1name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][0]["abilityname"]}</p>
+      <p className="ability2name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][1]["abilityname"]}</p>
+      <p className="ability3name abname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][2]["abilityname"]}</p>
+      <div className="abilitydescriptionbox">
+        <div className="abilitydescription">
+          <div className="abilitydescriptionname">
+            <p className="abilityname">{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityname"]}</p>
+          </div>
+          <div className="abilitydescriptionlevel">
+            <div className="circle">
+              <p>Lvl&nbsp;{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]}</p>
+            </div>
+          </div>
+          <div className="abilitydescriptionother">
+            <div className="abilitydescriptioninfo">
+              <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityinfo"]}</p>
+            </div>
+            <div className="abilitydescriptionstats">
+              <div className="abilitydescriptionability">
+                <p>{data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityspecial"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+              </div>
+              <div className="abilitydescriptionneed">
+                <p>XP needed for upgrade: {data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilityupgradeneed"][data1["Characters"][characterindex]["abilitypanel"][prevnav][currentabilityfocus]["abilitycurrentlevel"]-1]}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+  ];

@@ -1,7 +1,7 @@
 
 import Project1 from './cardmenu.js';
 import BProj from './borderproj.js';
-
+import Project11 from './cardmenu2.js';
 
 
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
@@ -12,6 +12,7 @@ function App() {
         
         <Route path='/' element={<Project1/>}/>
         <Route path='/bproj' element={<BProj/>}/>
+        <Route path='/1' element={<Project11/>}/>
 
       </Routes>
     </BrowserRouter>

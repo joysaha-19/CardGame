@@ -318,7 +318,7 @@ left: calc(50% - 100px);
 }
 
 
-@media screen and (min-width: 1px )  and (max-width: 1249px) {
+@media screen and (min-width: 1px )  and (max-width: 1350px) {
 
   .glowcircle {
     height: 320px;
