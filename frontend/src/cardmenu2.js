@@ -690,20 +690,9 @@ const Ui = () => {
               </div> 
           </div>
           </div>
-          </div>
-         <div className="rightcontent">
-            <div className="stats">
-                <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
-                {contents[0]}
           
-            </div>
-            <div className="abilities">
-            <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
-                {contents[1]}
-            </div>
-          </div> 
-        </div>
-        <div className="Cardtrailbox">
+        <div className="lowestgrid">
+          <div className="Cardtrailbox">
           <div className="Cardtrail">
             <div className="begin"></div>
             {arr.map((value, index) => {
@@ -746,6 +735,22 @@ const Ui = () => {
             })}
           </div>
         </div>
+        </div>
+          </div>
+         <div className="rightcontent">
+            <div className="stats">
+                <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
+                {contents[0]}
+          
+            </div>
+            <div className="abilities">
+            <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
+                {contents[1]}
+            </div>
+          </div> 
+          
+        </div>
+        
       </div>
     </div>
   );

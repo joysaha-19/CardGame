@@ -4258,7 +4258,7 @@ p {
 
 
 
-@media screen and (min-width: 760px) and (max-width: 950px) {
+@media screen and (min-width: 760px) and (max-width: 950px)  {
   .bgi {
     height: 100%;
     width: 100%;
