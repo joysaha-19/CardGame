@@ -29,6 +29,7 @@ p {
   background-size: cover;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
 }
 .subparent{
@@ -384,7 +385,7 @@ p {
            
        } */
     .Cardtrailbox {
-      height: 90%;
+      height: 80px;
       width: 100%;
       background: linear-gradient(
         90deg,
@@ -397,11 +398,11 @@ p {
   
    
       position: absolute;
-      top:  50%;
-      transform: translateY(-50%);
+      top:  calc(100% - 80px);
       left: 0%;
       /* display: none; */
-      /* overflow-x: scroll; */
+      overflow-x: scroll;
+      z-index: 300;
     }
     .lowestgrid{
       grid-row: 4/5;
@@ -414,7 +415,7 @@ p {
       width: 100%;
       position: absolute;
       top:  50%;
-      transform: translateY(-60%);
+      transform: translateY(-50%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -423,6 +424,7 @@ p {
      scroll-behavior: smooth;
       overflow-y: hidden;
       flex-wrap: nowrap;
+      gap: 10px;
       /* background-color: black; */
     }
   
@@ -471,19 +473,20 @@ p {
     .rightcontent{
         grid-column: 3/4;
         display: grid;
-        grid-template-rows: 4px 0.40fr 1px 0.48fr 2px ;
+        grid-template-rows: 4px 0.27fr 30px 0.35fr 2px ;
     }
      
     .leftcontent{
       grid-column: 1/2;
       display: grid;
-      grid-template-rows: 0.7fr 0.5fr  0px 0.8fr ;
+      grid-template-rows: 100px 1fr  0px 0.6fr ;
       /* background-color: blue; */
       /* background-color: antiquewhite; */
     }
     .filetrailbox{
         grid-row: 2/3;
         position: relative;
+        margin-left: 0px;
         /* background-color: white; */
 
         /* background-color: rgba(240, 248, 255, 0.389); */
@@ -961,7 +964,7 @@ p {
     }
   
     .stats {
-      grid-row: 2/3;
+      grid-row: 4/5;
       width: 96%;
       /* background-color: red; */
       position: relative;
@@ -990,13 +993,14 @@ p {
     }
   
     .abilities{
-        grid-row: 4/5;
+        grid-row: 2/3;
       width: 96%;
       /* background-color: red; */
       position: relative;
       border: 1px solid aqua;
       display: grid;
       grid-template-rows: 17px 1fr 2px;
+      margin-left: 25px;
       
     }
     .blinker {
@@ -1238,7 +1242,7 @@ p {
       grid-row: 2/3;
       display: grid;
       grid-template-columns: 1px 1fr 1fr 1fr 1fr 1fr 1fr 1px;
-      grid-template-rows: 1px 0.5fr 1fr 10px 1.4fr;
+      grid-template-rows: 1px 0.3fr 1fr 15px 1.7fr;
       transition: transform 0.21s ease-in-out, opacity 0.21s ease-in-out;
     }
     .special {
@@ -1249,11 +1253,11 @@ p {
       position: relative;
     }
     .special .circle {
-      height: 58px;
-      width: 58px;
+      height: 40px;
+      width: 40px;
       position: absolute;
-      top: calc(50% - 29px);
-      left: calc(50% - 29px);
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
       /* animation: none; */
     }
   
@@ -1289,8 +1293,8 @@ p {
     .abilityimage {
       object-fit: contain;
       overflow: hidden;
-      height: 50px;
-      width: 50px;
+      height: 36px;
+      width: 36px;
       border-radius: 50%;
     }
     .abname {
@@ -1386,7 +1390,7 @@ p {
       position: relative;
     }
     .abilityname {
-      font-size: 10px;
+      font-size: 9px;
       color: rgb(0, 255, 213);
       font-family: "Tektur", sans-serif;
       position: absolute;
@@ -1427,7 +1431,7 @@ p {
       grid-row: 2/4;
       display: grid;
       grid-template-columns: 2px 1fr 2px;
-      grid-template-rows: 0.6fr 2px 0.2fr;
+      grid-template-rows: 0.6fr 2px 0.3fr;
     }
   
     .abilitydescriptioninfo {
@@ -1440,7 +1444,7 @@ p {
     }
   
     .abilitydescriptioninfo p {
-      font-size: 7px;
+      font-size: 6px;
       color: white;
       font-family: "Tektur", sans-serif;
     }
@@ -1452,7 +1456,7 @@ p {
     }
   
     .abilitydescriptionstats p {
-      font-size: 7px;
+      font-size: 5px;
       /* display: none; */
       color: rgb(0, 255, 213);
       font-family: "Tektur", sans-serif;
@@ -1481,8 +1485,8 @@ p {
   
     .symbol {
       object-fit: contain;
-      height: 40px;
-      width: 40px;
+      height: 45px;
+      width: 45px;
       opacity: 1;
     }
   

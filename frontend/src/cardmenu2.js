@@ -578,7 +578,49 @@ const Ui = () => {
           }}
           ref={imageref}
         ></img>
-
+        <div className="Cardtrailbox">
+          <div className="Cardtrail">
+            {/* <div className="begin"></div> */}
+            {arr.map((value, index) => {
+              return (
+                <>
+                  <div key={index}
+                    className="Cardarea"
+                    style={{
+                      background: value
+                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, transparent 50%, transparent 85%, transparent 100%)`
+                        : "none",
+                      transform: value
+                        ? "skewX(0deg) scale(1.25)"
+                        : hoverarr[index]
+                        ? "skewX(0deg) scale(1.1)"
+                        : "skewX(0deg)",
+                      opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
+                      zIndex: value ? 1 : 0,
+                    }}
+                    onMouseEnter={() => {
+                      hoverscale(index);
+                    }}
+                    onMouseLeave={() => {
+                      offhoverscale(index);
+                    }}
+                  >
+                    <div
+                      className="Cardeg"
+                      onClick={() => transformcard(index)}
+                      // onMouseEnter={()=>{onlyplace(index)}}
+                    >
+                      <img
+                        className="symbol"
+                        src={data1["Characters"][index]["imagelocation"]}
+                      />
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
         <div className="description">
             <div className="leftcontent">
           <div className="namebox">
@@ -589,14 +631,8 @@ const Ui = () => {
                   <div className="Titleswipedec"></div>
                 </div>
               </div>
-              <div className="detbar">
-                <div className="rod">
-                  <div className="alias"></div>
-                  <div className="origin"></div>
-                  <div className="power"></div>
-                </div>
-              </div>
-              <div className="detarea">
+             
+              {/* <div className="detarea">
                 <div className="aliasarea">
                   <p className="det-text-label">
                     Alias:&nbsp;
@@ -621,7 +657,7 @@ const Ui = () => {
                     </span>
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="glowcircle">
               <div className="inner-circle" onClick={stagechange}>
@@ -633,6 +669,18 @@ const Ui = () => {
               <div className={outermostcircleclassname}></div>
               <div className="outermost-conic"></div>
             </div>
+            </div>
+            
+          <div className="abilities">
+            <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
+                {contents[1]}
+            </div>
+          </div>
+         <div className="rightcontent">
+            <div className="stats">
+                <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
+                {contents[0]}
+          
             </div>
             <div className="filetrailbox">
             <div className="masterintrobox"  >
@@ -690,63 +738,6 @@ const Ui = () => {
               </div> 
           </div>
           </div>
-          
-        <div className="lowestgrid">
-          <div className="Cardtrailbox">
-          <div className="Cardtrail">
-            <div className="begin"></div>
-            {arr.map((value, index) => {
-              return (
-                <>
-                  <div key={index}
-                    className="Cardarea"
-                    style={{
-                      background: value
-                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, transparent 50%, transparent 85%, transparent 100%)`
-                        : "none",
-                      transform: value
-                        ? "skewX(0deg) scale(1.25)"
-                        : hoverarr[index]
-                        ? "skewX(0deg) scale(1.1)"
-                        : "skewX(0deg)",
-                      opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
-                      zIndex: value ? 1 : 0,
-                    }}
-                    onMouseEnter={() => {
-                      hoverscale(index);
-                    }}
-                    onMouseLeave={() => {
-                      offhoverscale(index);
-                    }}
-                  >
-                    <div
-                      className="Cardeg"
-                      onClick={() => transformcard(index)}
-                      // onMouseEnter={()=>{onlyplace(index)}}
-                    >
-                      <img
-                        className="symbol"
-                        src={data1["Characters"][index]["imagelocation"]}
-                      />
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-          </div>
-        </div>
-        </div>
-          </div>
-         <div className="rightcontent">
-            <div className="stats">
-                <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
-                {contents[0]}
-          
-            </div>
-            <div className="abilities">
-            <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
-                {contents[1]}
-            </div>
           </div> 
           
         </div>
