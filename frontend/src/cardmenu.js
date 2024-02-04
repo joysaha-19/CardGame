@@ -1,4 +1,5 @@
-import React, { useEffect, useRef , useCallback } from "react";
+import React, { useEffect, useRef,  } from "react";
+// import { Component } from "react";
 import { useState } from "react";
 import "./cardmenu.css";
 import "./borderproj.css";
@@ -28,6 +29,7 @@ const outermostcirclearr = [
 const anim = "grow 0.7s ease-out 0s 1 normal both";
 
 const Ui = () => {
+  const [componentstyle,setcomponentstyle]=useState(0);
   const [characterindex, setcharacterindex] = useState(0);
   const imageref = useRef();
   const [image, setimage] = useState(
@@ -36,11 +38,6 @@ const Ui = () => {
   const [imageinitial, setimageinitial] = useState(
     data1["Characters"][characterindex]["backgroundlocation"]
   );
-  const [health, sethealth] = useState("5%");
-  const [strength, setstrength] = useState("5%");
-  const [defense, setdefense] = useState("5%");
-  const [speed, setspeed] = useState("5%");
-  const [combat, setcombat] = useState("5%");
   const [animation, setanimation] = useState(false);
   const [ang, setang] = useState(45);
   const [prev, setprev] = useState(0);
@@ -52,25 +49,20 @@ const Ui = () => {
     Array(data1["Characters"].length).fill(false)
   );
   const scrollref = useRef(null);
-  const scroll=useRef(null);
-  const [height, setheight] = useState("210px");
-  const [arrow, setarrow] = useState(0);
+  const scroll = useRef(null);
+  // const [height, setheight] = useState("210px");
+  // const [arrow, setarrow] = useState(0);
   const [bg1, setbg1] = useState("rgba(40, 150, 174, 0.793)");
   const [bg2, setbg2] = useState("rgba(65, 65, 66, 0.993)");
-  const [viewinfo, setviewinfo] = useState("1");
+  // const [viewinfo, setviewinfo] = useState("1");
   const [scalestats, setscalestats] = useState(1);
   const [scaleabilities, setscaleabilities] = useState(0);
   const [opstats, setopstats] = useState(1);
   const [opabilities, setopabilities] = useState(0);
   const [numcontent, setnumcontent] = useState(0);
   const [prevnav, setprevnav] = useState(0);
-  const [showfile,setshowfile]=useState(true);
-  const [opacityleft,setopacityleft]=useState(0);
-  const [opacityright,setopacityright]=useState(1);
-
-    // const [showfile,setshowfile]=useState([...true,Array[lore.length-1].fill(false)]);
-
-  const [delay,setdelay]=useState(1);
+  const [opacityleft, setopacityleft] = useState(0);
+  const [opacityright, setopacityright] = useState(1);
   const [backgroundnav, setbackgroundnav] = useState([
     "rgba(9, 196, 237, 0.496)",
     "transparent",
@@ -79,7 +71,7 @@ const Ui = () => {
 
   let [abilityfocus, setabilityfocus] = useState([true, false, false]);
   const [currentabilityfocus, setcurrentabilityfocus] = useState(0);
-  const [filelinewidth,setfilelinewidth]=useState('4%');
+  const [filelinewidth, setfilelinewidth] = useState("4%");
   const L1abilities = [Fist, Shield, Level1Support];
   const L2abilities = [DoubleFist, Level2Shield, Level2Support];
   const L3abilities = [Sword, Level3Shield, Level3Support];
@@ -93,16 +85,21 @@ const Ui = () => {
           <p className="parameter">STRENGTH</p>
         </div>
         <div className="strength">
-          <div className="bar strengthbar" style={{ width: data1["Characters"][characterindex]["STRENGTH"] }}>
+          <div
+            className="bar strengthbar"
+            style={{ width: data1["Characters"][characterindex]["STRENGTH"] }}
+          >
             <div className="offset"></div>
-            {/* <p className="value">{strength}</p> */}
           </div>
         </div>
         <div className="healthparam label">
           <p className="parameter">HEALTH</p>
         </div>
         <div className="health">
-          <div className="bar healthbar" style={{ width: data1["Characters"][characterindex]["HEALTH"] }}>
+          <div
+            className="bar healthbar"
+            style={{ width: data1["Characters"][characterindex]["HEALTH"] }}
+          >
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -111,7 +108,10 @@ const Ui = () => {
           <p className="parameter">DEFENSE</p>
         </div>
         <div className="defense">
-          <div className="bar defensebar" style={{ width: data1["Characters"][characterindex]["DEFENSE"] }}>
+          <div
+            className="bar defensebar"
+            style={{ width: data1["Characters"][characterindex]["DEFENSE"] }}
+          >
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -120,7 +120,10 @@ const Ui = () => {
           <p className="parameter">SPEED</p>
         </div>
         <div className="speed">
-          <div className="bar speedbar" style={{ width: data1["Characters"][characterindex]["SPEED"] }}>
+          <div
+            className="bar speedbar"
+            style={{ width: data1["Characters"][characterindex]["SPEED"] }}
+          >
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -129,7 +132,10 @@ const Ui = () => {
           <p className="parameter">COMBAT</p>
         </div>
         <div className="combat">
-          <div className="bar combatbar" style={{width: data1["Characters"][characterindex]["COMBAT"] }}>
+          <div
+            className="bar combatbar"
+            style={{ width: data1["Characters"][characterindex]["COMBAT"] }}
+          >
             <div className="offset"></div>
             <div className="endpoint"></div>
           </div>
@@ -212,7 +218,7 @@ const Ui = () => {
           style={{ transform: abilityfocus[0] ? "scale(1.15)" : "scale(0)" }}
         ></div>
         <div className="circle">
-          <img src={L1abilities[prevnav]} className="abilityimage"></img>
+          <img src={L1abilities[prevnav]} alt="ability" className="abilityimage"></img>
         </div>
       </div>
 
@@ -224,7 +230,7 @@ const Ui = () => {
           {" "}
         </div>
         <div className="circle">
-          <img src={L2abilities[prevnav]} className="abilityimage"></img>
+          <img src={L2abilities[prevnav]} alt="ability" className="abilityimage"></img>
         </div>
       </div>
 
@@ -236,7 +242,7 @@ const Ui = () => {
           {" "}
         </div>
         <div className="circle">
-          <img src={L3abilities[prevnav]} className="abilityimage"></img>
+          <img src={L3abilities[prevnav]} alt="ability" className="abilityimage"></img>
         </div>
       </div>
       <p className="ability1name abname">
@@ -344,7 +350,7 @@ const Ui = () => {
     setabilityfocus(abilityfocus);
   }
   function movenav(n) {
-    if (prevnav != n) {
+    if (prevnav !== n) {
       backgroundnav[prevnav] = "transparent";
       backgroundnav[n] = "rgba(9, 196, 237, 0.496)";
       setbackgroundnav(backgroundnav);
@@ -352,19 +358,10 @@ const Ui = () => {
     }
   }
 
-  useEffect(() => {
-   
-      setshowfile(true);
-    const a=  setTimeout(()=>{
-        setshowfile(false);
-        setdelay(0);
-      },1150)
-  
-  });
 
   function swapcolor(n) {
-    if (n == 1) {
-      if (bg1 == "rgba(65, 65, 66, 0.993)") {
+    if (n === 1) {
+      if (bg1 === "rgba(65, 65, 66, 0.993)") {
         setopabilities(0);
         setscaleabilities(0);
         setTimeout(() => {
@@ -378,8 +375,8 @@ const Ui = () => {
         setbg2(t);
       }
     }
-    if (n == 2) {
-      if (bg2 == "rgba(65, 65, 66, 0.993)") {
+    if (n === 2) {
+      if (bg2 ==="rgba(65, 65, 66, 0.993)") {
         setopstats(0);
         setscalestats(0);
         setTimeout(() => {
@@ -394,18 +391,17 @@ const Ui = () => {
     }
   }
 
-  function introincrease() {
-    if (height == "200px") {
-      setarrow(180);
-      setheight("500px");
-      setviewinfo("0");
-      
-    } else {
-      setheight("200px");
-      setarrow(0);
-      setviewinfo("1");
-    }
-  }
+  // function introincrease() {
+  //   if (height === "200px") {
+  //     setarrow(180);
+  //     setheight("500px");
+  //     setviewinfo("0");
+  //   } else {
+  //     setheight("200px");
+  //     setarrow(0);
+  //     setviewinfo("1");
+  //   }
+  // }
   useEffect(() => {
     const interval = setInterval(() => {
       setang((prevang) => prevang + 1);
@@ -456,18 +452,17 @@ const Ui = () => {
   //   }
 
   // }
-  useEffect(()=>{
-    setTimeout(()=>{
-      setfilelinewidth('40%');
-    },100)
-  })
-  const transformcard =useCallback((index)=> {
-    if (prev != -1) arr[prev] = false;
-    setfilelinewidth('4%');
-    if(scroll.current)
-    {
-      const element=scroll.current;
-      element.scrollLeft=0;
+  useEffect(() => {
+    setTimeout(() => {
+      setfilelinewidth("40%");
+    }, 100);
+  });
+  const transformcard = ((index) => {
+    if (prev !== -1) arr[prev] = false;
+    setfilelinewidth("4%");
+    if (scroll.current) {
+      const element = scroll.current;
+      element.scrollLeft = 0;
       setopacityleft(0);
       setopacityright(1);
     }
@@ -479,23 +474,16 @@ const Ui = () => {
     setimage(data1["Characters"][index]["backgroundlocation"]);
     setimageinitial(image);
     // imageanimation(data1["Characters"][index]["backgroundlocation"]);
-   const anim1= setTimeout(() => {
+setTimeout(() => {
       setanimation(false);
     }, 200);
 
-   
-    
+  
+  });
 
-    // setTimeout(()=>{
-    //   setimageinitial(image);
-    // },100)
-  })
+  
 
-  function onlyplace(index) {
-    setimage(data1["Characters"][index]["backgroundlocation"]);
-  }
-
-  const [anime, setanime] = useState(false);
+  // const [anime, setanime] = useState(false);
   const arr2 = [
     <>
       <div className="blade"></div>
@@ -529,240 +517,455 @@ const Ui = () => {
     setinside(arr2[(i + 1) % 3]);
     setoutercircleclassname(outercirclearr[(i + 1) % 3]);
     setoutermostcircleclassname(outermostcirclearr[(i + 1) % 3]);
-    setanime(true);
+    // setanime(true);
     console.log("clicked");
-    setTimeout(() => {
-      setanime(false);
-    }, 200);
+    // setTimeout(() => {
+    //   setanime(false);
+    // }, 200);
     seti((i + 1) % 3);
   }
- function shiftright(){
-  if(scroll.current)
-  { const element=scroll.current;
-    const remainingScrollLength = element.scrollWidth - (element.clientWidth + element.scrollLeft);
-    setopacityleft(1);
+  function shiftright() {
+    if (scroll.current) {
+      const element = scroll.current;
+      const remainingScrollLength =
+        element.scrollWidth - (element.clientWidth + element.scrollLeft);
+      setopacityleft(1);
 
-   if(remainingScrollLength>0)
-   {
-   element.scrollLeft+=700;
-   let remlengthr=element.scrollWidth - (element.clientWidth + element.scrollLeft);
-   console.log(remlengthr)
-    setopacityright(remlengthr <730 ? 0 : 1);
-
-
-   }
-  
+      if (remainingScrollLength > 0) {
+        element.scrollLeft += 700;
+        let remlengthr =
+          element.scrollWidth - (element.clientWidth + element.scrollLeft);
+        console.log(remlengthr);
+        setopacityright(remlengthr < 730 ? 0 : 1);
+      }
+    }
   }
- }
- function shiftleft(){
-  if(scroll.current)
-  { const element=scroll.current;
-   setopacityright(1);
+  function shiftleft() {
+    if (scroll.current) {
+      const element = scroll.current;
+      setopacityright(1);
 
-
-   if(element.scrollLeft>0)
-   {
-   element.scrollLeft-=700;
-   setopacityleft(element.scrollLeft > 700 ? 1 : 0);
-
-  
-   }
-   }
-  
+      if (element.scrollLeft > 0) {
+        element.scrollLeft -= 700;
+        setopacityleft(element.scrollLeft > 700 ? 1 : 0);
+      }
+    }
   }
- 
-  return (
+
+  useEffect(()=>{
+    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+    const isMobileSize = window.matchMedia("(max-height: 412px)").matches;
+    if(isLandscape&&isMobileSize)
+    {
+    setcomponentstyle(1);
+    setopstats(1);
+    setopabilities(1);
+    setscalestats(1);
+    setscaleabilities(1);
+    }
+  },[])
+  const components=[
     <div className="parentcontainer_proj1">
-      <div>
-        <img className="bgi" src={imageinitial}></img>
-        <img
-          className="bg"
-          src={image}
-          style={{
-            animation: animation ? "moveimage 0.2s ease 0s 1 normal both" : "",
-            opacity: 1,
-          }}
-          ref={imageref}
-        ></img>
+    <div>
+      <img className="bgi" src={imageinitial} alt="backgroundi"></img>
+      <img
+        className="bg"
+        src={image}
+        alt="backgroundf"
+        style={{
+          animation: animation ? "moveimage 0.2s ease 0s 1 normal both" : "",
+          opacity: 1,
+        }}
+        ref={imageref}
+      ></img>
 
-        <div className="description">
-          <div className="namebox">
-            <div className="Title">
-              <div className="name">
-                <p>{data1["Characters"][characterindex]["Name"]}</p>
-                <div className="Titleswipe">
-                  <div className="Titleswipedec"></div>
-                </div>
-              </div>
-              <div className="detbar">
-                <div className="rod">
-                  <div className="alias"></div>
-                  <div className="origin"></div>
-                  <div className="power"></div>
-                </div>
-              </div>
-              <div className="detarea">
-                <div className="aliasarea">
-                  <p className="det-text-label">
-                    Alias:&nbsp;
-                    <span className="det-text">
-                      {data1["Characters"][characterindex]["Alias"]}
-                    </span>
-                  </p>
-                </div>
-                <div className="originarea">
-                  <p className="det-text-label">
-                    Origin:&nbsp;
-                    <span className="det-text">
-                      {data1["Characters"][characterindex]["Origin"]}
-                    </span>
-                  </p>
-                </div>
-                <div className="powerarea">
-                  <p className="det-text-label">
-                    Power:&nbsp;
-                    <span className="det-text">
-                      {data1["Characters"][characterindex]["Power"]}
-                    </span>
-                  </p>
-                </div>
+      <div className="description">
+        <div className="namebox">
+          <div className="Title">
+            <div className="name">
+              <p>{data1["Characters"][characterindex]["Name"]}</p>
+              <div className="Titleswipe">
+                <div className="Titleswipedec"></div>
               </div>
             </div>
-            <div className="glowcircle">
-              <div className="inner-circle" onClick={stagechange}>
-                <div className="base" style={{ animation: anim }}>
-                  {inside}
-                </div>
-              </div>
-              <div className={outercircleclassname}></div>
-              <div className={outermostcircleclassname}></div>
-              <div className="outermost-conic"></div>
-            </div>
-          </div>
-          <div className="masterintrobox" style={{ height: height }} >
-            <div className="filestitle">
-              <div className="fileline filelineleft" style={{width:filelinewidth}}>
-                <div className="endpoint endpointleft"></div>
-              </div>
-              <p className="filestag">FILES</p>
-              <div className="fileline filelineright" style={{width:filelinewidth}}>
-              <div className="endpoint endpointright"></div>
-
+            <div className="detbar">
+              <div className="rod">
+                <div className="alias"></div>
+                <div className="origin"></div>
+                <div className="power"></div>
               </div>
             </div>
-            <div className="scroll leftscroll" style={{opacity:opacityleft}}onClick={shiftleft}>
-        <div className="actualbutton">
-        </div>
-      </div>
-      <div className="scroll rightscroll"  style={{opacity:opacityright}}onClick={shiftright}>
-        <div className="actualbutton">
-        </div>
-      </div>
-            <div className="introbox" ref={scroll}>
-              <div className="logbegin"></div>
-              {
-
-                lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
-                       return <>
-                       <div className="log" key={index}>
-                        <div className="logsubcontainer">
-                       <p className="classifiedtag" >CLASSIFIED</p>
-                       <p className="filenumber">FILE{value["Filenumber"]}</p>
-                       <div className="filesymbol">
-                       <img style={{height: '50px'}}
-                               className="fileimage"
-                               src={data1["Characters"][characterindex]["imagelocation"]}
-                             />
-                       </div>
-                       <div className="filetitle">
-                         <p>{value["Title"]}</p>
-                       
-                       </div>
-                       </div>
-                     </div>
-                     </>
-                })
-              }
-              <div className="logend"></div>
-               
-            </div>
-            <div className="pulldown" >
-                <div
-                  className="arrow"
-                  style={{ transform: `rotate(${arrow}deg)` }}
-                ></div>
-              </div> 
-          </div>
-          <div className="infogrid" style={{ opacity: viewinfo }}>
-            <div className="stats">
-              <div
-                className="lowbarbutton"
-                style={{ backgroundColor: bg1 }}
-                onClick={() => swapcolor(1)}
-              >
-                <p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p>
+            <div className="detarea">
+              <div className="aliasarea">
+                <p className="det-text-label">
+                  Alias:&nbsp;
+                  <span className="det-text">
+                    {data1["Characters"][characterindex]["Alias"]}
+                  </span>
+                </p>
               </div>
-            </div>
-            <div className="abilities">
-              <div
-                className="lowbarbutton"
-                style={{ backgroundColor: bg2 }}
-                onClick={() => swapcolor(2)}
-              >
-                <p style={{ transform: "  transform:skewX(20deg)" }}>
-                  ABILITIES
+              <div className="originarea">
+                <p className="det-text-label">
+                  Origin:&nbsp;
+                  <span className="det-text">
+                    {data1["Characters"][characterindex]["Origin"]}
+                  </span>
+                </p>
+              </div>
+              <div className="powerarea">
+                <p className="det-text-label">
+                  Power:&nbsp;
+                  <span className="det-text">
+                    {data1["Characters"][characterindex]["Power"]}
+                  </span>
                 </p>
               </div>
             </div>
-            {contents[numcontent]}
+          </div>
+          <div className="glowcircle">
+            <div className="inner-circle" onClick={stagechange}>
+              <div className="base" style={{ animation: anim }}>
+                {inside}
+              </div>
+            </div>
+            <div className={outercircleclassname}></div>
+            <div className={outermostcircleclassname}></div>
+            <div className="outermost-conic"></div>
           </div>
         </div>
-        <div className="Cardtrailbox">
-          <div className="Cardtrail">
-            <div className="begin"></div>
-            {arr.map((value, index) => {
-              return (
-                <>
-                  <div key={index}
-                    className="Cardarea"
-                    style={{
-                      background: value
-                        ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, red 50%, transparent 85%, transparent 100%)`
-                        : "none",
-                      transform: value
-                        ? "skewX(0deg) scale(1.25)"
-                        : hoverarr[index]
-                        ? "skewX(0deg) scale(1.1)"
-                        : "skewX(0deg)",
-                      opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
-                      zIndex: value ? 1 : 0,
-                    }}
-                    onMouseEnter={() => {
-                      hoverscale(index);
-                    }}
-                    onMouseLeave={() => {
-                      offhoverscale(index);
-                    }}
-                  >
-                    <div
-                      className="Cardeg"
-                      onClick={() => transformcard(index)}
-                      // onMouseEnter={()=>{onlyplace(index)}}
-                    >
-                      <img
-                        className="symbol"
-                        src={data1["Characters"][index]["imagelocation"]}
-                      />
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-            <div className="end"></div>
+        <div className="masterintrobox" style={{ height: '210px' }}>
+          <div className="filestitle">
+            <div
+              className="fileline filelineleft"
+              style={{ width: filelinewidth }}
+            >
+              <div className="endpoint endpointleft"></div>
+            </div>
+            <p className="filestag">FILES</p>
+            <div
+              className="fileline filelineright"
+              style={{ width: filelinewidth }}
+            >
+              <div className="endpoint endpointright"></div>
+            </div>
           </div>
+          <div
+            className="scroll leftscroll"
+            style={{ opacity: opacityleft }}
+            onClick={shiftleft}
+          >
+            <div className="actualbutton"></div>
+          </div>
+          <div
+            className="scroll rightscroll"
+            style={{ opacity: opacityright }}
+            onClick={shiftright}
+          >
+            <div className="actualbutton"></div>
+          </div>
+          <div className="introbox" ref={scroll}>
+            <div className="logbegin"></div>
+            {lore[data1["Characters"][characterindex]["Name"]].map(
+              (value, index) => {
+                return (
+                  <>
+                    <div className="log" key={index}>
+                      <div className="logsubcontainer">
+                        <p className="classifiedtag">CLASSIFIED</p>
+                        <p className="filenumber">
+                          FILE{value["Filenumber"]}
+                        </p>
+                        <div className="filesymbol">
+                          <img
+                            style={{ height: "50px" }}
+                            className="fileimage"
+                            src={
+                              data1["Characters"][characterindex][
+                                "imagelocation"
+                              ]
+                            }
+                            alt="filesymbol"
+                          />
+                        </div>
+                        <div className="filetitle">
+                          <p>{value["Title"]}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                );
+              }
+            )}
+            <div className="logend"></div>
+          </div>
+          <div className="pulldown">
+            <div
+              className="arrow"
+              style={{ transform: `rotate($0deg)` }}
+            ></div>
+          </div>
+        </div>
+        <div className="infogrid" style={{ opacity: 1 }}>
+          <div className="stats">
+            <div
+              className="lowbarbutton"
+              style={{ backgroundColor: bg1 }}
+              onClick={() => swapcolor(1)}
+            >
+              <p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p>
+            </div>
+          </div>
+          <div className="abilities">
+            <div
+              className="lowbarbutton"
+              style={{ backgroundColor: bg2 }}
+              onClick={() => swapcolor(2)}
+            >
+              <p style={{ transform: "  transform:skewX(20deg)" }}>
+                ABILITIES
+              </p>
+            </div>
+          </div>
+          {contents[numcontent]}
+        </div>
+      </div>
+      <div className="Cardtrailbox">
+        <div className="Cardtrail">
+          <div className="begin"></div>
+          {arr.map((value, index) => {
+            return (
+              <>
+                <div
+                  key={index}
+                  className="Cardarea"
+                  style={{
+                    background: value
+                      ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, red 50%, transparent 85%, transparent 100%)`
+                      : "none",
+                    transform: value
+                      ? "skewX(0deg) scale(1.25)"
+                      : hoverarr[index]
+                      ? "skewX(0deg) scale(1.1)"
+                      : "skewX(0deg)",
+                    opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
+                    zIndex: value ? 1 : 0,
+                  }}
+                  onMouseEnter={() => {
+                    hoverscale(index);
+                  }}
+                  onMouseLeave={() => {
+                    offhoverscale(index);
+                  }}
+                >
+                  <div
+                    className="Cardeg"
+                    onClick={() => transformcard(index)}
+                    // onMouseEnter={()=>{onlyplace(index)}}
+                  >
+                    <img
+                      className="symbol"
+                      src={data1["Characters"][index]["imagelocation"]}
+                      alt="symbol"
+                    />
+                  </div>
+                </div>
+              </>
+            );
+          })}
+          <div className="end"></div>
         </div>
       </div>
     </div>
+  </div>,
+
+
+
+
+
+  <div className="parentcontainer_proj1">
+  <div className="subparent">
+    <img className="bgi" alt="backgroundi" src={imageinitial}></img>
+    <img
+      className="bg"
+      src={image}
+      alt="backgroundf"
+      style={{
+        animation: animation ? "moveimage 0.2s ease 0s 1 normal both" : "",
+        opacity: 1,
+      }}
+      ref={imageref}
+    ></img>
+    <div className="Cardtrailbox">
+      <div className="Cardtrail">
+        {/* <div className="begin"></div> */}
+        {arr.map((value, index) => {
+          return (
+            <>
+              <div key={index}
+                className="Cardarea"
+                style={{
+                  background: value
+                    ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, transparent 50%, transparent 85%, transparent 100%)`
+                    : "none",
+                  transform: value
+                    ? "skewX(0deg) scale(1.25)"
+                    : hoverarr[index]
+                    ? "skewX(0deg) scale(1.1)"
+                    : "skewX(0deg)",
+                  opacity: value ? 1 : hoverarr[index] ? 0.92 : 0.5,
+                  zIndex: value ? 1 : 0,
+                }}
+                onMouseEnter={() => {
+                  hoverscale(index);
+                }}
+                onMouseLeave={() => {
+                  offhoverscale(index);
+                }}
+              >
+                <div
+                  className="Cardeg"
+                  onClick={() => transformcard(index)}
+                  // onMouseEnter={()=>{onlyplace(index)}}
+                >
+                  <img
+                    className="symbol"
+                    src={data1["Characters"][index]["imagelocation"]}
+                    alt="symbol"
+                  />
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+    </div>
+    <div className="description">
+        <div className="leftcontent">
+      <div className="namebox">
+        <div className="Title">
+          <div className="name">
+            <p>{data1["Characters"][characterindex]["Name"]}</p>
+            <div className="Titleswipe">
+              <div className="Titleswipedec"></div>
+            </div>
+          </div>
+         
+          {/* <div className="detarea">
+            <div className="aliasarea">
+              <p className="det-text-label">
+                Alias:&nbsp;
+                <span className="det-text">
+                  {data1["Characters"][characterindex]["Alias"]}
+                </span>
+              </p>
+            </div>
+            <div className="originarea">
+              <p className="det-text-label">
+                Origin:&nbsp;
+                <span className="det-text">
+                  {data1["Characters"][characterindex]["Origin"]}
+                </span>
+              </p>
+            </div>
+            <div className="powerarea">
+              <p className="det-text-label">
+                Power:&nbsp;
+                <span className="det-text">
+                  {data1["Characters"][characterindex]["Power"]}
+                </span>
+              </p>
+            </div>
+          </div> */}
+        </div>
+        <div className="glowcircle">
+          <div className="inner-circle" onClick={stagechange}>
+            <div className="base" style={{ animation: anim }}>
+              {inside}
+            </div>
+          </div>
+          <div className={outercircleclassname}></div>
+          <div className={outermostcircleclassname}></div>
+          <div className="outermost-conic"></div>
+        </div>
+        </div>
+        
+      <div className="abilities">
+        <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
+            {contents[1]}
+        </div>
+      </div>
+     <div className="rightcontent">
+        <div className="stats">
+            <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
+            {contents[0]}
+      
+        </div>
+        <div className="filetrailbox">
+        <div className="masterintrobox"  >
+        <div className="filestitle">
+          {/* <div className="fileline filelineleft" style={{width:filelinewidth}}>
+            <div className="endpoint endpointleft"></div>
+          </div> */}
+          <p className="filestag">FILES</p>
+          <div className="fileline filelineright" style={{width:filelinewidth}}>
+          <div className="endpoint endpointright"></div>
+
+          </div>
+        </div>
+        <div className="scroll leftscroll" style={{opacity:opacityleft}}onClick={shiftleft}>
+    <div className="actualbutton">
+    </div>
+  </div>
+  <div className="scroll rightscroll"  style={{opacity:opacityright}}onClick={shiftright}>
+    <div className="actualbutton">
+    </div>
+  </div>
+        <div className="introbox" ref={scroll}>
+          <div className="logbegin"></div>
+          {
+
+            lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
+                   return <>
+                   <div className="log" key={index}>
+                    <div className="logsubcontainer">
+                   <p className="classifiedtag" >CLASSIFIED</p>
+                   <p className="filenumber">FILE{value["Filenumber"]}</p>
+                   <div className="filesymbol">
+                   <img style={{height: '20px'}}
+                           className="fileimage"
+                           src={data1["Characters"][characterindex]["imagelocation"]}
+                           alt="fileimage"
+                         />
+                   </div>
+                   <div className="filetitle">
+                     <p>{value["Title"]}</p>
+                   
+                   </div>
+                   </div>
+                 </div>
+                 </>
+            })
+          }
+          <div className="logend"></div>
+           
+        </div>
+        <div className="pulldown" >
+            <div
+              className="arrow"
+              style={{ transform: `rotate(0deg)` }}
+            ></div>
+          </div> 
+      </div>
+      </div>
+      </div> 
+      
+    </div>
+    
+  </div>
+</div>
+  ]
+  return (
+    components[componentstyle]
   );
 };
 export default Ui;
