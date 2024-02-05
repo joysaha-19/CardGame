@@ -8952,7 +8952,7 @@ p {
       width: 100%;
       /* border: 2px black dashed; */
        display: grid;
-       grid-template-rows:70px 1fr 10px 3fr;
+       grid-template-rows:42px 1fr 10px 3fr;
       background: rgba(8, 67, 83, 0.448);
       height: 100%;
       overflow-y: hidden;
@@ -8979,7 +8979,7 @@ p {
   .filetrailbox{
     
       position: relative;
-      height: 98%;
+      height: 93%;
       width: 100%;
       /* background-color: white; */
 
@@ -9226,6 +9226,7 @@ p {
   }
 
   .namebox {
+    height: 100%;
     grid-row: 1/2;
     width: 98%;
     display: grid;
@@ -9243,22 +9244,20 @@ p {
   }
 
   .name {
-    height: 87px;
     position: absolute;
-    top: 0%;
+    top: -40%;
     left: 50%;
     width: 100%;
     transform: translate(-50%,0);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
+    justify-content: center; 
+
   }
   .name p {
-    font-size: 38px;
-    line-height: 25px;
+    font-size: 25px;
+    /* line-height: 0px; */
     color: rgb(13, 228, 221);
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-align: center;
     white-space: nowrap;
   }
@@ -9465,7 +9464,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 137px;
 
 }
   .stats {
@@ -9503,7 +9502,7 @@ p {
     justify-content: center;
     align-items: center;
     /* background-color: black; */
-    height: 150px;
+    height: 137px;
 }
   .abilities{
     height: 100%;
