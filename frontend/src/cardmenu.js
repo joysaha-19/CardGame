@@ -1,5 +1,4 @@
 import React, { useEffect, useRef,  } from "react";
-// import { Component } from "react";
 import { useState } from "react";
 import "./cardmenu.css";
 import "./borderproj.css";
@@ -552,18 +551,45 @@ setTimeout(() => {
     }
   }
 
-  useEffect(()=>{
-    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-    const isMobileSize = window.matchMedia("(max-height: 412px)").matches;
-    if(isLandscape&&isMobileSize)
-    {
-    setcomponentstyle(1);
-    setopstats(1);
-    setopabilities(1);
-    setscalestats(1);
-    setscaleabilities(1);
-    }
-  },[])
+  
+  useEffect(() => {
+    // Define the handleResize function inside useEffect
+    const handleResize = () => {
+      const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+      const isMobileSize = window.matchMedia("(max-height: 412px)").matches;
+
+      if (isLandscape && isMobileSize) {
+        setcomponentstyle(1);
+        setopstats(1);
+        setopabilities(1);
+        setscalestats(1);
+        setscaleabilities(1);
+      } else {
+        setcomponentstyle(0);
+        setopstats(1);
+        setopabilities(0);
+        setscalestats(1);
+        setscaleabilities(0);
+      }
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Perform an initial check
+    handleResize();
+
+    // Return a cleanup function
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array ensures this effect is only applied once
+
+
+
+  
+
+ 
   const components=[
     <div className="parentcontainer_proj1">
     <div>
