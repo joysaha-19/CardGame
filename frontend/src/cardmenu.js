@@ -838,7 +838,7 @@ setTimeout(() => {
                     ? `linear-gradient(${ang}deg, transparent 0%, transparent 15%, transparent 50%, transparent 85%, transparent 100%)`
                     : "none",
                   transform: value
-                    ? "skewX(0deg) scale(1.25)"
+                    ? "skewX(0deg) scale(1.08)"
                     : hoverarr[index]
                     ? "skewX(0deg) scale(1.1)"
                     : "skewX(0deg)",
