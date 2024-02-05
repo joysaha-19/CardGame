@@ -557,20 +557,25 @@ setTimeout(() => {
     const handleResize = () => {
       const isLandscape = window.matchMedia("(orientation: landscape)").matches;
       const isMobileSize = window.matchMedia("(max-height: 412px)").matches;
-
+      const mobwidth=window.matchMedia("(max-width: 412px)").matches;
       if (isLandscape && isMobileSize) {
         setcomponentstyle(1);
         setopstats(1);
         setopabilities(1);
         setscalestats(1);
         setscaleabilities(1);
-      } else {
+      }
+      else if(mobwidth){
+          setcomponentstyle(2);
+      }
+      else {
         setcomponentstyle(0);
         setopstats(1);
         setopabilities(0);
         setscalestats(1);
         setscaleabilities(0);
       }
+      
     };
 
     // Attach the event listener
@@ -806,8 +811,7 @@ setTimeout(() => {
 
 
 
-
-
+//PHONE
   <div className="parentcontainer_proj1">
   <div className="subparent">
     <img className="bgi" alt="backgroundi" src={imageinitial}></img>
@@ -866,8 +870,7 @@ setTimeout(() => {
       </div>
     </div>
     <div className="description">
-        <div className="leftcontent">
-      <div className="namebox">
+    <div className="namebox">
         <div className="Title">
           <div className="name">
             <p>{data1["Characters"][characterindex]["Name"]}</p>
@@ -914,24 +917,28 @@ setTimeout(() => {
           <div className="outermost-conic"></div>
         </div>
         </div>
-        
-      <div className="abilities">
+        <div className="downcontent">
+      <div className="abilitiesholder">
+      <div className="abilities"> 
         <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>ABILITIES</p></div>
             {contents[1]}
         </div>
-      </div>
-     <div className="rightcontent">
+        </div>
+       <div className="statsholder">
         <div className="stats">
             <div className="lowbarbutton"><p style={{ transform: "  transform:skewX(20deg)" }}>STATS</p></div>
             {contents[0]}
       
         </div>
+        </div>
+        </div>
+        <div className="upcontent">
         <div className="filetrailbox">
         <div className="masterintrobox"  >
         <div className="filestitle">
-          {/* <div className="fileline filelineleft" style={{width:filelinewidth}}>
+          <div className="fileline filelineleft" style={{width:filelinewidth}}>
             <div className="endpoint endpointleft"></div>
-          </div> */}
+          </div>
           <p className="filestag">FILES</p>
           <div className="fileline filelineright" style={{width:filelinewidth}}>
           <div className="endpoint endpointright"></div>
@@ -988,6 +995,13 @@ setTimeout(() => {
     </div>
     
   </div>
+</div>,
+
+<div className="parentcontainer_proj1" style={{background:'black'}}>
+<div className="warning">
+  <p> PLEASE SWITCH TO LANDSCAPE MODE FOR A BETTER EXPERIENCE!</p>
+ 
+</div>
 </div>
   ]
   return (
