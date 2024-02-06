@@ -26,8 +26,10 @@ const outermostcirclearr = [
   "healblur outermost",
 ];
 const anim = "grow 0.7s ease-out 0s 1 normal both";
-
 const Ui = () => {
+  const [parentopacity,setparentopacity]=useState(1);
+
+  const [transforminfo,settransforminfo]=useState('scale(0) translate(-50%,-50%)');
   const [componentstyle,setcomponentstyle]=useState(0);
   const [characterindex, setcharacterindex] = useState(0);
   const imageref = useRef();
@@ -593,10 +595,33 @@ setTimeout(() => {
 
 
   
+ function handleinfovisibility(){
+  if(transforminfo==='scale(1) translate(-50%,-50%)')
+  {
+    settransforminfo('scale(0) translate(-50%,-50%)');
+    setparentopacity(1);
+  }
 
+    if(transforminfo==='scale(0) translate(-50%,-50%)')
+    {
+    settransforminfo('scale(1) translate(-50%,-50%)');
+    setparentopacity(0.3);
+
+    }
+ }
  
   const components=[
-    <div className="parentcontainer_proj1">
+    <>
+   < div className="fileinfo" style={{transform:transforminfo}}>
+  <div className="optionsbar">
+    <div className="cross" onClick={handleinfovisibility}>
+    <div class="cross-icon"></div>
+
+    </div>
+  </div>
+  <div className="actualinfo"></div>
+</div>
+  <div className="parentcontainer_proj1" style={{opacity:parentopacity}}>
     <div>
       <img className="bgi" src={imageinitial} alt="backgroundi"></img>
       <img
@@ -700,7 +725,7 @@ setTimeout(() => {
               (value, index) => {
                 return (
                   <>
-                    <div className="log" key={index}>
+                    <div className="log" key={index} onClick={handleinfovisibility}>
                       <div className="logsubcontainer">
                         <p className="classifiedtag">CLASSIFIED</p>
                         <p className="filenumber">
@@ -807,13 +832,26 @@ setTimeout(() => {
         </div>
       </div>
     </div>
-  </div>,
+  </div>
+  </>,
 
 
 
 //PHONE
-  <div className="parentcontainer_proj1">
+<>
+<div className="fileinfo" style={{transform:transforminfo}}>
+  <div className="optionsbar">
+    <div className="cross" onClick={handleinfovisibility}>
+    <div class="cross-icon"></div>
+
+    </div>
+  </div>
+  <div className="actualinfo"></div>
+</div>
+  <div className="parentcontainer_proj1" style={{opacity:parentopacity}}>
+   
   <div className="subparent">
+    
     <img className="bgi" alt="backgroundi" src={imageinitial}></img>
     <img
       className="bg"
@@ -959,7 +997,7 @@ setTimeout(() => {
 
             lore[data1["Characters"][characterindex]["Name"]].map((value,index)=>{
                    return <>
-                   <div className="log" key={index}>
+                   <div className="log" key={index} onClick={handleinfovisibility}>
                     <div className="logsubcontainer">
                    <p className="classifiedtag" >CLASSIFIED</p>
                    <p className="filenumber">FILE{value["Filenumber"]}</p>
@@ -995,7 +1033,8 @@ setTimeout(() => {
     </div>
     
   </div>
-</div>,
+</div>
+</>,
 
 <div className="parentcontainer_proj1" style={{background:'black'}}>
 <div className="warning">

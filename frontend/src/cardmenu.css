@@ -6,7 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
 
 
-
+body{
+  background-color: black;
+}
 * {
   margin: 0;
 }
@@ -29,7 +31,83 @@ p {
   background-size: cover;
   position: relative;
   overflow-x: hidden;
+  /* opacity: 0.3; */
+  transition: opacity 0.7s ease;
+}
+.fileinfo{
+  height: 70%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: height 0.7s ease, width 0.7s ease,transform 0.7s ease, opacity 0.7s ease;
+  background-color: rgba(3, 183, 249, 0.853);
+  /* border: 3px solid rgba(1, 1, 1, 0.514); */
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 20px 1fr;
+}
 
+.optionsbar{
+  grid-row: 1/2;
+  /* background-color: rgba(12, 13, 13, 0.842); */
+  position: relative;
+}
+.cross{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  height: 15px;
+  width: 15px;
+  /* background-color: white; */
+}
+
+.cross-icon {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross-icon:before, .cross-icon:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.cross-icon:before {
+  left: 6px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.cross-icon:after {
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+
+@keyframes showfileinfo {
+
+  0%{
+    opacity: 0;
+    height: 0%;
+    width: 0%;
+    transform: translate(-50%,-50%);
+  }
+  
+  100%{
+    opacity: 1;
+    height: 70%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .warning{
@@ -37,6 +115,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  
 
 }
 
@@ -8890,7 +8969,7 @@ p {
     left: 0%;
     /* display: none; */
     overflow-x: scroll;
-    z-index: 300;
+    z-index: 7;
   }
   .lowestgrid{
     grid-row: 4/5;
