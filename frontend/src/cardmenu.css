@@ -8951,7 +8951,7 @@ p {
          
      } */
   .Cardtrailbox {
-    height: 80px;
+    height: 70px;
     width: 100%;
     background: linear-gradient(
       90deg,
@@ -8965,7 +8965,7 @@ p {
 
  
     position: absolute;
-    top:  calc(100% - 80px);
+    top:  calc(100% - 70px);
     left: 0%;
     /* display: none; */
     overflow-x: scroll;
@@ -9078,7 +9078,7 @@ p {
     z-index: 0;
   }
   .filestitle {
-    height: 0%;
+    height: 10%;
     width: 100%;
     position: absolute;
     background-color: transparent;
@@ -9121,7 +9121,7 @@ p {
 
   .scroll {
     height: 89.5%;
-    bottom: 0.5%;
+    top: 14%;
     width: 30px;
     background-color: rgba(82, 80, 80, 0.247);
     position: absolute;
@@ -9130,6 +9130,7 @@ p {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    
     /* display: none; */
   }
 
@@ -9160,7 +9161,7 @@ p {
   .introbox {
     border: 2px solid rgba(0, 183, 255, 0.46);
     background: rgba(36, 35, 35, 0.573);
-    height: 80%;
+    height: 89.5%;
     bottom: 0%;
     width: 100%;
     display: flex;
@@ -9174,6 +9175,10 @@ p {
     gap: 5px;
     scroll-behavior: smooth;
     overflow-y: hidden;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform-origin: bottom; */
   }
   /* .introbox{
       border: 2px solid rgba(0, 183, 255, 0.46);
@@ -9425,18 +9430,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
   }
 
   @keyframes increasearea {
     0% {
-      height: 0.25%;
-      width: 0.5%;
+      height: 0%;
+      width: 0%;
     }
 
-    60% {
+    /* 60% {
       height: 0.25%;
       width: 100%;
-    }
+    } */
 
     100% {
       height: 89.5%;
